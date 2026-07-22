@@ -27,7 +27,8 @@ import seaborn as sns
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import (
+    KFold, cross_val_predict, cross_val_score)
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
@@ -108,47 +109,95 @@ def main() -> None:
     ])
     model = Pipeline([("pre", pre), ("lr", LinearRegression())])
 
-    X_tr, X_te, y_tr, y_te = train_test_split(
-        X, y, test_size=0.25, random_state=42)
-    model.fit(X_tr, y_tr)
+    # ---- Honest evaluation: 5-fold cross-validation ----
+    # 119 rows is small, so a single 75/25 split is luck-dependent — the score
+    # swings with the random seed. K-fold averages over 5 splits, and
+    # out-of-fold (OOF) predictions give EVERY row a prediction from a model
+    # that never saw it, so the reported error is stable, not a lucky draw.
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    r2_folds = cross_val_score(model, X, y, cv=kf, scoring="r2")
+    oof_log = cross_val_predict(model, X, y, cv=kf)      # out-of-fold, log-rupees
+    oof_rs = np.expm1(oof_log)
+    true_rs = np.expm1(y)
+    r2_oof = r2_score(y, oof_log)
+    mae = mean_absolute_error(true_rs, oof_rs)
+    rmse = np.sqrt(mean_squared_error(true_rs, oof_rs))
 
-    # ---- Metrics: overfitting check + error in rupees ----
-    r2_tr = r2_score(y_tr, model.predict(X_tr))
-    r2_te = r2_score(y_te, model.predict(X_te))
-    # Back-transform to rupees for interpretable error.
-    pred_rs = np.expm1(model.predict(X_te))
-    true_rs = np.expm1(y_te)
-    mae = mean_absolute_error(true_rs, pred_rs)
-    rmse = np.sqrt(mean_squared_error(true_rs, pred_rs))
+    # Fold-wise MAE in rupees (the spread a renter would actually feel).
+    fold_mae = []
+    for tr_idx, te_idx in kf.split(X):
+        model.fit(X.iloc[tr_idx], y.iloc[tr_idx])
+        p = np.expm1(model.predict(X.iloc[te_idx]))
+        fold_mae.append(mean_absolute_error(np.expm1(y.iloc[te_idx]), p))
+    fold_mae = np.array(fold_mae)
 
-    note("## Results\n")
-    note(f"- Train R2: **{r2_tr:.3f}**")
-    note(f"- Test  R2: **{r2_te:.3f}**")
-    note(f"- Overfitting gap (train-test R2): **{r2_tr - r2_te:.3f}** "
-         "(small gap = generalises; large gap = memorising).")
-    note(f"- Test MAE:  **Rs {mae:,.0f}/month** (typical miss)")
-    note(f"- Test RMSE: **Rs {rmse:,.0f}/month** (penalises big misses)\n")
+    # Overfitting check: fit on ALL data, compare in-sample R2 to OOF R2.
+    model.fit(X, y)
+    r2_in = r2_score(y, model.predict(X))
 
-    # ---- Honest failure analysis ----
+    note("## Results (5-fold cross-validation)\n")
+    note(f"- CV R2: **{r2_folds.mean():.3f} +/- {r2_folds.std():.3f}** "
+         f"across folds ({', '.join(f'{v:.2f}' for v in r2_folds)}).")
+    note(f"- Out-of-fold R2 (all {len(X)} rows): **{r2_oof:.3f}**.")
+    note(f"- In-sample R2 (fit on all data): **{r2_in:.3f}** -> overfitting "
+         f"gap **{r2_in - r2_oof:.3f}** (small = generalises, not memorising).")
+    note(f"- CV MAE: **Rs {mae:,.0f}/month** (out-of-fold); per-fold "
+         f"**Rs {fold_mae.mean():,.0f} +/- {fold_mae.std():,.0f}**.")
+    note(f"- CV RMSE: **Rs {rmse:,.0f}/month** (penalises big misses).\n")
+    note("Why CV over a single split: with 119 rows one 75/25 split leaves a "
+         "~30-flat test set whose R2 swings with the seed. 5-fold reports the "
+         "average over five held-out sets, so this number is trustworthy.\n")
+
+    # ---- Honest failure analysis (on out-of-fold predictions) ----
+    # Flag rows whose locality has only ONE listing: their tier and
+    # median_rent_per_sqft features rest on that single flat (a real weakness).
+    solo_localities = set(
+        df["locality"].value_counts().loc[lambda s: s == 1].index)
     err = pd.DataFrame({
-        "locality": model_df.loc[X_te.index, "locality"],
-        "bhk": model_df.loc[X_te.index, "bhk"],
-        "true": np.asarray(true_rs), "pred": np.asarray(pred_rs),
+        "locality": model_df["locality"].values,
+        "bhk": model_df["bhk"].values,
+        "true": np.asarray(true_rs), "pred": np.asarray(oof_rs),
     })
     err["abs_err"] = (err["true"] - err["pred"]).abs()
+    err["solo_loc"] = err["locality"].isin(solo_localities).map(
+        {True: "yes", False: ""})
     worst = err.sort_values("abs_err", ascending=False).head(5)
     note("## Where the model breaks\n")
-    note("Worst 5 test predictions:\n")
+    note("Worst 5 out-of-fold predictions:\n")
     note(worst.to_markdown(index=False, floatfmt=",.0f"))
-    note("\n**Failure pattern:** biggest misses are high-end premium flats "
-         "and thin localities with few listings — the model has little signal "
-         "there and pulls toward the city mean. It is honest for typical "
-         "mid-tier 1-2 BHK rent and unreliable at the luxury tail.\n")
+    note("\n**Failure pattern:** biggest misses are high-end premium flats and "
+         "thin localities — the model has little signal there and pulls toward "
+         "the city mean. It is honest for typical mid-tier 1-2 BHK rent and "
+         "unreliable at the luxury tail.\n")
+
+    # ---- Export OOF predictions for the dashboard (predicted-vs-actual) ----
+    preds = pd.DataFrame({
+        "locality": model_df["locality"].values,
+        "tier": model_df["tier"].values,
+        "bhk": model_df["bhk"].values,
+        "area_sqft": model_df["area_sqft"].values,
+        "metro_km": model_df["metro_km"].values,
+        "actual_rent": np.asarray(true_rs).round().astype(int),
+        "predicted_rent": np.asarray(oof_rs).round().astype(int),
+    })
+    preds["error"] = preds["actual_rent"] - preds["predicted_rent"]
+    preds["abs_pct_error"] = (
+        preds["error"].abs() / preds["actual_rent"] * 100).round(1)
+    preds["solo_locality"] = preds["locality"].isin(solo_localities).astype(int)
+    preds.to_csv(ROOT / "data/clean/predictions.csv", index=False)
+
+    n_solo = len(solo_localities)
     note("## Limits\n"
-         f"- Only {len(X)} listings; test set is ~{len(X_te)} flats.\n"
-         "- Single source (Square Yards); one city (Mumbai).\n"
+         f"- Only {len(X)} listings across {df['locality'].nunique()} "
+         f"localities; **{n_solo} localities have a single listing**, so their "
+         "tier and median-rent features rest on one flat each (flagged as "
+         "solo_locality in predictions.csv).\n"
+         "- Single source (Square Yards); one city (Mumbai) by design.\n"
          "- median_rent_per_sqft is locality-derived, so it leaks locality "
-         "strength — kept because it mirrors how a human prices a flat.\n")
+         "strength — kept because it mirrors how a human prices a flat, and "
+         "disclosed rather than hidden.\n"
+         f"- Evaluated by 5-fold CV (not a single split) because {len(X)} rows "
+         "make any one split unreliable.\n")
 
     with open(MODEL_OUT, "wb") as f:
         pickle.dump(model, f)

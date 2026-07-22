@@ -4,13 +4,17 @@
 
 ## What the model is good at
 
-Typical mid-tier **1–2 BHK** flats in localities with a handful of listings. There it predicts within about **±₹47,000/month** (MAE) and generalises cleanly — the train/test R² gap is only **0.020** (0.869 → 0.848), so it's learning the market, not memorising the rows.
+Typical mid-tier **1–2 BHK** flats in localities with a handful of listings. There it predicts within about **±₹38,000/month** (out-of-fold MAE) and generalises cleanly — the overfitting gap between in-sample R² (0.866) and out-of-fold R² (0.821) is only **0.045**, so it's learning the market, not memorising the rows.
+
+## How it was evaluated (and why that matters)
+
+Not on a single train/test split. With 119 rows, a 75/25 split leaves a ~30-flat test set whose R² swings with the random seed — a lucky seed flatters the model, an unlucky one buries it. So the headline is **5-fold cross-validation**: **CV R² 0.796 ± 0.099** (folds ranged 0.60–0.87). That ±0.10 spread *is* the honest uncertainty, and the low fold (0.60) is a feature of the report, not something hidden. Every row's prediction in `predictions.csv` is **out-of-fold** — made by a model that never saw that row.
 
 ## What it is not good at, and why
 
 1. **The luxury tail.** Its worst miss priced a Versova 6BHK at ₹9.2L against a ₹4.0L listing. With almost no other 5–6 BHK flats to learn from, a linear model reaches toward the mean of a tiny, high-variance group and overshoots. **Don't auto-price 4+ BHK.**
 2. **Thin localities.** Some of the 53 localities have 1–2 listings, so their median-based features rest on almost no evidence. The `n_listings >= 2` filter in the SQL ranking is a guard, but the model itself still sees them.
-3. **Small dataset overall.** 119 rows → a test set of ~30 flats. Every metric here carries real sampling noise; a different random split would move the numbers. This is the single biggest limitation.
+3. **Small dataset overall.** 119 rows, and **28 of 53 localities have only a single listing** — for those, `tier` and `median_rent_per_sqft` rest on one flat each (flagged as `solo_locality` in `predictions.csv`). Cross-validation controls the *reporting* noise, but it can't create signal that isn't there. This is the single biggest limitation.
 
 ## Known data-quality caveats (carried forward from cleaning)
 

@@ -9,7 +9,7 @@ I used an LLM (Claude) as a pair — for scaffolding, for arguing a modelling ch
 | Stage | What I asked | What the LLM contributed | What I kept / changed |
 |---|---|---|---|
 | Cleaning | "How should I handle a rent value of ₹60,00,000 in a monthly-rent feed?" | Argued it's a sale price that leaked in, not an extreme rent — so **drop the record, don't winsorise**. | Kept. Wrote it up as a documented decision in `data_quality_note.md`. |
-| Feature choice | "Should I predict rent or log(rent)?" | Rent is right-skewed and multiplicative (a premium locality *scales* rent), so model `log1p(rent)` and back-transform errors to rupees via `expm1`. | Kept — the train/test gap stayed small (0.020), which supported it. |
+| Feature choice | "Should I predict rent or log(rent)?" | Rent is right-skewed and multiplicative (a premium locality *scales* rent), so model `log1p(rent)` and back-transform errors to rupees via `expm1`. | Kept — the cross-validated overfitting gap stayed small (0.045), which supported it. |
 | Missing BHK | "12% of rows have no BHK — drop or impute?" | Suggested inferring from area (~450 sqft/BHK) rather than dropping, and **flagging** the imputation. | Kept the infer-and-flag approach; documented it as an assumption. |
 | SQL | Draft of the window-function and CTE queries | Gave a working `RANK() OVER` + `AVG() OVER ()` skeleton and a metro-band CTE. | Kept structure; verified every number against the actual DB output before trusting it. |
 | Prose | Draft README/memo structure | Organised "business impact first, code second". | Rewrote in my own voice; the walkthrough video is fully mine. |

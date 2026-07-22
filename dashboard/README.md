@@ -24,7 +24,7 @@ Relate `listings_clean` and `predictions` to `localities` on **locality** (left 
 
 ## Dashboard layout
 
-- Top strip: 2–3 BAN (big-number) tiles — Test R² **0.848**, typical error **±₹47k**, localities covered **53**.
+- Top strip: 2–3 BAN (big-number) tiles — CV R² **0.80**, typical error **±₹38k**, localities covered **53**.
 - Left: locality ranking (sheet 1). Right: predicted-vs-actual (sheet 3).
 - Bottom: tier box plot (sheet 2) + metro bars (sheet 4).
 - Add a **tier** filter and a **BHK** filter, applied dashboard-wide, so the pricing team can slice to their question.
