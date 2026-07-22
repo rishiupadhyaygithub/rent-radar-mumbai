@@ -1,0 +1,54 @@
+locality,n_listings,median_rent,median_rent_per_sqft,avg_metro_km,tier
+Amboli,1,60000.0,109.1,2.75,mid
+Andheri East,5,60000.0,100.0,0.91,mid
+Andheri West,11,90000.0,111.8,4.1,mid
+Andheri-Kurla Road,1,55190.0,85.4,,budget
+Bandra East,7,318000.0,260.4,0.76,premium
+Bandra Kurla Complex,1,252290.0,312.6,,premium
+Bandra West,1,450000.0,348.8,,premium
+Bhandup East,1,25000.0,38.5,4.15,budget
+Borivali East,2,102500.0,180.35,1.48,premium
+Byculla,1,170000.0,144.1,1.63,premium
+Chembur,2,60500.0,89.55,0.59,budget
+Chikoowadi,1,65000.0,72.2,3.08,budget
+Cumbala Hill,1,300000.0,214.3,1.22,premium
+Dadar West,1,310000.0,397.4,,premium
+Dahisar East,2,30500.0,56.849999999999994,2.09,budget
+Dindoshi,1,47000.0,95.7,5.64,budget
+Ghatkopar East,1,50000.0,71.4,4.33,budget
+Gokuldham Colony,1,18000.0,18.0,5.06,budget
+Goregaon East,4,100000.0,105.45,5.32,mid
+Goregaon West,5,65000.0,116.7,4.97,mid
+Jogeshwari West,2,147500.0,106.9,3.53,mid
+Juhu,3,300000.0,187.5,2.27,premium
+Kalina,1,95000.0,96.3,1.83,budget
+Kandivali East,3,70000.0,70.7,4.11,budget
+Kanjurmarg East,2,60000.0,57.2,6.3,budget
+Kanjurmarg West,1,55000.0,74.3,5.57,budget
+Lokhandwala Complex,1,100000.0,125.0,5.27,mid
+Lower Parel,4,255000.0,207.15,0.73,premium
+Mahalaxmi,3,275000.0,216.2,0.59,premium
+Mahavir Nagar,1,80000.0,142.9,,premium
+Malad East,2,47000.0,53.3,5.73,budget
+Malad West,4,80500.0,105.1,6.3,mid
+Marol,1,42000.0,83.2,0.69,budget
+Mhada Colony,1,95000.0,100.0,4.86,mid
+Mindspace,1,72000.0,156.5,,premium
+Mulund West,3,62000.0,77.5,3.36,budget
+Oshiwara,5,55000.0,100.0,3.89,mid
+Pali Hill,1,110000.0,200.0,2.17,premium
+Powai,5,150000.0,138.9,3.28,mid
+Prabhadevi,3,110000.0,151.3,0.43,premium
+Safed Pul,1,21000.0,30.7,1.4,budget
+Sakinaka,3,65000.0,90.3,1.12,budget
+Sandesh Nagar,1,500000.0,200.0,1.89,premium
+Santacruz West,1,90000.0,120.0,1.18,mid
+Sewri,1,200000.0,133.3,3.23,mid
+Shashtri Nagar,1,251000.0,173.1,4.52,premium
+Versova,2,247500.0,122.19999999999999,4.1,mid
+Vikhroli East,2,123000.0,118.85,4.94,mid
+Vikhroli West,2,75500.0,79.05,4.96,budget
+Vile Parle East,1,112000.0,97.4,0.5,mid
+Vile Parle West,1,140000.0,205.9,1.89,premium
+Vithaldas Nagar,1,145000.0,174.7,1.83,premium
+Wadala,5,90000.0,133.3,2.38,mid
