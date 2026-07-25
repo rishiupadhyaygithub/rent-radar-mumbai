@@ -10,7 +10,7 @@ Given a flat's locality, size, BHK, floor, furnishing, and distance to a metro s
 
 ## The data
 
-- **Listings:** 122 raw Mumbai rental listings scraped from Square Yards, cleaned down to **119** usable rows across **53 localities**. One source, one city — scope held deliberately narrow so the effort goes into features, not breadth.
+- **Listings:** 897 raw Mumbai rental listings scraped from Square Yards, cleaned down to **882** usable rows across **95 localities**. One source, one city — scope held deliberately narrow so the effort goes into features, not breadth.
 - **Locality attributes (the enrichment):** a second table built from public sources — median rent, median rent-per-sqft, a budget/mid/premium tier, and average distance to the nearest of Mumbai's metro stations (computed by haversine from OpenStreetMap/Overpass station coordinates).
 
 The two tables are loaded into SQLite and **joined** on locality, so every listing carries its neighbourhood's characteristics.
@@ -23,17 +23,17 @@ The two tables are loaded into SQLite and **joined** on locality, so every listi
 
 ## The findings
 
-- **Locality is the price.** Premium localities rent for roughly **3× per square foot** what budget localities do (₹225/sqft vs ₹77/sqft for a typical 2BHK). **Bandra East** tops the city at ₹260/sqft — about **₹139/sqft above** the city average.
-- **Metro access carries a real but modest premium:** localities within 1.5 km of a metro average **₹141.6/sqft** vs **₹130.4/sqft** for those farther out.
-- **The model explains most of the variation it sees.** Evaluated by **5-fold cross-validation** (not a single lucky split, because 119 rows make one split unreliable): CV R² **0.796 ± 0.099**, out-of-fold R² **0.821**. In-sample R² is 0.866, so the overfitting gap is a small **0.045** — it generalises. Typical miss is **₹38,000/month** (out-of-fold MAE); RMSE ₹79,400, dragged up by a few large misses.
+- **Locality is the price.** Premium localities rent for roughly **2× per square foot** what budget localities do (₹185/sqft vs ₹93/sqft for a typical 2BHK). **Worli** tops the city at ₹252/sqft — about **₹128/sqft above** the city average.
+- **Metro access carries a real but modest premium:** localities within 1.5 km of a metro average **₹137.0/sqft** vs **₹130.8/sqft** for those farther out — a ~5% uplift, not the headline driver.
+- **The model explains most of the variation it sees.** Evaluated by **5-fold cross-validation** (not a single lucky split): CV R² **0.790 ± 0.040** (folds tight, 0.74–0.84), out-of-fold R² **0.792**. In-sample R² is 0.801, so the overfitting gap is a tiny **0.009** — it generalises cleanly. Typical miss is **₹40,000/month** (out-of-fold MAE); RMSE is ₹299,000, dragged up by a handful of luxury-tail misses.
 
 ## Where it breaks (the honest part)
 
-The model is reliable for typical mid-tier 1–2 BHK flats and **unreliable at the luxury tail and in thin localities**. Its worst prediction: a 6BHK in Versova listed at ₹4,00,000 that the model priced at ~₹9,00,000 — because it had almost no other 6BHKs to learn from and reached toward the mean of a sparse, high-variance group. Of the 53 localities, **28 have only a single listing**, flagged as `solo_locality` in `predictions.csv`. Full failure analysis in `docs/model_report.md`; honest limits in `docs/limitations.md`.
+The model is reliable for typical mid-tier 1–2 BHK flats and **unreliable at the luxury tail and in thin localities**. Its worst prediction: an 8BHK in Santacruz West listed at ₹8,00,000 that the model priced at ~₹94,00,000 (₹9.4 million) — the lone 8BHK in the data, so the model had no comparable to learn from and extrapolated wildly. Of the 95 localities, **38 have only a single listing**, flagged as `solo_locality` in `predictions.csv`. Full failure analysis in `docs/model_report.md`; honest limits in `docs/limitations.md`.
 
 ## What would make it better
 
-More listings per locality (the single biggest fix — 119 rows is thin), a second source to cross-check Square Yards, and real amenity data (age of building, lift, parking, balcony) that listings hint at but rarely record cleanly.
+More listings per locality (38 of 95 localities still have just one), a second source to cross-check Square Yards, and real amenity data (age of building, lift, parking, balcony) that listings hint at but rarely record cleanly.
 
 ## Repo map
 

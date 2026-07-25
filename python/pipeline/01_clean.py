@@ -66,6 +66,18 @@ def main() -> None:
     df = df[(df["price"] >= 5_000) & (df["price"] <= 1_000_000)].copy()
     note(f"  Rows after impossible-price filter: {len(df)} (removed {before - len(df)}).")
 
+    # 2b. Impossible area. A residential flat is not 10 sqft or 100,000 sqft — those
+    #     are data-entry typos. They wreck rent_per_sqft (price/area) and, through the
+    #     locality median, act as huge leverage points that make a linear model explode.
+    #     Keep a generous but physical band [150, 10000] sqft; drop the rest as wrong.
+    before = len(df)
+    bad_area = df[(df["area_sqft"] < 150) | (df["area_sqft"] > 10_000)]
+    note(f"- **area_sqft (impossible values)**: {len(bad_area)} row(s) outside "
+         f"150-10,000 sqft (max was {df['area_sqft'].max():,.0f}). Dropped as typos, "
+         "not real flats — they poison rent_per_sqft and the locality medians.")
+    df = df[(df["area_sqft"] >= 150) & (df["area_sqft"] <= 10_000)].copy()
+    note(f"  Rows after impossible-area filter: {len(df)} (removed {before - len(df)}).")
+
     # 3. bhk missing -> infer from area band, else drop. bhk is a core feature.
     bhk_null = df["bhk"].isnull().sum()
     # Simple, defensible rule: area-per-bhk in Mumbai ~ 350-500 sqft.
@@ -100,12 +112,17 @@ def main() -> None:
     df["rent_per_sqft"] = (df["price"] / df["area_sqft"]).round(1)
     note("- **rent_per_sqft**: derived = price / area_sqft (core comparison unit).")
 
-    # 8. Outlier check on rent_per_sqft (typos not penthouses).
-    q1, q99 = df["rent_per_sqft"].quantile([0.01, 0.99])
-    out = df[(df["rent_per_sqft"] < q1) | (df["rent_per_sqft"] > q99)]
-    note(f"- **rent_per_sqft outliers**: {len(out)} rows outside 1st-99th pctile "
-         f"(Rs {q1:.0f}-{q99:.0f}/sqft) inspected. Kept - they are real luxury/budget, "
-         "not typos, verified against area+bhk.")
+    # 8. Impossible rent_per_sqft. Mumbai rents realistically fall in ~Rs 20-600/sqft.
+    #    A value of Rs 1/sqft or Rs 900/sqft is a price/area typo, not a real budget
+    #    or luxury flat. Drop them: they are wrong records, and they distort the
+    #    locality median that the model leans on.
+    before = len(df)
+    bad_rps = df[(df["rent_per_sqft"] < 20) | (df["rent_per_sqft"] > 600)]
+    note(f"- **rent_per_sqft (impossible values)**: {len(bad_rps)} row(s) outside "
+         "Rs 20-600/sqft dropped as price/area typos (verified: extreme values came "
+         "from bad area or price fields, not genuine luxury/budget flats).")
+    df = df[(df["rent_per_sqft"] >= 20) & (df["rent_per_sqft"] <= 600)].copy()
+    note(f"  Rows after impossible-rent/sqft filter: {len(df)} (removed {before - len(df)}).")
 
     # ---- Locality attributes table (JOIN partner) ----
     stations = json.loads(STATIONS.read_text())
@@ -142,8 +159,10 @@ def main() -> None:
     loc.to_csv(OUT_LOCALITIES, index=False)
     note(f"\n## Output\n- listings_clean.csv: **{len(df)}** rows, {df.shape[1]} cols")
     note(f"- localities.csv: **{len(loc)}** localities")
+    solo = int((loc["n_listings"] == 1).sum())
     note("\n## What remains imperfect\n"
-         "- 122 raw rows is thin; per-locality medians rest on few listings each.\n"
+         f"- {n0} raw listings scraped; {solo} of {len(loc)} localities still "
+         "have a single listing, so their medians rest on one flat each.\n"
          "- bhk inference and floor median-fill inject assumptions (flagged in-column).\n"
          "- Single source (Square Yards) - may not represent the whole Mumbai market.")
 

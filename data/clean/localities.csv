@@ -1,54 +1,96 @@
 locality,n_listings,median_rent,median_rent_per_sqft,avg_metro_km,tier
-Amboli,1,60000.0,109.1,2.75,mid
-Andheri East,5,60000.0,100.0,0.91,mid
-Andheri West,11,90000.0,111.8,4.1,mid
-Andheri-Kurla Road,1,55190.0,85.4,,budget
-Bandra East,7,318000.0,260.4,0.76,premium
-Bandra Kurla Complex,1,252290.0,312.6,,premium
-Bandra West,1,450000.0,348.8,,premium
-Bhandup East,1,25000.0,38.5,4.15,budget
-Borivali East,2,102500.0,180.35,1.48,premium
-Byculla,1,170000.0,144.1,1.63,premium
-Chembur,2,60500.0,89.55,0.59,budget
-Chikoowadi,1,65000.0,72.2,3.08,budget
-Cumbala Hill,1,300000.0,214.3,1.22,premium
-Dadar West,1,310000.0,397.4,,premium
-Dahisar East,2,30500.0,56.849999999999994,2.09,budget
-Dindoshi,1,47000.0,95.7,5.64,budget
-Ghatkopar East,1,50000.0,71.4,4.33,budget
-Gokuldham Colony,1,18000.0,18.0,5.06,budget
-Goregaon East,4,100000.0,105.45,5.32,mid
-Goregaon West,5,65000.0,116.7,4.97,mid
-Jogeshwari West,2,147500.0,106.9,3.53,mid
-Juhu,3,300000.0,187.5,2.27,premium
-Kalina,1,95000.0,96.3,1.83,budget
-Kandivali East,3,70000.0,70.7,4.11,budget
-Kanjurmarg East,2,60000.0,57.2,6.3,budget
-Kanjurmarg West,1,55000.0,74.3,5.57,budget
-Lokhandwala Complex,1,100000.0,125.0,5.27,mid
-Lower Parel,4,255000.0,207.15,0.73,premium
-Mahalaxmi,3,275000.0,216.2,0.59,premium
-Mahavir Nagar,1,80000.0,142.9,,premium
-Malad East,2,47000.0,53.3,5.73,budget
-Malad West,4,80500.0,105.1,6.3,mid
-Marol,1,42000.0,83.2,0.69,budget
-Mhada Colony,1,95000.0,100.0,4.86,mid
-Mindspace,1,72000.0,156.5,,premium
-Mulund West,3,62000.0,77.5,3.36,budget
-Oshiwara,5,55000.0,100.0,3.89,mid
-Pali Hill,1,110000.0,200.0,2.17,premium
-Powai,5,150000.0,138.9,3.28,mid
-Prabhadevi,3,110000.0,151.3,0.43,premium
-Safed Pul,1,21000.0,30.7,1.4,budget
-Sakinaka,3,65000.0,90.3,1.12,budget
-Sandesh Nagar,1,500000.0,200.0,1.89,premium
-Santacruz West,1,90000.0,120.0,1.18,mid
-Sewri,1,200000.0,133.3,3.23,mid
+Amboli,1,75000.0,112.8,2.75,mid
+Andheri East,34,75000.0,100.0,1.0,budget
+Andheri West,76,95000.0,116.75,4.07,mid
+Antop Hill,1,65000.0,72.2,2.7,budget
+Asha Nagar,1,32000.0,71.1,2.92,budget
+Bandra East,8,205000.0,136.0,0.91,mid
+Bandra Kurla Complex,1,710000.0,221.9,1.77,premium
+Bandra West,23,175000.0,188.2,2.23,premium
+Bangur Nagar,3,100000.0,94.6,5.9,budget
+Bhandup East,5,25000.0,41.5,4.49,budget
+Bhandup West,6,46500.0,65.5,4.87,budget
+Borivali East,10,55000.0,77.15,1.45,budget
+Borivali West,9,40000.0,88.9,2.18,budget
+Byculla,2,182500.0,156.5,1.63,premium
+Byculla West,1,220000.0,151.7,0.8,premium
+Chandivali,9,82000.0,94.4,1.98,budget
+Chedda Nagar,1,65000.0,65.0,1.44,budget
+Chembur,95,85000.0,104.2,0.72,mid
+Chunabhatti,1,46000.0,102.2,0.83,mid
+Colaba,4,82500.0,174.25,0.53,premium
+Cuffe Parade,1,275000.0,221.8,0.22,premium
+Cumbala Hill,1,90000.0,180.0,1.23,premium
+Dadar West,3,130000.0,122.7,1.38,mid
+Dahisar East,3,36000.0,88.4,0.69,budget
+Dalal Estate,1,70000.0,127.3,0.22,mid
+Deonar,3,95000.0,136.4,0.96,mid
+Dn Nagar,1,80000.0,123.1,3.09,mid
+Ghatkopar East,7,75000.0,83.3,3.1,budget
+Ghatkopar West,12,119000.0,116.75,4.24,mid
+Girgaon,1,75000.0,129.3,0.59,mid
+Goregaon East,58,75000.0,98.25,5.03,budget
+Goregaon West,76,76000.0,98.19999999999999,5.13,budget
+Govandi,3,56000.0,80.0,1.7,budget
+Gulmohar Road,1,300000.0,222.2,2.63,premium
+Gundavali,1,900000.0,352.9,,premium
+Jacob Circle,1,115000.0,153.3,0.77,premium
+Jogeshwari East,9,65000.0,100.0,1.9,budget
+Jogeshwari West,5,85000.0,100.0,4.3,budget
+Juhu,12,212500.0,190.5,2.68,premium
+Kalbadevi,1,90000.0,105.9,0.19,mid
+Kamala Mill,1,130000.0,200.0,2.78,premium
+Kandivali East,4,71500.0,52.15,4.16,budget
+Kandivali West,3,40000.0,82.9,4.37,budget
+Kanjurmarg East,7,73000.0,92.3,6.29,budget
+Kanjurmarg West,9,97000.0,90.3,6.11,budget
+Kemps Corner,1,90000.0,138.5,0.73,mid
+Khar West,11,140000.0,200.0,1.61,premium
+Kherwadi,1,170000.0,196.3,0.95,premium
+Kumbharwada,1,35000.0,65.8,0.93,budget
+Kurla,1,40000.0,90.9,2.23,budget
+Kurla East,2,60000.0,120.94999999999999,1.43,mid
+Kurla West,2,72500.0,140.2,2.54,mid
+Lokhandwala,1,100000.0,153.8,5.25,premium
+Lower Parel,14,280000.0,181.35000000000002,0.89,premium
+Mahalaxmi,9,350000.0,226.3,0.61,premium
+Mahim,1,35000.0,65.8,0.54,budget
+Mahim West,4,220000.0,197.55,0.42,premium
+Malad East,51,65000.0,92.5,5.48,budget
+Malad West,63,60000.0,94.1,6.03,budget
+Marine Lines,2,110000.0,130.0,0.44,mid
+Marol,7,82000.0,101.7,0.78,mid
+Matunga,1,35000.0,116.7,,mid
+Mindspace,1,190000.0,166.7,,premium
+Mulund East,4,65000.0,74.69999999999999,2.3,budget
+Mulund West,10,62500.0,65.9,3.06,budget
+Nagesh Patilwadi,1,115000.0,95.8,0.58,budget
+Natwar Nagar,1,70000.0,127.3,1.89,mid
+Navin Nagar,2,150000.0,214.3,1.09,premium
+Nepean Sea Road,1,280000.0,215.4,2.63,premium
+Oshiwara,7,120000.0,141.8,4.28,mid
+Pali Hill,1,600000.0,333.3,2.3,premium
+Parel,3,135000.0,157.9,1.7,premium
+Peddar Road,1,375000.0,210.1,1.31,premium
+Powai,46,85000.0,104.0,2.99,mid
+Prabhadevi,10,272500.0,183.3,0.42,premium
+Sakinaka,7,65000.0,108.2,1.18,mid
+Sandesh Nagar,9,100000.0,142.9,1.89,mid
+Santacruz East,10,74000.0,89.65,0.89,budget
+Santacruz West,6,177500.0,159.5,1.06,premium
+Satya Nagar,1,31000.0,67.4,0.61,budget
+Shapur Baug,1,75000.0,89.8,0.25,budget
 Shashtri Nagar,1,251000.0,173.1,4.52,premium
-Versova,2,247500.0,122.19999999999999,4.1,mid
-Vikhroli East,2,123000.0,118.85,4.94,mid
-Vikhroli West,2,75500.0,79.05,4.96,budget
-Vile Parle East,1,112000.0,97.4,0.5,mid
-Vile Parle West,1,140000.0,205.9,1.89,premium
-Vithaldas Nagar,1,145000.0,174.7,1.83,premium
-Wadala,5,90000.0,133.3,2.38,mid
+Shimpoli,1,35000.0,193.4,,premium
+Shivaji Nagar,1,110000.0,107.8,5.68,mid
+Sion,4,52500.0,116.65,0.96,mid
+Tanji Nagar,1,75000.0,115.4,4.35,mid
+Tardeo,3,90000.0,155.2,0.77,premium
+Tilak Nagar,1,85000.0,113.3,1.98,mid
+Versova,3,99000.0,145.5,5.29,premium
+Vikhroli East,9,180000.0,166.7,5.12,premium
+Vikhroli West,9,65000.0,93.8,4.3,budget
+Vile Parle West,1,275000.0,137.5,3.06,mid
+Wadala,14,160000.0,131.15,1.93,mid
+Wadala East,5,90000.0,121.7,2.34,mid
+Worli,20,290250.0,251.8,0.85,premium

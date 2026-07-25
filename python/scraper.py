@@ -10,6 +10,7 @@ Usage:
 
 Supported cities: mumbai, delhi, pune, bangalore, hyderabad, kolkata, chennai
 """
+from __future__ import annotations   # lazy annotations: run on Python 3.9
 
 import csv
 import json

@@ -4,17 +4,17 @@
 
 ## What the model is good at
 
-Typical mid-tier **1–2 BHK** flats in localities with a handful of listings. There it predicts within about **±₹38,000/month** (out-of-fold MAE) and generalises cleanly — the overfitting gap between in-sample R² (0.866) and out-of-fold R² (0.821) is only **0.045**, so it's learning the market, not memorising the rows.
+Typical mid-tier **1–2 BHK** flats in localities with a handful of listings. There it predicts within about **±₹40,000/month** (out-of-fold MAE) and generalises cleanly — the overfitting gap between in-sample R² (0.801) and out-of-fold R² (0.792) is only **0.009**, so it's learning the market, not memorising the rows.
 
 ## How it was evaluated (and why that matters)
 
-Not on a single train/test split. With 119 rows, a 75/25 split leaves a ~30-flat test set whose R² swings with the random seed — a lucky seed flatters the model, an unlucky one buries it. So the headline is **5-fold cross-validation**: **CV R² 0.796 ± 0.099** (folds ranged 0.60–0.87). That ±0.10 spread *is* the honest uncertainty, and the low fold (0.60) is a feature of the report, not something hidden. Every row's prediction in `predictions.csv` is **out-of-fold** — made by a model that never saw that row.
+Not on a single train/test split. A 75/25 split leaves a test set whose R² swings with the random seed — a lucky seed flatters the model, an unlucky one buries it. So the headline is **5-fold cross-validation**: **CV R² 0.790 ± 0.040** (folds ranged 0.74–0.84). That tight ±0.04 spread across folds *is* the honest uncertainty — and it is far tighter than the ±0.10 we saw on the earlier 119-row dataset, which is exactly what 7× more data buys you. Every row's prediction in `predictions.csv` is **out-of-fold** — made by a model that never saw that row.
 
 ## What it is not good at, and why
 
-1. **The luxury tail.** Its worst miss priced a Versova 6BHK at ₹9.2L against a ₹4.0L listing. With almost no other 5–6 BHK flats to learn from, a linear model reaches toward the mean of a tiny, high-variance group and overshoots. **Don't auto-price 4+ BHK.**
-2. **Thin localities.** Some of the 53 localities have 1–2 listings, so their median-based features rest on almost no evidence. The `n_listings >= 2` filter in the SQL ranking is a guard, but the model itself still sees them.
-3. **Small dataset overall.** 119 rows, and **28 of 53 localities have only a single listing** — for those, `tier` and `median_rent_per_sqft` rest on one flat each (flagged as `solo_locality` in `predictions.csv`). Cross-validation controls the *reporting* noise, but it can't create signal that isn't there. This is the single biggest limitation.
+1. **The luxury tail.** Its worst miss priced a lone Santacruz West 8BHK at ~₹94L against an ₹8.0L listing — the only 8BHK in the data, so a linear-on-log model has nothing to anchor to and extrapolates to an absurd figure. This one row is why RMSE (₹299k) sits so far above MAE (₹40k). **Don't auto-price 5+ BHK.**
+2. **Thin localities.** Many of the 95 localities have 1–2 listings, so their median-based features rest on almost no evidence. The `n_listings >= 2` filter in the SQL ranking is a guard, but the model itself still sees them.
+3. **Dataset still uneven.** 882 rows is a real improvement over the first 119, but **38 of 95 localities still have only a single listing** — for those, `tier` and `median_rent_per_sqft` rest on one flat each (flagged as `solo_locality` in `predictions.csv`). Cross-validation controls the *reporting* noise, but it can't create signal that isn't there. This is the single biggest remaining limitation.
 
 ## Known data-quality caveats (carried forward from cleaning)
 
@@ -28,7 +28,7 @@ Not on a single train/test split. With 119 rows, a 75/25 split leaves a ~30-flat
 
 ## Single source, single city
 
-All 119 listings come from **Square Yards**, for **Mumbai only**. Any source has selection bias (which flats get listed, how fields are filled). No cross-source validation was possible. Findings should be read as "what Square Yards' Mumbai listings say," not "the Mumbai rental market, settled."
+All 882 listings come from **Square Yards**, for **Mumbai only**. Any source has selection bias (which flats get listed, how fields are filled). No cross-source validation was possible. Findings should be read as "what Square Yards' Mumbai listings say," not "the Mumbai rental market, settled."
 
 ## What data would fix it (in priority order)
 

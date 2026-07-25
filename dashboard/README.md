@@ -20,11 +20,11 @@ Relate `listings_clean` and `predictions` to `localities` on **locality** (left 
 
 3. **Predicted vs actual (scatter) — the trust chart.** `predictions`: `actual_rent` (x) vs `predicted_rent` (y). Add a 45° reference line (Analytics → reference line, or a calculated `[actual_rent]` diagonal). Points on the line = model agrees; far from it = mispriced or model breaks. Colour by `tier`, size by `abs_pct_error`. The luxury-tail outliers pop visually here.
 
-4. **Metro premium (bar, optional).** Two-bar summary: avg `rent_per_sqft` for near-metro (≤1.5 km) vs far — mirrors the SQL CTE result (₹141.6 vs ₹130.4).
+4. **Metro premium (bar, optional).** Two-bar summary: avg `rent_per_sqft` for near-metro (≤1.5 km) vs far — mirrors the SQL CTE result (₹137.0 vs ₹130.8).
 
 ## Dashboard layout
 
-- Top strip: 2–3 BAN (big-number) tiles — CV R² **0.80**, typical error **±₹38k**, localities covered **53**.
+- Top strip: 2–3 BAN (big-number) tiles — CV R² **0.79**, typical error **±₹40k**, localities covered **95**.
 - Left: locality ranking (sheet 1). Right: predicted-vs-actual (sheet 3).
 - Bottom: tier box plot (sheet 2) + metro bars (sheet 4).
 - Add a **tier** filter and a **BHK** filter, applied dashboard-wide, so the pricing team can slice to their question.
