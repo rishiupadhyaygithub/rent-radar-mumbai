@@ -6,7 +6,7 @@ reasoning is auditable (rubric: "every cleaning decision documented, with reason
 
 Inputs:
     data/raw/mumbai_listings_raw.csv        raw scraper output (messy)
-    public/data/metro_stations_mumbai.json  station coords (Overpass)
+    data/geo/metro_stations_mumbai.json     station coords (Overpass)
 Outputs:
     data/clean/listings_clean.csv           one row per listing, cleaned
     data/clean/localities.csv               one row per locality (the JOIN partner)

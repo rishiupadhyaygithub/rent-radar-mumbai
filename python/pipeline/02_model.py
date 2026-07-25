@@ -3,7 +3,7 @@ Stage 3 - EDA + ONE linear regression to predict monthly rent.
 
 Rubric guardrails honoured:
 - EXACTLY ONE model (linear regression). No ensembles, no second model.
-- Train/test split with an explicit overfitting check (train vs test R2).
+- Evaluated by 5-fold cross-validation with an explicit overfitting check (in-sample vs out-of-fold R2).
 - Error reported in rupees (MAE + RMSE), the unit a renter understands.
 - Honest failure analysis: where the model breaks, written to docs/model_report.md.
 
@@ -110,10 +110,11 @@ def main() -> None:
     model = Pipeline([("pre", pre), ("lr", LinearRegression())])
 
     # ---- Honest evaluation: 5-fold cross-validation ----
-    # 119 rows is small, so a single 75/25 split is luck-dependent — the score
-    # swings with the random seed. K-fold averages over 5 splits, and
-    # out-of-fold (OOF) predictions give EVERY row a prediction from a model
-    # that never saw it, so the reported error is stable, not a lucky draw.
+    # A single 75/25 split reports one held-out score that swings with the
+    # random seed. K-fold averages over 5 splits, and out-of-fold (OOF)
+    # predictions give EVERY row a prediction from a model that never saw it,
+    # so the reported error is a stable estimate with an honest uncertainty
+    # band (the fold spread), not a lucky single draw.
     kf = KFold(n_splits=5, shuffle=True, random_state=42)
     r2_folds = cross_val_score(model, X, y, cv=kf, scoring="r2")
     oof_log = cross_val_predict(model, X, y, cv=kf)      # out-of-fold, log-rupees
@@ -144,9 +145,10 @@ def main() -> None:
     note(f"- CV MAE: **Rs {mae:,.0f}/month** (out-of-fold); per-fold "
          f"**Rs {fold_mae.mean():,.0f} +/- {fold_mae.std():,.0f}**.")
     note(f"- CV RMSE: **Rs {rmse:,.0f}/month** (penalises big misses).\n")
-    note("Why CV over a single split: with 119 rows one 75/25 split leaves a "
-         "~30-flat test set whose R2 swings with the seed. 5-fold reports the "
-         "average over five held-out sets, so this number is trustworthy.\n")
+    note("Why CV over a single split: one 75/25 split reports a single held-out "
+         "R2 that swings with the seed. 5-fold reports the average over five "
+         "held-out sets plus the spread across them, so the headline number "
+         "carries its own honest uncertainty band.\n")
 
     # ---- Which features carry the price, and by how much ----
     # Numeric features are standardized, so each coefficient is the effect of a
@@ -217,11 +219,13 @@ def main() -> None:
          "tier and median-rent features rest on one flat each (flagged as "
          "solo_locality in predictions.csv).\n"
          "- Single source (Square Yards); one city (Mumbai) by design.\n"
-         "- median_rent_per_sqft is locality-derived, so it leaks locality "
-         "strength — kept because it mirrors how a human prices a flat, and "
-         "disclosed rather than hidden.\n"
-         f"- Evaluated by 5-fold CV (not a single split) because {len(X)} rows "
-         "make any one split unreliable.\n")
+         f"- median_rent_per_sqft is locality-derived, so it leaks some locality "
+         f"strength; for the {n_solo} single-listing localities it equals that "
+         "row's own rent/sqft — a hard leak that flatters out-of-fold R2 on "
+         "those rows. Kept because it mirrors how a human prices a flat, and "
+         "disclosed not hidden; leave-one-out locality medians are the clean fix.\n"
+         "- Evaluated by 5-fold CV (not a single split) so every row gets an "
+         "out-of-fold prediction and the headline R2 carries a fold-spread band.\n")
 
     with open(MODEL_OUT, "wb") as f:
         pickle.dump(model, f)

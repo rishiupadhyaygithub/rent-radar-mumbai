@@ -19,7 +19,7 @@ The two tables are loaded into SQLite and **joined** on locality, so every listi
 
 1. **SQL first** (`sql/`) — schema, load, and analysis. Before any Python, the queries answer the first questions: rent by tier and BHK (JOIN + GROUP BY), a locality ranking by rent-per-sqft with each area's gap to the city average (window functions), and a near-metro vs far-metro comparison (CTE).
 2. **Clean and explore** (`python/pipeline/01_clean.py`) — every cleaning decision is logged with its reasoning to `docs/data_quality_note.md`: dropping a 100%-null deposit column, removing sale prices that leaked in as ₹60L "rent", inferring missing BHK from floor area, flagging imputed floors, and keeping genuine luxury outliers rather than deleting them.
-3. **Model once** (`python/pipeline/02_model.py`) — **one** linear regression predicting `log(rent)`, on a proper train/test split, with the error reported back in rupees.
+3. **Model once** (`python/pipeline/02_model.py`) — **one** linear regression predicting `log(rent)`, evaluated by 5-fold cross-validation, with the error reported back in rupees.
 
 ## The findings
 

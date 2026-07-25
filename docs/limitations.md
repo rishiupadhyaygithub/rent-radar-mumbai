@@ -24,7 +24,7 @@ Not on a single train/test split. A 75/25 split leaves a test set whose R² swin
 
 ## The one leak I kept on purpose
 
-`median_rent_per_sqft` is derived from the same localities it helps predict, so it leaks a little locality strength into the model. I kept it because (a) it's a *locality-level* aggregate, not the per-listing rent-per-sqft that would leak the exact answer (see `ai_appendix.md`), and (b) it mirrors how a human actually prices a flat — "what does this neighbourhood go for?" It is disclosed here rather than hidden, and it inflates R² modestly. Removing it is the honest sensitivity check a reviewer might ask for.
+`median_rent_per_sqft` is derived from the same localities it helps predict, so it leaks a little locality strength into the model. I kept it because (a) it's a *locality-level* aggregate, not the per-listing rent-per-sqft that would leak the exact answer (see `ai_appendix.md`), and (b) it mirrors how a human actually prices a flat — "what does this neighbourhood go for?" It is disclosed here rather than hidden, and it inflates R² modestly — sharpest for the 38 single-listing localities, where the locality median simply *is* that one flat's rent/sqft (a hard leak on those rows). Removing it, or switching to leave-one-out locality medians, is the honest sensitivity check a reviewer might ask for.
 
 ## Single source, single city
 

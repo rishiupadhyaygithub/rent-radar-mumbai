@@ -14,7 +14,7 @@ Relate `listings_clean` and `predictions` to `localities` on **locality** (left 
 
 ## Four sheets → one dashboard
 
-1. **Locality ranking (bar).** `localities`: bar of `median_rent_per_sqft` by `locality`, sorted descending, coloured by `tier`. Filter `n_listings >= 2`. This is the "which areas are expensive" answer — Bandra East on top.
+1. **Locality ranking (bar).** `localities`: bar of `median_rent_per_sqft` by `locality`, sorted descending, coloured by `tier`. Filter `n_listings >= 2`. This is the "which areas are expensive" answer — Worli on top (₹252/sqft).
 
 2. **Rent-per-sqft by tier (box).** `listings_clean`: box plot of `rent_per_sqft` split by `tier` (budget/mid/premium). Shows the ~3× premium spread in one glance.
 

@@ -15,7 +15,7 @@ Target = log1p(rent); errors reported back in rupees via expm1.
 - CV MAE: **Rs 40,049/month** (out-of-fold); per-fold **Rs 40,016 +/- 24,305**.
 - CV RMSE: **Rs 299,455/month** (penalises big misses).
 
-Why CV over a single split: with 119 rows one 75/25 split leaves a ~30-flat test set whose R2 swings with the seed. 5-fold reports the average over five held-out sets, so this number is trustworthy.
+Why CV over a single split: one 75/25 split reports a single held-out R2 that swings with the seed. 5-fold reports the average over five held-out sets plus the spread across them, so the headline number carries its own honest uncertainty band.
 
 ## Which features carry the price
 
@@ -51,6 +51,6 @@ Worst 5 out-of-fold predictions:
 ## Limits
 - Only 882 listings across 95 localities; **38 localities have a single listing**, so their tier and median-rent features rest on one flat each (flagged as solo_locality in predictions.csv).
 - Single source (Square Yards); one city (Mumbai) by design.
-- median_rent_per_sqft is locality-derived, so it leaks locality strength — kept because it mirrors how a human prices a flat, and disclosed rather than hidden.
-- Evaluated by 5-fold CV (not a single split) because 882 rows make any one split unreliable.
+- median_rent_per_sqft is locality-derived, so it leaks some locality strength; for the 38 single-listing localities it equals that row's own rent/sqft — a hard leak that flatters out-of-fold R2 on those rows. Kept because it mirrors how a human prices a flat, and disclosed not hidden; leave-one-out locality medians are the clean fix.
+- Evaluated by 5-fold CV (not a single split) so every row gets an out-of-fold prediction and the headline R2 carries a fold-spread band.
 
