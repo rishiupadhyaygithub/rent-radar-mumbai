@@ -16,3 +16,4 @@ rent_radar.db
 .DS_Store
 .serena/
 node_modules/
+${HOME}/
