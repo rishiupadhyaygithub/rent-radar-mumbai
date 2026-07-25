@@ -17,6 +17,23 @@ Target = log1p(rent); errors reported back in rupees via expm1.
 
 Why CV over a single split: with 119 rows one 75/25 split leaves a ~30-flat test set whose R2 swings with the seed. 5-fold reports the average over five held-out sets, so this number is trustworthy.
 
+## Which features carry the price
+
+Coefficients of the one linear model. Numeric features are standardized, so each row is the effect of a **+1 standard-deviation** move; the target is log(rent), so **effect_on_rent** is how much predicted rent changes.
+
+| feature                        |   coef_log | effect_on_rent   |
+|:-------------------------------|-----------:|:-----------------|
+| cat__furnishing_unknown        |     -0.487 | -39%             |
+| num__area_sqft                 |      0.382 | +47%             |
+| num__median_rent_per_sqft      |      0.242 | +27%             |
+| cat__furnishing_furnished      |      0.203 | +22%             |
+| cat__furnishing_semi-furnished |      0.159 | +17%             |
+| cat__furnishing_unfurnished    |      0.126 | +13%             |
+| num__bhk                       |      0.106 | +11%             |
+| cat__tier_budget               |     -0.073 | -7%              |
+
+**In plain words:** floor **area** is the single biggest genuine lever (+1 SD ≈ +47% rent), followed by **locality strength** (median_rent_per_sqft, +27%). BHK and tier add on top; metro distance moves rent only at the margin. The large negative on `furnishing_unknown` is a *missingness* signal, not a real driver — listings that hide their furnishing status tend to be cheaper, so the flag itself predicts lower rent.
+
 ## Where the model breaks
 
 Worst 5 out-of-fold predictions:

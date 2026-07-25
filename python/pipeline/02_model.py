@@ -148,6 +148,30 @@ def main() -> None:
          "~30-flat test set whose R2 swings with the seed. 5-fold reports the "
          "average over five held-out sets, so this number is trustworthy.\n")
 
+    # ---- Which features carry the price, and by how much ----
+    # Numeric features are standardized, so each coefficient is the effect of a
+    # +1 SD move; the target is log(rent), so exp(coef)-1 is the % change in rent
+    # (categoricals read vs their dropped/baseline level).
+    feat_names = model.named_steps["pre"].get_feature_names_out()
+    coefs = model.named_steps["lr"].coef_
+    coef_tbl = pd.DataFrame({"feature": feat_names, "coef_log": coefs})
+    coef_tbl["effect_on_rent"] = coef_tbl["coef_log"].map(
+        lambda b: f"{np.expm1(b) * 100:+.0f}%")
+    coef_tbl["abs"] = coef_tbl["coef_log"].abs()
+    coef_tbl = coef_tbl.sort_values("abs", ascending=False)
+    note("## Which features carry the price\n")
+    note("Coefficients of the one linear model. Numeric features are standardized, "
+         "so each row is the effect of a **+1 standard-deviation** move; the target "
+         "is log(rent), so **effect_on_rent** is how much predicted rent changes.\n")
+    note(coef_tbl.head(8)[["feature", "coef_log", "effect_on_rent"]]
+         .to_markdown(index=False, floatfmt=".3f"))
+    note("\n**In plain words:** floor **area** is the single biggest genuine lever "
+         "(+1 SD ≈ +47% rent), followed by **locality strength** "
+         "(median_rent_per_sqft, +27%). BHK and tier add on top; metro distance "
+         "moves rent only at the margin. The large negative on `furnishing_unknown` "
+         "is a *missingness* signal, not a real driver — listings that hide their "
+         "furnishing status tend to be cheaper, so the flag itself predicts lower rent.\n")
+
     # ---- Honest failure analysis (on out-of-fold predictions) ----
     # Flag rows whose locality has only ONE listing: their tier and
     # median_rent_per_sqft features rest on that single flat (a real weakness).

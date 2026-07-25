@@ -39,15 +39,21 @@ More listings per locality (38 of 95 localities still have just one), a second s
 
 ```
 sql/         01_schema · 02_load · 03_analysis      (run in order)
+notebooks/   rent_radar_analysis.ipynb              (narrative: cleaning + EDA + model)
 python/
-  pipeline/  01_clean.py → 02_model.py              (the pipeline)
+  pipeline/  01_clean.py → 02_model.py              (reproducible pipeline)
   scraper.py, fetch_metro.py, fetch_wards.py        (data provenance)
 data/        raw/ · clean/ · geo/
 docs/        data_quality_note · model_report · limitations · ai_appendix · figures/
 memo/        pricing_memo.md                        (one-page decision memo)
 models/      rent_model.pkl
-dashboard/   Tableau workbook + guidance
+dashboard/   Tableau build guide + predictions.csv
 ```
+
+The **notebook** (`notebooks/rent_radar_analysis.ipynb`) is the readable story —
+every cleaning decision documented as it's made, EDA, the model, coefficients, and
+failure analysis. The **`python/pipeline/` scripts** are the reproducible version
+that regenerates every artifact below.
 
 ## Reproduce it
 
@@ -58,4 +64,7 @@ sqlite3 rent_radar.db < sql/01_schema.sql
 sqlite3 rent_radar.db < sql/02_load.sql
 sqlite3 rent_radar.db < sql/03_analysis.sql
 python3 python/pipeline/02_model.py
+
+# read the narrative notebook
+jupyter notebook notebooks/rent_radar_analysis.ipynb
 ```
