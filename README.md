@@ -21,6 +21,21 @@ The two tables are loaded into SQLite and **joined** on locality, so every listi
 2. **Clean and explore** (`python/pipeline/01_clean.py`) — every cleaning decision is logged with its reasoning to `docs/data_quality_note.md`: dropping a 100%-null deposit column, removing sale prices that leaked in as ₹60L "rent", inferring missing BHK from floor area, flagging imputed floors, and keeping genuine luxury outliers rather than deleting them.
 3. **Model once** (`python/pipeline/02_model.py`) — **one** linear regression predicting `log(rent)`, evaluated by 5-fold cross-validation, with the error reported back in rupees.
 
+## Tech stack
+
+One language family, **one model**, standard tools — kept deliberately minimal (depth over tool sprawl).
+
+| Layer | Tools |
+|---|---|
+| Language | Python 3 · SQL |
+| Data wrangling | pandas · numpy |
+| Database | SQLite — two related tables joined on `locality`; JOIN + GROUP BY, window functions, and a CTE (`sql/`) |
+| Modelling | scikit-learn — a **single** `LinearRegression` in a `Pipeline` (`StandardScaler` for numerics + `OneHotEncoder` for categoricals), evaluated by 5-fold cross-validation |
+| Visualisation | seaborn · matplotlib (EDA figures) · Tableau Public (dashboard) |
+| Narrative | Jupyter |
+
+**One model, on purpose.** No ensemble, no gradient boosting, no second algorithm bolted on for a benchmark — a linear regression on `log(rent)` stays interpretable (every coefficient is a rupee lever a pricing team can read straight off), and being honest about where that one model breaks is the point of the write-up.
+
 ## The findings
 
 - **Locality is the price.** Premium localities rent for roughly **2× per square foot** what budget localities do (₹185/sqft vs ₹93/sqft for a typical 2BHK). **Worli** tops the city at ₹252/sqft — about **₹128/sqft above** the city average.
