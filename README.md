@@ -40,11 +40,11 @@ One language family, **one model**, standard tools — kept deliberately minimal
 
 - **Locality is the price.** Premium localities rent for roughly **2× per square foot** what budget localities do (₹185/sqft vs ₹93/sqft for a typical 2BHK). **Worli** tops the city at ₹252/sqft — about **₹128/sqft above** the city average.
 - **Metro access carries a real but modest premium:** localities within 1.5 km of a metro average **₹137.0/sqft** vs **₹130.8/sqft** for those farther out — a ~5% uplift, not the headline driver.
-- **The model explains most of the variation it sees.** Evaluated by **5-fold cross-validation** (not a single lucky split): CV R² **0.772 ± 0.047** (folds tight, 0.71–0.83), out-of-fold R² **0.775**. In-sample R² is 0.784, so the overfitting gap is a tiny **0.009** — it generalises cleanly. Typical miss is **₹44,000/month** (out-of-fold MAE); RMSE is ₹406,000, dragged up by a handful of luxury-tail misses.
+- **The model explains most of the variation it sees.** Evaluated by **5-fold cross-validation** (not a single lucky split): CV R² **0.807 ± 0.042** (folds tight, 0.73–0.86), out-of-fold R² **0.812**. In-sample R² is 0.818, so the overfitting gap is a tiny **0.006** — it generalises cleanly. Typical miss is **₹28,700/month** (out-of-fold MAE); RMSE is **₹57,000** — now close to the MAE, because area is modelled on a log scale so no single flat can blow the error up.
 
 ## Where it breaks (the honest part)
 
-The model is reliable for typical mid-tier 1–2 BHK flats and **unreliable at the luxury tail and in thin localities**. Its worst prediction: an 8BHK in Santacruz West listed at ₹8,00,000 that the model priced at ~₹1.27 crore (₹12.7 million) — the lone 8BHK in the data, so the model had no comparable to learn from and extrapolated wildly. Of the 95 localities, **38 have only a single listing**, flagged as `solo_locality` in `predictions.csv`. Full failure analysis in `docs/model_report.md`; honest limits in `docs/limitations.md`.
+The model is reliable for typical 1–3 BHK flats and **weakest on rare large flats and thin localities**. Modelling area on a **log scale** (a constant-elasticity term) killed the old blow-up: the lone 8BHK in Santacruz West — once priced at an absurd ~₹1.27 crore — now lands near ₹12.5 lakh against its ₹8,00,000 listing, and the worst miss across all 882 rows is a ₹4.7-lakh over/under-shoot on a rare 6BHK, not an order-of-magnitude error. That single fix cut RMSE from ₹406,000 to ₹57,000. Of the 95 localities, **38 have only a single listing**, flagged as `solo_locality` in `predictions.csv`. Full failure analysis in `docs/model_report.md`; honest limits in `docs/limitations.md`.
 
 ## What would make it better
 

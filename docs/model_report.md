@@ -4,16 +4,16 @@ Listings after JOIN: **882** rows.
 
 EDA charts written to docs/figures/ (4 plots).
 
-Model rows: **882**. Features: ['area_sqft', 'bhk', 'floor', 'metro_km', 'median_rps_loo', 'furnishing', 'tier'].
+Model rows: **882**. Features: ['log_area', 'bhk', 'floor', 'metro_km', 'median_rps_loo', 'furnishing', 'tier'].
 Target = log1p(rent); errors reported back in rupees via expm1.
 
 ## Results (5-fold cross-validation)
 
-- CV R2: **0.772 +/- 0.047** across folds (0.72, 0.80, 0.80, 0.71, 0.83).
-- Out-of-fold R2 (all 882 rows): **0.775**.
-- In-sample R2 (fit on all data): **0.784** -> overfitting gap **0.009** (small = generalises, not memorising).
-- CV MAE: **Rs 44,222/month** (out-of-fold); per-fold **Rs 44,179 +/- 30,140**.
-- CV RMSE: **Rs 406,187/month** (penalises big misses).
+- CV R2: **0.807 +/- 0.042** across folds (0.81, 0.82, 0.82, 0.73, 0.86).
+- Out-of-fold R2 (all 882 rows): **0.812**.
+- In-sample R2 (fit on all data): **0.818** -> overfitting gap **0.006** (small = generalises, not memorising).
+- CV MAE: **Rs 28,676/month** (out-of-fold); per-fold **Rs 28,670 +/- 6,119**.
+- CV RMSE: **Rs 56,874/month** (penalises big misses).
 
 Why CV over a single split: one 75/25 split reports a single held-out R2 that swings with the seed. 5-fold reports the average over five held-out sets plus the spread across them, so the headline number carries its own honest uncertainty band.
 
@@ -23,30 +23,30 @@ Coefficients of the one linear model. Numeric features are standardized, so each
 
 | feature                        |   coef_log | effect_on_rent   |
 |:-------------------------------|-----------:|:-----------------|
-| cat__furnishing_unknown        |     -0.506 | -40%             |
-| num__area_sqft                 |      0.386 | +47%             |
-| cat__tier_premium              |      0.253 | +29%             |
-| cat__tier_budget               |     -0.229 | -20%             |
-| cat__furnishing_furnished      |      0.211 | +23%             |
-| cat__furnishing_semi-furnished |      0.154 | +17%             |
-| cat__furnishing_unfurnished    |      0.141 | +15%             |
-| num__bhk                       |      0.115 | +12%             |
+| num__log_area                  |      0.442 | +56%             |
+| cat__tier_premium              |      0.273 | +31%             |
+| cat__tier_budget               |     -0.232 | -21%             |
+| num__median_rps_loo            |      0.094 | +10%             |
+| num__bhk                       |      0.056 | +6%              |
+| cat__tier_mid                  |     -0.041 | -4%              |
+| cat__furnishing_furnished      |      0.041 | +4%              |
+| cat__furnishing_semi-furnished |     -0.037 | -4%              |
 
-**In plain words:** floor **area** is the single biggest genuine lever, followed by **locality strength** (median_rps_loo, the leave-one-out neighbourhood rent/sqft). BHK and tier add on top; metro distance moves rent only at the margin. The negative on `furnishing_unknown` is a *missingness* signal, not a real driver — listings that hide furnishing tend to be cheaper, so the flag itself predicts lower rent. (Exact per-feature effects are the table above, regenerated each run.)
+**In plain words:** **area** is the single biggest genuine lever (now entered as **log-area**, so its effect reads as an elasticity — a *percent* change in size maps to a percent change in rent), then **locality tier** (premium vs budget). With the continuous locality median now computed leave-one-out, most of the neighbourhood signal loads onto the collinear tier dummies rather than median_rps_loo. BHK adds on top; metro distance moves rent only at the margin. The negative on `furnishing_unknown` is a *missingness* signal, not a real driver — listings that hide furnishing tend to be cheaper. (Exact per-feature effects are the table above, regenerated each run.)
 
 ## Where the model breaks
 
 Worst 5 out-of-fold predictions:
 
-| locality       |   bhk |    true |       pred |    abs_err | solo_loc   |
-|:---------------|------:|--------:|-----------:|-----------:|:-----------|
-| Santacruz West |     8 | 800,000 | 12,685,055 | 11,885,055 |            |
-| Andheri West   |     6 | 900,000 |  1,931,749 |  1,031,749 |            |
-| Malad West     |     6 | 700,000 |  1,396,082 |    696,082 |            |
-| Lower Parel    |     3 | 400,000 |    777,786 |    377,786 |            |
-| Pali Hill      |     4 | 600,000 |    258,426 |    341,574 | yes        |
+| locality       |   bhk |      true |      pred |   abs_err | solo_loc   |
+|:---------------|------:|----------:|----------:|----------:|:-----------|
+| Gundavali      |     6 |   900,000 |   434,618 |   465,382 | yes        |
+| Santacruz West |     8 |   800,000 | 1,247,582 |   447,582 |            |
+| Worli          |     5 | 1,000,000 |   622,584 |   377,416 |            |
+| Andheri West   |     6 |   900,000 |   557,410 |   342,590 |            |
+| Pali Hill      |     4 |   600,000 |   266,189 |   333,811 | yes        |
 
-**Failure pattern:** biggest misses are high-end premium flats and thin localities — the model has little signal there and pulls toward the city mean. It is honest for typical mid-tier 1-2 BHK rent and unreliable at the luxury tail.
+**Failure pattern:** with area entered as log-area the luxury tail no longer explodes — the worst miss is now a plausible over/under-shoot, not the order-of-magnitude blow-up the raw-area model produced. Residual misses are rare large flats and thin single-listing localities, where the model has little comparable signal and pulls toward the tier mean. It is reliable for typical 1-3 BHK rent; treat 5+ BHK and solo localities as advisory, not automatic.
 
 ## Limits
 - Only 882 listings across 95 localities; **38 localities have a single listing**, so their tier and median-rent features rest on one flat each (flagged as solo_locality in predictions.csv).

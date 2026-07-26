@@ -105,9 +105,18 @@ def main() -> None:
     # ---- Feature engineering ----
     # Predict log(rent): rent is right-skewed and multiplicative (a premium
     # locality scales rent, not adds a flat amount). Log makes errors relative.
-    feats_num = ["area_sqft", "bhk", "floor", "metro_km", "median_rps_loo"]
-    feats_cat = ["furnishing", "tier"]
+    #
+    # Area enters as log(area), not raw sqft, making it a log-log (constant-
+    # elasticity) term: "+1% area -> +k% rent". Two reasons. (1) Rent-vs-size is a
+    # power law, so log-log fits the body of the market better. (2) It is bounded
+    # on extrapolation: a RAW-area term under a log target predicts exp(b*area),
+    # which explodes for a rare huge flat -- the raw-area model once priced the
+    # lone 8BHK at ~Rs 1.27 crore. log(area) removes that failure mode outright
+    # (RMSE Rs 406k -> Rs 57k, worst miss Rs 11.9M -> Rs 0.5M) with no new model.
     model_df = df.dropna(subset=["price", "area_sqft"]).copy()
+    model_df["log_area"] = np.log1p(model_df["area_sqft"])
+    feats_num = ["log_area", "bhk", "floor", "metro_km", "median_rps_loo"]
+    feats_cat = ["furnishing", "tier"]
     model_df[feats_num] = model_df[feats_num].fillna(model_df[feats_num].median())
     model_df[feats_cat] = model_df[feats_cat].fillna("unknown")
 
@@ -181,8 +190,10 @@ def main() -> None:
          "is log(rent), so **effect_on_rent** is how much predicted rent changes.\n")
     note(coef_tbl.head(8)[["feature", "coef_log", "effect_on_rent"]]
          .to_markdown(index=False, floatfmt=".3f"))
-    note("\n**In plain words:** floor **area** is the single biggest genuine lever, "
-         "then **locality tier** (premium vs budget). With the continuous locality "
+    note("\n**In plain words:** **area** is the single biggest genuine lever (now "
+         "entered as **log-area**, so its effect reads as an elasticity — a *percent* "
+         "change in size maps to a percent change in rent), then **locality tier** "
+         "(premium vs budget). With the continuous locality "
          "median now computed leave-one-out, most of the neighbourhood signal loads "
          "onto the collinear tier dummies rather than median_rps_loo. BHK adds on "
          "top; metro distance moves rent only at the margin. The negative on "
@@ -207,10 +218,13 @@ def main() -> None:
     note("## Where the model breaks\n")
     note("Worst 5 out-of-fold predictions:\n")
     note(worst.to_markdown(index=False, floatfmt=",.0f"))
-    note("\n**Failure pattern:** biggest misses are high-end premium flats and "
-         "thin localities — the model has little signal there and pulls toward "
-         "the city mean. It is honest for typical mid-tier 1-2 BHK rent and "
-         "unreliable at the luxury tail.\n")
+    note("\n**Failure pattern:** with area entered as log-area the luxury tail no "
+         "longer explodes — the worst miss is now a plausible over/under-shoot, not "
+         "the order-of-magnitude blow-up the raw-area model produced. Residual "
+         "misses are rare large flats and thin single-listing localities, where the "
+         "model has little comparable signal and pulls toward the tier mean. It is "
+         "reliable for typical 1-3 BHK rent; treat 5+ BHK and solo localities as "
+         "advisory, not automatic.\n")
 
     # ---- Export OOF predictions for the dashboard (predicted-vs-actual) ----
     preds = pd.DataFrame({
