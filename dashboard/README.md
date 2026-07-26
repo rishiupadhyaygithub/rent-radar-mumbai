@@ -2,6 +2,21 @@
 
 The page answers one question at a glance: **"What should this flat cost — and where do we trust the model?"** It is built from four CSVs the pipeline writes (`python/pipeline/02_model.py`). No live connection, no database — import the text files and go.
 
+## Ready-made Excel version (no build needed)
+
+If you don't want to click a dashboard together, one is already generated:
+**`dashboard/rent_radar_dashboard.xlsx`** — open it in Excel and it's done. It has a
+**Dashboard** sheet (KPI tiles + locality-ranking bar + price-driver bar + predicted-vs-actual
+scatter with a 45° line) plus `Ranking`, `Drivers`, `PredVsActual`, and `AllListings` data sheets.
+Regenerate any time with:
+
+```bash
+python python/pipeline/02_model.py        # refresh the datasets
+python python/pipeline/03_build_dashboard.py   # rebuild the .xlsx
+```
+
+The Power BI guide below is the higher-polish option (interactive slicers + a map). Use whichever you present.
+
 > **Rebuild note.** The first cut (`DASHBOARD PROJECT.pbix`) was a descriptive view of the *raw* listings — count, average area, furnishing mix, price-vs-area — imported from `data/raw/mumbai_listings_raw.csv`. That answers *"what do the listings look like?"*, not the brief's *"what should this flat cost?"*. Rebuild it on the four files below so it shows **locality rankings, price drivers, and predicted-vs-actual** — the three things Part 4 asks for. Save the rebuilt file into `dashboard/` so the deliverable lives in the repo.
 
 ## Data sources (Home → Get data → Text/CSV, add all four)
