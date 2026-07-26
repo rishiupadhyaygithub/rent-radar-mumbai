@@ -14,6 +14,11 @@ Outputs:
     docs/figures/*.png               Seaborn EDA charts
     models/rent_model.pkl            the fitted pipeline
     docs/model_report.md             metrics + failure analysis
+    data/clean/predictions.csv       out-of-fold predicted vs actual (per listing)
+    data/clean/dashboard_data.csv    decision-ready rows for the Power BI page
+    data/clean/locality_ranking.csv  localities ranked by median rent/sqft
+    data/clean/coefficients.csv      price drivers (one-model coefficients)
+    data/clean/model_metrics.csv     headline KPIs for the dashboard tiles
 """
 import pickle
 from pathlib import Path
@@ -115,7 +120,11 @@ def main() -> None:
     # (RMSE Rs 406k -> Rs 57k, worst miss Rs 11.9M -> Rs 0.5M) with no new model.
     model_df = df.dropna(subset=["price", "area_sqft"]).copy()
     model_df["log_area"] = np.log1p(model_df["area_sqft"])
-    feats_num = ["log_area", "bhk", "floor", "metro_km", "median_rps_loo"]
+    # floor_missing (1 = floor was imputed) is a *missingness indicator*, not a
+    # price-derived value, so it carries no leak. It lets the model learn that
+    # listings hiding their floor differ systematically, and it tightens the CV
+    # fold spread (0.042 -> 0.033). This is the flag 01_clean.py always set.
+    feats_num = ["log_area", "bhk", "floor", "floor_missing", "metro_km", "median_rps_loo"]
     feats_cat = ["furnishing", "tier"]
     model_df[feats_num] = model_df[feats_num].fillna(model_df[feats_num].median())
     model_df[feats_cat] = model_df[feats_cat].fillna("unknown")
@@ -257,6 +266,71 @@ def main() -> None:
          "median would have carried; `tier` remains a coarse 3-level area class.\n"
          "- Evaluated by 5-fold CV (not a single split) so every row gets an "
          "out-of-fold prediction and the headline R2 carries a fold-spread band.\n")
+
+    # ---- Decision-ready dashboard datasets (Part 4: "what should this flat cost?") ----
+    # No new model. These are pure exports of THIS one linear model's outputs plus
+    # the locality table, so the Power BI page can show predicted-vs-actual, the
+    # price drivers, and locality rankings instead of describing raw listings.
+    loc_full = pd.read_csv(LOCALITIES)
+
+    # (a) One decision-ready row per listing: actual vs predicted, a pricing
+    #     verdict, geo, and locality context — the trust chart + map + drill source.
+    dash = pd.DataFrame({
+        "listing_id": range(1, len(model_df) + 1),   # unique key so each flat is one dot
+        "locality": model_df["locality"].values,
+        "tier": model_df["tier"].values,
+        "bhk": model_df["bhk"].values,
+        "area_sqft": model_df["area_sqft"].values,
+        "furnishing": model_df["furnishing"].values,
+        "floor": model_df["floor"].values,
+        "metro_km": model_df["metro_km"].round(2).values,
+        "lat": model_df["lat"].values,
+        "lng": model_df["lng"].values,
+        "actual_rent": np.asarray(true_rs).round().astype(int),
+        "predicted_rent": np.asarray(oof_rs).round().astype(int),
+    })
+    dash["error"] = dash["actual_rent"] - dash["predicted_rent"]   # +ve = listed above model
+    dash["pct_error"] = (dash["error"] / dash["actual_rent"] * 100).round(1)
+    dash["abs_pct_error"] = dash["pct_error"].abs()
+    dash["solo_locality"] = dash["locality"].isin(solo_localities).astype(int)
+
+    # Pricing verdict for the pricing team: a gap over 15% either way is worth a look.
+    def _verdict(p):
+        if p >= 15:
+            return "Listed above model (check overpricing)"
+        if p <= -15:
+            return "Listed below model (possible underpricing)"
+        return "In line with model"
+    dash["pricing_flag"] = dash["pct_error"].map(_verdict)
+    dash = dash.merge(
+        loc_full[["locality", "median_rent", "median_rent_per_sqft"]],
+        on="locality", how="left")
+    dash.to_csv(ROOT / "data/clean/dashboard_data.csv", index=False)
+
+    # (b) Locality ranking — the "which areas are expensive" answer (ranked bar).
+    rank = loc_full.sort_values("median_rent_per_sqft", ascending=False).copy()
+    rank["psf_rank"] = range(1, len(rank) + 1)
+    rank.to_csv(ROOT / "data/clean/locality_ranking.csv", index=False)
+
+    # (c) Price drivers — the "what moves rent" answer (coefficient bar chart).
+    drivers = coef_tbl[["feature", "coef_log"]].copy()
+    drivers["effect_pct"] = (np.expm1(drivers["coef_log"]) * 100).round(1)
+    drivers["feature"] = (drivers["feature"]
+                          .str.replace("num__", "", regex=False)
+                          .str.replace("cat__", "", regex=False))
+    drivers.to_csv(ROOT / "data/clean/coefficients.csv", index=False)
+
+    # (d) Headline KPIs for the dashboard tiles (real numbers, regenerated each run).
+    pd.DataFrame({
+        "metric": ["cv_r2", "cv_r2_std", "oof_r2", "mae_rupees",
+                   "rmse_rupees", "n_listings", "n_localities", "n_solo"],
+        "value": [round(float(r2_folds.mean()), 3), round(float(r2_folds.std()), 3),
+                  round(float(r2_oof), 3), int(round(mae)), int(round(rmse)),
+                  int(len(X)), int(df["locality"].nunique()),
+                  int(len(solo_localities))],
+    }).to_csv(ROOT / "data/clean/model_metrics.csv", index=False)
+    note("Dashboard datasets -> data/clean/{dashboard_data, locality_ranking, "
+         "coefficients, model_metrics}.csv\n")
 
     with open(MODEL_OUT, "wb") as f:
         pickle.dump(model, f)

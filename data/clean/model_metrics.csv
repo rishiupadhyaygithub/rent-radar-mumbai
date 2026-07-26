@@ -1,0 +1,9 @@
+metric,value
+cv_r2,0.813
+cv_r2_std,0.033
+oof_r2,0.818
+mae_rupees,28683.0
+rmse_rupees,55717.0
+n_listings,882.0
+n_localities,95.0
+n_solo,38.0

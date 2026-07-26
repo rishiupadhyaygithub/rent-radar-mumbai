@@ -1,0 +1,96 @@
+locality,n_listings,median_rent,median_rent_per_sqft,avg_metro_km,tier,psf_rank
+Gundavali,1,900000.0,352.9,,premium,1
+Pali Hill,1,600000.0,333.3,2.3,premium,2
+Worli,20,290250.0,251.8,0.85,premium,3
+Mahalaxmi,9,350000.0,226.3,0.61,premium,4
+Gulmohar Road,1,300000.0,222.2,2.63,premium,5
+Bandra Kurla Complex,1,710000.0,221.9,1.77,premium,6
+Cuffe Parade,1,275000.0,221.8,0.22,premium,7
+Nepean Sea Road,1,280000.0,215.4,2.63,premium,8
+Navin Nagar,2,150000.0,214.3,1.09,premium,9
+Peddar Road,1,375000.0,210.1,1.31,premium,10
+Khar West,11,140000.0,200.0,1.61,premium,11
+Kamala Mill,1,130000.0,200.0,2.78,premium,12
+Mahim West,4,220000.0,197.55,0.42,premium,13
+Kherwadi,1,170000.0,196.3,0.95,premium,14
+Shimpoli,1,35000.0,193.4,,premium,15
+Juhu,12,212500.0,190.5,2.68,premium,16
+Bandra West,23,175000.0,188.2,2.23,premium,17
+Prabhadevi,10,272500.0,183.3,0.42,premium,18
+Lower Parel,14,280000.0,181.35,0.89,premium,19
+Cumbala Hill,1,90000.0,180.0,1.23,premium,20
+Colaba,4,82500.0,174.25,0.53,premium,21
+Shashtri Nagar,1,251000.0,173.1,4.52,premium,22
+Vikhroli East,9,180000.0,166.7,5.12,premium,23
+Mindspace,1,190000.0,166.7,,premium,24
+Santacruz West,6,177500.0,159.5,1.06,premium,25
+Parel,3,135000.0,157.9,1.7,premium,26
+Byculla,2,182500.0,156.5,1.63,premium,27
+Tardeo,3,90000.0,155.2,0.77,premium,28
+Lokhandwala,1,100000.0,153.8,5.25,premium,29
+Jacob Circle,1,115000.0,153.3,0.77,premium,30
+Byculla West,1,220000.0,151.7,0.8,premium,31
+Versova,3,99000.0,145.5,5.29,premium,32
+Sandesh Nagar,9,100000.0,142.9,1.89,mid,33
+Oshiwara,7,120000.0,141.8,4.28,mid,34
+Kurla West,2,72500.0,140.2,2.54,mid,35
+Kemps Corner,1,90000.0,138.5,0.73,mid,36
+Vile Parle West,1,275000.0,137.5,3.06,mid,37
+Deonar,3,95000.0,136.4,0.96,mid,38
+Bandra East,8,205000.0,136.0,0.91,mid,39
+Wadala,14,160000.0,131.15,1.93,mid,40
+Marine Lines,2,110000.0,130.0,0.44,mid,41
+Girgaon,1,75000.0,129.3,0.59,mid,42
+Natwar Nagar,1,70000.0,127.3,1.89,mid,43
+Dalal Estate,1,70000.0,127.3,0.22,mid,44
+Dn Nagar,1,80000.0,123.1,3.09,mid,45
+Dadar West,3,130000.0,122.7,1.38,mid,46
+Wadala East,5,90000.0,121.7,2.34,mid,47
+Kurla East,2,60000.0,120.95,1.43,mid,48
+Andheri West,76,95000.0,116.75,4.07,mid,49
+Ghatkopar West,12,119000.0,116.75,4.24,mid,50
+Matunga,1,35000.0,116.7,,mid,51
+Sion,4,52500.0,116.65,0.96,mid,52
+Tanji Nagar,1,75000.0,115.4,4.35,mid,53
+Tilak Nagar,1,85000.0,113.3,1.98,mid,54
+Amboli,1,75000.0,112.8,2.75,mid,55
+Sakinaka,7,65000.0,108.2,1.18,mid,56
+Shivaji Nagar,1,110000.0,107.8,5.68,mid,57
+Kalbadevi,1,90000.0,105.9,0.19,mid,58
+Chembur,95,85000.0,104.2,0.72,mid,59
+Powai,46,85000.0,104.0,2.99,mid,60
+Chunabhatti,1,46000.0,102.2,0.83,mid,61
+Marol,7,82000.0,101.7,0.78,mid,62
+Andheri East,34,75000.0,100.0,1.0,budget,63
+Jogeshwari East,9,65000.0,100.0,1.9,budget,64
+Jogeshwari West,5,85000.0,100.0,4.3,budget,65
+Goregaon East,58,75000.0,98.25,5.03,budget,66
+Goregaon West,76,76000.0,98.2,5.13,budget,67
+Nagesh Patilwadi,1,115000.0,95.8,0.58,budget,68
+Bangur Nagar,3,100000.0,94.6,5.9,budget,69
+Chandivali,9,82000.0,94.4,1.98,budget,70
+Malad West,63,60000.0,94.1,6.03,budget,71
+Vikhroli West,9,65000.0,93.8,4.3,budget,72
+Malad East,51,65000.0,92.5,5.48,budget,73
+Kanjurmarg East,7,73000.0,92.3,6.29,budget,74
+Kurla,1,40000.0,90.9,2.23,budget,75
+Kanjurmarg West,9,97000.0,90.3,6.11,budget,76
+Shapur Baug,1,75000.0,89.8,0.25,budget,77
+Santacruz East,10,74000.0,89.65,0.89,budget,78
+Borivali West,9,40000.0,88.9,2.18,budget,79
+Dahisar East,3,36000.0,88.4,0.69,budget,80
+Ghatkopar East,7,75000.0,83.3,3.1,budget,81
+Kandivali West,3,40000.0,82.9,4.37,budget,82
+Govandi,3,56000.0,80.0,1.7,budget,83
+Borivali East,10,55000.0,77.15,1.45,budget,84
+Mulund East,4,65000.0,74.69999999999999,2.3,budget,85
+Antop Hill,1,65000.0,72.2,2.7,budget,86
+Asha Nagar,1,32000.0,71.1,2.92,budget,87
+Satya Nagar,1,31000.0,67.4,0.61,budget,88
+Mulund West,10,62500.0,65.9,3.06,budget,89
+Kumbharwada,1,35000.0,65.8,0.93,budget,90
+Mahim,1,35000.0,65.8,0.54,budget,91
+Bhandup West,6,46500.0,65.5,4.87,budget,92
+Chedda Nagar,1,65000.0,65.0,1.44,budget,93
+Kandivali East,4,71500.0,52.15,4.16,budget,94
+Bhandup East,5,25000.0,41.5,4.49,budget,95

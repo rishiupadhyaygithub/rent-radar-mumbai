@@ -31,7 +31,7 @@ One language family, **one model**, standard tools — kept deliberately minimal
 | Data wrangling | pandas · numpy |
 | Database | SQLite — two related tables joined on `locality`; JOIN + GROUP BY, window functions, and a CTE (`sql/`) |
 | Modelling | scikit-learn — a **single** `LinearRegression` in a `Pipeline` (`StandardScaler` for numerics + `OneHotEncoder` for categoricals), evaluated by 5-fold cross-validation |
-| Visualisation | seaborn · matplotlib (EDA figures) · Tableau Public (dashboard) |
+| Visualisation | seaborn · matplotlib (EDA figures) · Power BI (decision dashboard) |
 | Narrative | Jupyter |
 
 **One model, on purpose.** No ensemble, no gradient boosting, no second algorithm bolted on for a benchmark — a linear regression on `log(rent)` stays interpretable (every coefficient is a rupee lever a pricing team can read straight off), and being honest about where that one model breaks is the point of the write-up.
@@ -40,11 +40,11 @@ One language family, **one model**, standard tools — kept deliberately minimal
 
 - **Locality is the price.** Premium localities rent for roughly **2× per square foot** what budget localities do (₹185/sqft vs ₹93/sqft for a typical 2BHK). **Worli** tops the city at ₹252/sqft — about **₹128/sqft above** the city average.
 - **Metro access carries a real but modest premium:** localities within 1.5 km of a metro average **₹137.0/sqft** vs **₹130.8/sqft** for those farther out — a ~5% uplift, not the headline driver.
-- **The model explains most of the variation it sees.** Evaluated by **5-fold cross-validation** (not a single lucky split): CV R² **0.807 ± 0.042** (folds tight, 0.73–0.86), out-of-fold R² **0.812**. In-sample R² is 0.818, so the overfitting gap is a tiny **0.006** — it generalises cleanly. Typical miss is **₹28,700/month** (out-of-fold MAE); RMSE is **₹57,000** — now close to the MAE, because area is modelled on a log scale so no single flat can blow the error up.
+- **The model explains most of the variation it sees.** Evaluated by **5-fold cross-validation** (not a single lucky split): CV R² **0.813 ± 0.033** (folds tight, 0.75–0.84), out-of-fold R² **0.818**. In-sample R² is 0.827, so the overfitting gap is a tiny **0.009** — it generalises cleanly. Typical miss is **₹28,700/month** (out-of-fold MAE); RMSE is **₹56,000** — now close to the MAE, because area is modelled on a log scale so no single flat can blow the error up.
 
 ## Where it breaks (the honest part)
 
-The model is reliable for typical 1–3 BHK flats and **weakest on rare large flats and thin localities**. Modelling area on a **log scale** (a constant-elasticity term) killed the old blow-up: the lone 8BHK in Santacruz West — once priced at an absurd ~₹1.27 crore — now lands near ₹12.5 lakh against its ₹8,00,000 listing, and the worst miss across all 882 rows is a ₹4.7-lakh over/under-shoot on a rare 6BHK, not an order-of-magnitude error. That single fix cut RMSE from ₹406,000 to ₹57,000. Of the 95 localities, **38 have only a single listing**, flagged as `solo_locality` in `predictions.csv`. Full failure analysis in `docs/model_report.md`; honest limits in `docs/limitations.md`.
+The model is reliable for typical 1–3 BHK flats and **weakest on rare large flats and thin localities**. Modelling area on a **log scale** (a constant-elasticity term) killed the old blow-up: the lone 8BHK in Santacruz West — once priced at an absurd ~₹1.27 crore — now lands near ₹12.4 lakh against its ₹8,00,000 listing — a ₹4.4-lakh over-shoot, the worst miss across all 882 rows, but a plausible band, not an order-of-magnitude error. That single fix cut RMSE from ₹406,000 to ₹56,000. Of the 95 localities, **38 have only a single listing**, flagged as `solo_locality` in `predictions.csv`. Full failure analysis in `docs/model_report.md`; honest limits in `docs/limitations.md`.
 
 ## What would make it better
 
@@ -62,7 +62,7 @@ data/        raw/ · clean/ · geo/
 docs/        data_quality_note · model_report · limitations · ai_appendix · figures/
 memo/        pricing_memo.md                        (one-page decision memo)
 models/      rent_model.pkl
-dashboard/   Tableau build guide + predictions.csv
+dashboard/   Power BI build guide (rankings · drivers · predicted-vs-actual)
 ```
 
 The **notebook** (`notebooks/rent_radar_analysis.ipynb`) is the readable story —

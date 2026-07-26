@@ -1,0 +1,883 @@
+listing_id,locality,tier,bhk,area_sqft,furnishing,floor,metro_km,lat,lng,actual_rent,predicted_rent,error,pct_error,abs_pct_error,solo_locality,pricing_flag,median_rent,median_rent_per_sqft
+1,Goregaon West,budget,2,617,furnished,33.0,5.7,19.167242,72.841577,75000,59802,15198,20.3,20.3,0,Listed above model (check overpricing),76000.0,98.2
+2,Bandra East,mid,3,1000,semi-furnished,5.0,1.12,19.058016,72.844382,120000,123659,-3659,-3.0,3.0,0,In line with model,205000.0,136.0
+3,Malad East,budget,2,1000,furnished,11.0,5.15,19.188328,72.860617,80000,93538,-13538,-16.9,16.9,0,Listed below model (possible underpricing),65000.0,92.5
+4,Powai,mid,2,671,furnished,9.0,2.49,19.111612,72.902057,75000,97491,-22491,-30.0,30.0,0,Listed below model (possible underpricing),85000.0,104.0
+5,Malad West,budget,1,400,semi-furnished,9.0,6.75,19.178532,72.838608,35000,48069,-13069,-37.3,37.3,0,Listed below model (possible underpricing),60000.0,94.1
+6,Kandivali East,budget,2,1160,semi-furnished,7.0,3.95,19.2004765,72.8736892,55000,88083,-33083,-60.2,60.2,0,Listed below model (possible underpricing),71500.0,52.15
+7,Dahisar East,budget,1,410,semi-furnished,11.0,0.74,19.248557,72.859999,33000,34654,-1654,-5.0,5.0,0,In line with model,36000.0,88.4
+8,Bandra West,premium,3,1366,semi-furnished,1.0,1.89,19.0865579894721,72.8810664643325,240000,252812,-12812,-5.3,5.3,0,In line with model,175000.0,188.2
+9,Santacruz East,budget,2,750,semi-furnished,20.0,0.54,19.075022,72.84948,95000,62513,32487,34.2,34.2,0,Listed above model (check overpricing),74000.0,89.65
+10,Powai,mid,1,400,furnished,14.0,3.74,19.116994,72.913059,90000,46295,43705,48.6,48.6,0,Listed above model (check overpricing),85000.0,104.0
+11,Malad West,budget,2,797,semi-furnished,7.0,5.88,19.189026,72.834793,75000,69522,5478,7.3,7.3,0,In line with model,60000.0,94.1
+12,Santacruz East,budget,2,600,semi-furnished,7.0,0.54,19.075022,72.84948,90000,51603,38397,42.7,42.7,0,Listed above model (check overpricing),74000.0,89.65
+13,Jogeshwari East,budget,1,435,unfurnished,12.0,1.8,19.137776,72.861949,50000,38900,11100,22.2,22.2,0,Listed above model (check overpricing),65000.0,100.0
+14,Borivali East,budget,2,630,unfurnished,3.0,1.82,19.219068,72.868479,48000,52018,-4018,-8.4,8.4,0,In line with model,55000.0,77.15
+15,Vikhroli West,budget,1,460,semi-furnished,13.0,4.74,19.109105,72.923653,48000,39877,8123,16.9,16.9,0,Listed above model (check overpricing),65000.0,93.8
+16,Kandivali West,budget,1,386,semi-furnished,12.0,5.4,19.206228,72.821377,32000,32699,-699,-2.2,2.2,0,In line with model,40000.0,82.9
+17,Bhandup West,budget,5,540,semi-furnished,9.0,4.15,19.155035,72.941318,36000,65243,-29243,-81.2,81.2,0,Listed below model (possible underpricing),46500.0,65.5
+18,Powai,mid,1,404,furnished,9.0,2.83,,,141880,55073,86807,61.2,61.2,0,Listed above model (check overpricing),85000.0,104.0
+19,Powai,mid,2,800,unfurnished,9.0,2.28,19.12393,72.89533,60000,111763,-51763,-86.3,86.3,0,Listed below model (possible underpricing),85000.0,104.0
+20,Mulund West,budget,2,606,unfurnished,9.0,3.55,19.167089,72.935158,55000,62977,-7977,-14.5,14.5,0,In line with model,62500.0,65.9
+21,Lower Parel,premium,4,1129,semi-furnished,15.0,0.88,19.0001926,72.8256762,220000,205159,14841,6.7,6.7,0,In line with model,280000.0,181.35
+22,Lower Parel,premium,4,1100,unfurnished,9.0,0.33,18.99253,72.824003,220000,268652,-48652,-22.1,22.1,0,Listed below model (possible underpricing),280000.0,181.35
+23,Sakinaka,mid,1,460,furnished,5.0,1.22,19.097184,72.884744,60000,51794,8206,13.7,13.7,0,In line with model,65000.0,108.2
+24,Powai,mid,2,888,semi-furnished,5.0,2.49,19.111612,72.902057,85000,94979,-9979,-11.7,11.7,0,In line with model,85000.0,104.0
+25,Prabhadevi,premium,1,375,unfurnished,12.0,0.27,19.0137,72.832007,50000,72439,-22439,-44.9,44.9,0,Listed below model (possible underpricing),272500.0,183.3
+26,Malad West,budget,2,700,semi-furnished,5.0,6.58,19.180973,72.836672,65000,61775,3225,5.0,5.0,0,In line with model,60000.0,94.1
+27,Malad West,budget,1,420,semi-furnished,9.0,2.83,,,55000,43413,11587,21.1,21.1,0,Listed above model (check overpricing),60000.0,94.1
+28,Malad West,budget,2,900,semi-furnished,9.0,6.62,19.177239,72.841579,70000,105939,-35939,-51.3,51.3,0,Listed below model (possible underpricing),60000.0,94.1
+29,Pali Hill,premium,4,1800,semi-furnished,9.0,2.3,19.067719,72.827637,600000,322246,277754,46.3,46.3,1,Listed above model (check overpricing),600000.0,333.3
+30,Bandra West,premium,2,650,semi-furnished,6.0,2.38,19.05955960049545,72.82952886074781,150000,118352,31648,21.1,21.1,0,Listed above model (check overpricing),175000.0,188.2
+31,Ghatkopar East,budget,2,700,furnished,9.0,4.33,19.0907441339125,72.9152309957184,50000,77008,-27008,-54.0,54.0,0,Listed below model (possible underpricing),75000.0,83.3
+32,Andheri West,mid,2,815,semi-furnished,5.0,4.66,19.1280405,72.8163742,80000,90927,-10927,-13.7,13.7,0,In line with model,95000.0,116.75
+33,Marol,mid,2,750,semi-furnished,9.0,0.69,19.122675,72.879283,60000,107695,-47695,-79.5,79.5,0,Listed below model (possible underpricing),82000.0,101.7
+34,Sandesh Nagar,mid,3,1750,semi-furnished,9.0,1.89,19.0865579894721,72.8810664643325,250000,241148,8852,3.5,3.5,0,In line with model,100000.0,142.9
+35,Bandra East,mid,3,1389,furnished,3.0,0.79,19.056192,72.848892,310000,167542,142458,46.0,46.0,0,Listed above model (check overpricing),205000.0,136.0
+36,Andheri West,mid,3,1450,furnished,9.0,2.83,,,300000,228846,71154,23.7,23.7,0,Listed above model (check overpricing),95000.0,116.75
+37,Vikhroli East,premium,2,573,unfurnished,12.0,6.35,19.119498,72.937862,45045,102034,-56989,-126.5,126.5,0,Listed below model (possible underpricing),180000.0,166.7
+38,Kandivali East,budget,3,1622,semi-furnished,22.0,4.13,19.198204,72.855462,88000,126729,-38729,-44.0,44.0,0,Listed below model (possible underpricing),71500.0,52.15
+39,Antop Hill,budget,2,900,furnished,2.0,2.7,19.02339,72.86888,65000,85135,-20135,-31.0,31.0,1,Listed below model (possible underpricing),65000.0,72.2
+40,Wadala East,mid,2,800,furnished,1.0,2.81,19.02311,72.865931,90000,101478,-11478,-12.8,12.8,0,In line with model,90000.0,121.7
+41,Andheri West,mid,4,2350,unfurnished,23.0,5.11,19.151569,72.833298,400000,270699,129301,32.3,32.3,0,Listed above model (check overpricing),95000.0,116.75
+42,Chandivali,budget,5,850,furnished,6.0,2.07,19.107837,72.89823,130000,92141,37859,29.1,29.1,0,Listed above model (check overpricing),82000.0,94.4
+43,Cuffe Parade,premium,5,1240,furnished,12.0,0.22,18.91529,72.821723,275000,210548,64452,23.4,23.4,1,Listed above model (check overpricing),275000.0,221.8
+44,Lower Parel,premium,2,720,semi-furnished,15.0,0.97,18.9982461,72.82696460000001,150000,121846,28154,18.8,18.8,0,Listed above model (check overpricing),280000.0,181.35
+45,Bandra East,mid,4,1536,semi-furnished,9.0,0.79,19.056192,72.848892,400000,215958,184042,46.0,46.0,0,Listed above model (check overpricing),205000.0,136.0
+46,Mulund East,budget,2,1350,furnished,25.0,2.82,19.162276,72.955732,100000,113235,-13235,-13.2,13.2,0,In line with model,65000.0,74.69999999999999
+47,Powai,mid,2,657,unfurnished,2.0,3.51,19.118717,72.9102,36000,72645,-36645,-101.8,101.8,0,Listed below model (possible underpricing),85000.0,104.0
+48,Sandesh Nagar,mid,1,470,semi-furnished,9.0,2.83,,,30000,76998,-46998,-156.7,156.7,0,Listed below model (possible underpricing),100000.0,142.9
+49,Malad West,budget,1,600,unfurnished,12.0,6.74,19.177983,72.84021,40000,50370,-10370,-25.9,25.9,0,Listed below model (possible underpricing),60000.0,94.1
+50,Borivali West,budget,1,420,semi-furnished,2.0,1.95,19.2442,72.845605,29000,36424,-7424,-25.6,25.6,0,Listed below model (possible underpricing),40000.0,88.9
+51,Goregaon East,budget,1,400,furnished,9.0,2.83,,,75000,47205,27795,37.1,37.1,0,Listed above model (check overpricing),75000.0,98.25
+52,Kandivali West,budget,3,1150,unfurnished,15.0,3.99,19.20186,72.84756,85000,103884,-18884,-22.2,22.2,0,Listed below model (possible underpricing),40000.0,82.9
+53,Matunga,mid,1,300,semi-furnished,9.0,2.83,,,35000,45242,-10242,-29.3,29.3,1,Listed below model (possible underpricing),35000.0,116.7
+54,Malad East,budget,2,750,semi-furnished,1.0,4.87,19.190878,72.861307,75000,65117,9883,13.2,13.2,0,In line with model,65000.0,92.5
+55,Kalbadevi,mid,1,850,furnished,2.0,0.19,18.947451,72.828589,90000,93562,-3562,-4.0,4.0,1,In line with model,90000.0,105.9
+56,Goregaon East,budget,2,680,semi-furnished,3.0,5.51,19.1744,72.8623,75000,61168,13832,18.4,18.4,0,Listed above model (check overpricing),75000.0,98.25
+57,Mulund West,budget,2,960,unfurnished,36.0,3.21,19.170312,72.936647,65000,77502,-12502,-19.2,19.2,0,Listed below model (possible underpricing),62500.0,65.9
+58,Borivali East,budget,3,1310,semi-furnished,9.0,1.38,19.222276,72.864019,135000,134930,70,0.1,0.1,0,In line with model,55000.0,77.15
+59,Malad West,budget,6,4500,furnished,9.0,2.83,,,700000,571505,128495,18.4,18.4,0,Listed above model (check overpricing),60000.0,94.1
+60,Sion,mid,1,450,furnished,14.0,1.25,19.039554,72.868765,55000,52278,2722,4.9,4.9,0,In line with model,52500.0,116.65
+61,Goregaon East,budget,1,425,furnished,6.0,5.85,19.178495,72.869884,32000,41453,-9453,-29.5,29.5,0,Listed below model (possible underpricing),75000.0,98.25
+62,Wadala East,mid,2,766,furnished,30.0,1.89,19.0865579894721,72.8810664643325,120000,93186,26814,22.3,22.3,0,Listed above model (check overpricing),90000.0,121.7
+63,Mulund West,budget,3,1050,unfurnished,7.0,2.89,19.1725,72.938806,100000,84220,15780,15.8,15.8,0,Listed above model (check overpricing),62500.0,65.9
+64,Mahim,budget,2,532,semi-furnished,5.0,0.54,19.043126,72.840376,35000,48925,-13925,-39.8,39.8,1,Listed below model (possible underpricing),35000.0,65.8
+65,Mahim West,premium,3,1300,furnished,9.0,0.75,19.03282,72.838,230000,360983,-130983,-56.9,56.9,0,Listed below model (possible underpricing),220000.0,197.55
+66,Sandesh Nagar,mid,5,900,semi-furnished,6.0,1.89,19.0865579894721,72.8810664643325,140000,120169,19831,14.2,14.2,0,In line with model,100000.0,142.9
+67,Mulund East,budget,1,465,furnished,3.0,2.53,19.165732,72.953027,35000,41329,-6329,-18.1,18.1,0,Listed below model (possible underpricing),65000.0,74.69999999999999
+68,Gundavali,premium,6,2550,furnished,9.0,2.83,,,900000,500272,399728,44.4,44.4,1,Listed above model (check overpricing),900000.0,352.9
+69,Borivali East,budget,1,250,unfurnished,9.0,2.83,,,60000,27295,32705,54.5,54.5,0,Listed above model (check overpricing),55000.0,77.15
+70,Ghatkopar West,mid,2,600,semi-furnished,14.0,3.99,19.09653,72.914392,55000,69600,-14600,-26.5,26.5,0,Listed below model (possible underpricing),119000.0,116.75
+71,Kandivali West,budget,1,430,furnished,4.0,3.71,19.21618,72.83369,40000,38964,1036,2.6,2.6,0,In line with model,40000.0,82.9
+72,Santacruz East,budget,5,704,semi-furnished,3.0,1.95,19.07862,72.86566,50000,69493,-19493,-39.0,39.0,0,Listed below model (possible underpricing),74000.0,89.65
+73,Chedda Nagar,budget,2,1000,semi-furnished,5.0,1.44,19.06171833,72.91061102,65000,87265,-22265,-34.3,34.3,1,Listed below model (possible underpricing),65000.0,65.0
+74,Worli,premium,5,1000,furnished,18.0,0.98,19.01743,72.818638,135000,266451,-131451,-97.4,97.4,0,Listed below model (possible underpricing),290250.0,251.8
+75,Andheri West,mid,3,1500,furnished,9.0,1.92,19.118765,72.841925,150000,228936,-78936,-52.6,52.6,0,Listed below model (possible underpricing),95000.0,116.75
+76,Santacruz West,premium,3,1100,semi-furnished,5.0,1.12,19.082464,72.836957,250000,171320,78680,31.5,31.5,0,Listed above model (check overpricing),177500.0,159.5
+77,Andheri West,mid,2,752,unfurnished,1.0,1.89,19.0865579894721,72.8810664643325,66000,87362,-21362,-32.4,32.4,0,Listed below model (possible underpricing),95000.0,116.75
+78,Andheri East,budget,4,2000,furnished,9.0,2.83,,,400000,226054,173946,43.5,43.5,0,Listed above model (check overpricing),75000.0,100.0
+79,Powai,mid,1,520,semi-furnished,9.0,2.83,,,85000,66074,18926,22.3,22.3,0,Listed above model (check overpricing),85000.0,104.0
+80,Mahalaxmi,premium,2,883,semi-furnished,1.0,0.7,18.982069,72.831475,200000,163830,36170,18.1,18.1,0,Listed above model (check overpricing),350000.0,226.3
+81,Malad East,budget,2,700,furnished,9.0,5.72,19.17738,72.87081,65000,86546,-21546,-33.1,33.1,0,Listed below model (possible underpricing),65000.0,92.5
+82,Mulund East,budget,3,790,unfurnished,9.0,1.89,19.0865579894721,72.8810664643325,50000,88145,-38145,-76.3,76.3,0,Listed below model (possible underpricing),65000.0,74.69999999999999
+83,Mulund West,budget,2,1000,furnished,18.0,1.89,19.0865579894721,72.8810664643325,50000,85397,-35397,-70.8,70.8,0,Listed below model (possible underpricing),62500.0,65.9
+84,Malad West,budget,1,485,semi-furnished,22.0,5.52,19.191133,72.837761,48000,42220,5780,12.0,12.0,0,In line with model,60000.0,94.1
+85,Chembur,mid,3,1225,furnished,6.0,0.31,19.055757,72.895153,111000,142369,-31369,-28.3,28.3,0,Listed below model (possible underpricing),85000.0,104.2
+86,Andheri West,mid,3,1500,semi-furnished,5.0,3.73,19.129748,72.829156,90000,169080,-79080,-87.9,87.9,0,Listed below model (possible underpricing),95000.0,116.75
+87,Sandesh Nagar,mid,1,265,semi-furnished,4.0,1.89,19.0865579894721,72.8810664643325,42000,33251,8749,20.8,20.8,0,Listed above model (check overpricing),100000.0,142.9
+88,Marol,mid,1,300,furnished,9.0,0.14,19.1185099,72.8730234,30000,46017,-16017,-53.4,53.4,0,Listed below model (possible underpricing),82000.0,101.7
+89,Sion,mid,1,450,furnished,2.0,0.73,19.052195,72.876823,50000,53700,-3700,-7.4,7.4,0,In line with model,52500.0,116.65
+90,Peddar Road,premium,3,1785,furnished,9.0,1.31,18.9728939316747,72.8090716723819,375000,336377,38623,10.3,10.3,1,In line with model,375000.0,210.1
+91,Bandra West,premium,4,1600,furnished,9.0,2.38,19.05955960049545,72.82952886074781,400000,406837,-6837,-1.7,1.7,0,In line with model,175000.0,188.2
+92,Powai,mid,3,1365,semi-furnished,9.0,3.66,19.114579,72.912815,185000,200859,-15859,-8.6,8.6,0,In line with model,85000.0,104.0
+93,Goregaon West,budget,6,3500,unknown,9.0,2.83,,,350000,426115,-76115,-21.7,21.7,0,Listed below model (possible underpricing),76000.0,98.2
+94,Malad East,budget,2,455,semi-furnished,9.0,1.89,19.0865579894721,72.8810664643325,27000,50584,-23584,-87.3,87.3,0,Listed below model (possible underpricing),65000.0,92.5
+95,Jogeshwari West,budget,3,1500,semi-furnished,10.0,3.41,19.142279,72.846198,120000,132796,-12796,-10.7,10.7,0,In line with model,85000.0,100.0
+96,Bhandup West,budget,2,630,semi-furnished,9.0,4.15,19.155035,72.941318,45000,68501,-23501,-52.2,52.2,0,Listed below model (possible underpricing),46500.0,65.5
+97,Kumbharwada,budget,2,532,semi-furnished,5.0,0.93,18.959038,72.827104,35000,48946,-13946,-39.8,39.8,1,Listed below model (possible underpricing),35000.0,65.8
+98,Vikhroli West,budget,2,750,semi-furnished,12.0,4.74,19.109105,72.923653,65000,66441,-1441,-2.2,2.2,0,In line with model,65000.0,93.8
+99,Powai,mid,1,425,unfurnished,6.0,2.08,19.121229,72.893097,55000,45780,9220,16.8,16.8,0,Listed above model (check overpricing),85000.0,104.0
+100,Govandi,budget,5,777,furnished,12.0,1.59,19.060419,72.914432,56000,77791,-21791,-38.9,38.9,0,Listed below model (possible underpricing),56000.0,80.0
+101,Malad West,budget,2,765,semi-furnished,32.0,5.56,19.191779,72.835777,95000,66579,28421,29.9,29.9,0,Listed above model (check overpricing),60000.0,94.1
+102,Byculla,premium,2,750,semi-furnished,23.0,1.63,18.978219,72.840864,115000,121857,-6857,-6.0,6.0,0,In line with model,182500.0,156.5
+103,Goregaon West,budget,2,800,furnished,9.0,2.83,,,99000,97501,1499,1.5,1.5,0,In line with model,76000.0,98.2
+104,Ghatkopar East,budget,2,550,semi-furnished,12.0,4.28,19.088143,72.915071,50000,47752,2248,4.5,4.5,0,In line with model,75000.0,83.3
+105,Powai,mid,1,650,semi-furnished,12.0,3.74,19.116994,72.913059,65000,67813,-2813,-4.3,4.3,0,In line with model,85000.0,104.0
+106,Byculla West,premium,3,1450,unfurnished,45.0,0.8,18.973979,72.830296,220000,200021,19979,9.1,9.1,1,In line with model,220000.0,151.7
+107,Borivali East,budget,5,445,semi-furnished,5.0,1.79,19.21938,72.85777,35000,43747,-8747,-25.0,25.0,0,Listed below model (possible underpricing),55000.0,77.15
+108,Andheri East,budget,2,700,furnished,9.0,1.27,19.121292,72.884916,70000,83200,-13200,-18.9,18.9,0,Listed below model (possible underpricing),75000.0,100.0
+109,Jogeshwari East,budget,2,625,unfurnished,22.0,2.08,19.138506,72.859044,80000,57254,22746,28.4,28.4,0,Listed above model (check overpricing),65000.0,100.0
+110,Bandra East,mid,2,635,semi-furnished,3.0,1.0,19.060602,72.845185,90000,74660,15340,17.0,17.0,0,Listed above model (check overpricing),205000.0,136.0
+111,Juhu,premium,2,807,furnished,9.0,2.83,,,285360,184055,101305,35.5,35.5,0,Listed above model (check overpricing),212500.0,190.5
+112,Wadala East,mid,1,353,furnished,10.0,1.62,19.031484,72.881586,55000,40762,14238,25.9,25.9,0,Listed above model (check overpricing),90000.0,121.7
+113,Malad East,budget,2,800,semi-furnished,21.0,5.79,19.178041,72.871778,65000,69956,-4956,-7.6,7.6,0,In line with model,65000.0,92.5
+114,Malad East,budget,1,400,furnished,2.0,5.78,19.177851,72.869853,35000,38462,-3462,-9.9,9.9,0,In line with model,65000.0,92.5
+115,Mulund West,budget,2,840,furnished,9.0,3.65,19.169956,72.931871,50000,91034,-41034,-82.1,82.1,0,Listed below model (possible underpricing),62500.0,65.9
+116,Goregaon West,budget,2,650,furnished,12.0,5.5,19.163167,72.83922,140000,62227,77773,55.6,55.6,0,Listed above model (check overpricing),76000.0,98.2
+117,Sakinaka,mid,3,924,semi-furnished,12.0,1.22,19.097184,72.884744,100000,100501,-501,-0.5,0.5,0,In line with model,65000.0,108.2
+118,Worli,premium,1,480,unfurnished,13.0,0.75,19.014238,72.823164,80000,101668,-21668,-27.1,27.1,0,Listed below model (possible underpricing),290250.0,251.8
+119,Powai,mid,2,723,furnished,20.0,4.34,19.118357,72.91856,115000,84576,30424,26.5,26.5,0,Listed above model (check overpricing),85000.0,104.0
+120,Ghatkopar East,budget,2,755,semi-furnished,6.0,3.11,19.079073,72.907978,75500,63242,12258,16.2,16.2,0,Listed above model (check overpricing),75000.0,83.3
+121,Wadala East,mid,2,1000,semi-furnished,10.0,2.81,19.02311,72.865931,85000,115960,-30960,-36.4,36.4,0,Listed below model (possible underpricing),90000.0,121.7
+122,Khar West,premium,2,910,furnished,3.0,1.54,19.069785,72.834683,210000,174581,35419,16.9,16.9,0,Listed above model (check overpricing),140000.0,200.0
+123,Oshiwara,mid,3,1119,semi-furnished,24.0,1.89,19.0865579894721,72.8810664643325,185000,131092,53908,29.1,29.1,0,Listed above model (check overpricing),120000.0,141.8
+124,Malad West,budget,2,740,semi-furnished,10.0,6.35,19.179695,72.846652,65000,65556,-556,-0.9,0.9,0,In line with model,60000.0,94.1
+125,Malad East,budget,1,475,semi-furnished,9.0,5.73,19.177501,72.876135,54000,50691,3309,6.1,6.1,0,In line with model,65000.0,92.5
+126,Kamala Mill,premium,2,650,furnished,2.0,2.78,19.0594403,72.9304385,130000,101091,28909,22.2,22.2,1,Listed above model (check overpricing),130000.0,200.0
+127,Shimpoli,premium,1,181,unfurnished,9.0,2.83,,,35000,34965,35,0.1,0.1,1,In line with model,35000.0,193.4
+128,Ghatkopar East,budget,2,750,unfurnished,12.0,2.91,19.0784,72.9032,75000,61875,13125,17.5,17.5,0,Listed above model (check overpricing),75000.0,83.3
+129,Kurla,budget,1,440,unfurnished,7.0,2.23,19.0672,72.8767,40000,38691,1309,3.3,3.3,1,In line with model,40000.0,90.9
+130,Mindspace,premium,3,1140,furnished,9.0,2.83,,,190000,223668,-33668,-17.7,17.7,1,Listed below model (possible underpricing),190000.0,166.7
+131,Byculla,premium,3,1565,semi-furnished,9.0,1.63,18.978219,72.840864,250000,338407,-88407,-35.4,35.4,0,Listed below model (possible underpricing),182500.0,156.5
+132,Borivali West,budget,1,450,semi-furnished,5.0,2.49,19.2277714234062,72.8405237342107,40000,37740,2260,5.6,5.6,0,In line with model,40000.0,88.9
+133,Goregaon West,budget,3,882,furnished,2.0,5.86,19.172208,72.846954,90000,89475,525,0.6,0.6,0,In line with model,76000.0,98.2
+134,Khar West,premium,1,460,unfurnished,9.0,2.83,,,165000,109876,55124,33.4,33.4,0,Listed above model (check overpricing),140000.0,200.0
+135,Parel,premium,2,952,semi-furnished,9.0,1.85,18.995353,72.838313,135000,208226,-73226,-54.2,54.2,0,Listed below model (possible underpricing),135000.0,157.9
+136,Santacruz West,premium,3,1100,unfurnished,9.0,0.72,19.079075,72.84031667,225000,218322,6678,3.0,3.0,0,In line with model,177500.0,159.5
+137,Shashtri Nagar,premium,4,1450,furnished,9.0,4.52,19.138789,72.828837,251000,274958,-23958,-9.5,9.5,1,In line with model,251000.0,173.1
+138,Goregaon West,budget,2,700,furnished,9.0,2.83,,,105000,79072,25928,24.7,24.7,0,Listed above model (check overpricing),76000.0,98.2
+139,Worli,premium,4,3200,furnished,1.0,0.1,18.9986406,72.8173599,800000,708489,91511,11.4,11.4,0,In line with model,290250.0,251.8
+140,Parel,premium,1,500,furnished,12.0,0.91,19.008201,72.833958,80000,86896,-6896,-8.6,8.6,0,In line with model,135000.0,157.9
+141,Mahalaxmi,premium,3,1622,semi-furnished,34.0,0.7,18.982069,72.831475,235000,317281,-82281,-35.0,35.0,0,Listed below model (possible underpricing),350000.0,226.3
+142,Goregaon West,budget,5,550,semi-furnished,3.0,6.11,19.16467666,72.83242502,45000,56737,-11737,-26.1,26.1,0,Listed below model (possible underpricing),76000.0,98.2
+143,Sion,mid,1,400,semi-furnished,9.0,2.83,,,160000,54232,105768,66.1,66.1,0,Listed above model (check overpricing),52500.0,116.65
+144,Goregaon East,budget,2,713,furnished,28.0,5.33,19.169767,72.852983,85000,67807,17193,20.2,20.2,0,Listed above model (check overpricing),75000.0,98.25
+145,Lower Parel,premium,3,2060,semi-furnished,19.0,0.93,19.0078,72.832977,351000,358654,-7654,-2.2,2.2,0,In line with model,280000.0,181.35
+146,Asha Nagar,budget,1,450,semi-furnished,9.0,2.92,19.168134,72.9423656,32000,50298,-18298,-57.2,57.2,1,Listed below model (possible underpricing),32000.0,71.1
+147,Goregaon West,budget,4,2800,furnished,30.0,4.57,19.15205,72.8400958,350000,267656,82344,23.5,23.5,0,Listed above model (check overpricing),76000.0,98.2
+148,Malad East,budget,2,750,semi-furnished,9.0,5.79,19.177528,72.865805,65000,80284,-15284,-23.5,23.5,0,Listed below model (possible underpricing),65000.0,92.5
+149,Sion,mid,2,570,semi-furnished,4.0,0.9,19.0427504,72.87074799999999,45000,65537,-20537,-45.6,45.6,0,Listed below model (possible underpricing),52500.0,116.65
+150,Chunabhatti,mid,1,450,semi-furnished,6.0,0.83,19.05318018,72.8771438,46000,47148,-1148,-2.5,2.5,1,In line with model,46000.0,102.2
+151,Mulund East,budget,3,1054,semi-furnished,7.0,1.94,19.169745,72.963963,80000,88373,-8373,-10.5,10.5,0,In line with model,65000.0,74.69999999999999
+152,Goregaon East,budget,1,430,furnished,7.0,5.82,19.177784,72.865787,42000,40274,1726,4.1,4.1,0,In line with model,75000.0,98.25
+153,Andheri East,budget,3,1200,semi-furnished,9.0,2.83,,,180000,130320,49680,27.6,27.6,0,Listed above model (check overpricing),75000.0,100.0
+154,Tardeo,premium,2,580,semi-furnished,36.0,0.57,18.9657267,72.81327519999999,90000,92432,-2432,-2.7,2.7,0,In line with model,90000.0,155.2
+155,Powai,mid,2,1250,semi-furnished,12.0,3.82,19.116687,72.913884,135000,128500,6500,4.8,4.8,0,In line with model,85000.0,104.0
+156,Goregaon West,budget,2,950,unfurnished,12.0,5.31,19.160017,72.838296,75000,86237,-11237,-15.0,15.0,0,Listed below model (possible underpricing),76000.0,98.2
+157,Santacruz East,budget,1,308,semi-furnished,1.0,1.52,19.073108,72.863434,35000,26615,8385,24.0,24.0,0,Listed above model (check overpricing),74000.0,89.65
+158,Goregaon East,budget,1,425,furnished,666.0,5.85,19.178495,72.869884,32000,43911,-11911,-37.2,37.2,0,Listed below model (possible underpricing),75000.0,98.25
+159,Santacruz East,budget,2,500,furnished,3.0,0.31,19.078878366499616,72.85003066062927,45000,47458,-2458,-5.5,5.5,0,In line with model,74000.0,89.65
+160,Kandivali East,budget,1,700,unfurnished,19.0,4.42,19.195089,72.868001,35000,51675,-16675,-47.6,47.6,0,Listed below model (possible underpricing),71500.0,52.15
+161,Malad West,budget,2,760,furnished,9.0,2.83,,,110000,91978,18022,16.4,16.4,0,Listed above model (check overpricing),60000.0,94.1
+162,Kherwadi,premium,3,866,furnished,20.0,0.95,19.0620442,72.84579839999999,170000,129975,40025,23.5,23.5,1,Listed above model (check overpricing),170000.0,196.3
+163,Powai,mid,3,800,semi-furnished,1002.0,3.71,19.118103,72.912369,130000,104040,25960,20.0,20.0,0,Listed above model (check overpricing),85000.0,104.0
+164,Andheri East,budget,1,400,semi-furnished,9.0,0.16,19.117192,72.872057,41000,43864,-2864,-7.0,7.0,0,In line with model,75000.0,100.0
+165,Borivali West,budget,1,450,furnished,4.0,1.92,19.2424712906651,72.8458664895492,40000,41042,-1042,-2.6,2.6,0,In line with model,40000.0,88.9
+166,Kanjurmarg East,budget,3,1080,furnished,12.0,6.47,19.133424,72.9348,110000,106449,3551,3.2,3.2,0,In line with model,73000.0,92.3
+167,Prabhadevi,premium,3,1300,semi-furnished,15.0,0.58,19.010713,72.830626,400000,214640,185360,46.3,46.3,0,Listed above model (check overpricing),272500.0,183.3
+168,Bandra West,premium,3,1000,furnished,9.0,2.62,19.05969833,72.82694667,150000,256346,-106346,-70.9,70.9,0,Listed below model (possible underpricing),175000.0,188.2
+169,Chembur,mid,3,1130,furnished,9.0,2.83,,,417930,157188,260742,62.4,62.4,0,Listed above model (check overpricing),85000.0,104.2
+170,Govandi,budget,5,600,unfurnished,12.0,1.59,19.060419,72.914432,48000,59829,-11829,-24.6,24.6,0,Listed below model (possible underpricing),56000.0,80.0
+171,Borivali East,budget,3,1580,furnished,15.0,2.09,19.2160770573922,72.8666659950415,97000,132648,-35648,-36.8,36.8,0,Listed below model (possible underpricing),55000.0,77.15
+172,Chembur,mid,3,1220,furnished,6.0,0.31,19.055757,72.895153,110000,137735,-27735,-25.2,25.2,0,Listed below model (possible underpricing),85000.0,104.2
+173,Dahisar East,budget,2,656,semi-furnished,16.0,0.59,19.24848,72.86442,58000,55444,2556,4.4,4.4,0,In line with model,36000.0,88.4
+174,Powai,mid,2,600,furnished,7.0,3.71,19.118103,72.912369,111000,72199,38801,35.0,35.0,0,Listed above model (check overpricing),85000.0,104.0
+175,Juhu,premium,2,600,furnished,1.0,3.25,19.11436,72.82445,90000,120266,-30266,-33.6,33.6,0,Listed below model (possible underpricing),212500.0,190.5
+176,Jogeshwari West,budget,2,850,furnished,4.0,4.42,19.140744,72.834016,85000,79242,5758,6.8,6.8,0,In line with model,85000.0,100.0
+177,Worli,premium,2,900,furnished,2.0,0.22,18.997648,72.81563,150000,205967,-55967,-37.3,37.3,0,Listed below model (possible underpricing),290250.0,251.8
+178,Borivali East,budget,2,650,semi-furnished,9.0,1.17,19.224424,72.860548,64000,67204,-3204,-5.0,5.0,0,In line with model,55000.0,77.15
+179,Borivali East,budget,2,640,semi-furnished,9.0,1.82,19.218602,72.859474,50000,66373,-16373,-32.7,32.7,0,Listed below model (possible underpricing),55000.0,77.15
+180,Malad East,budget,2,700,semi-furnished,5.0,5.81,19.1782443,72.8720713,65000,60889,4111,6.3,6.3,0,In line with model,65000.0,92.5
+181,Dahisar East,budget,1,390,semi-furnished,9.0,0.74,19.248557,72.859999,36000,38925,-2925,-8.1,8.1,0,In line with model,36000.0,88.4
+182,Andheri West,mid,2,850,semi-furnished,9.0,3.99,19.125281,72.822148,69000,119866,-50866,-73.7,73.7,0,Listed below model (possible underpricing),95000.0,116.75
+183,Sandesh Nagar,mid,3,1751,semi-furnished,9.0,1.87,19.08668,72.880956,251000,260874,-9874,-3.9,3.9,0,In line with model,100000.0,142.9
+184,Borivali West,budget,1,536,unfurnished,9.0,2.83,,,112000,52601,59399,53.0,53.0,0,Listed above model (check overpricing),40000.0,88.9
+185,Kurla West,mid,1,456,furnished,3.0,2.64,19.072327,72.876614,65000,57003,7997,12.3,12.3,0,In line with model,72500.0,140.2
+186,Mulund West,budget,1,624,semi-furnished,2.0,2.76,19.16520333,72.94918667,40000,48481,-8481,-21.2,21.2,0,Listed below model (possible underpricing),62500.0,65.9
+187,Mahim West,premium,5,1100,semi-furnished,19.0,0.34,19.03598,72.840055,240000,218426,21574,9.0,9.0,0,In line with model,220000.0,197.55
+188,Bandra East,mid,4,2600,semi-furnished,12.0,1.05,19.062266,72.86457,250000,311688,-61688,-24.7,24.7,0,Listed below model (possible underpricing),205000.0,136.0
+189,Mulund West,budget,2,688,unfurnished,15.0,3.51,19.15845,72.94743,60000,56705,3295,5.5,5.5,0,In line with model,62500.0,65.9
+190,Powai,mid,4,2200,semi-furnished,7.0,2.2,19.123388,72.894532,300000,239691,60309,20.1,20.1,0,Listed above model (check overpricing),85000.0,104.0
+191,Goregaon East,budget,3,950,semi-furnished,14.0,5.43,19.174215,72.865608,110000,87631,22369,20.3,20.3,0,Listed above model (check overpricing),75000.0,98.25
+192,Powai,mid,3,1500,semi-furnished,20.0,4.42,19.121325,72.918361,240000,163388,76612,31.9,31.9,0,Listed above model (check overpricing),85000.0,104.0
+193,Prabhadevi,premium,2,1700,semi-furnished,10.0,0.3,19.016439,72.828143,170000,299934,-129934,-76.4,76.4,0,Listed below model (possible underpricing),272500.0,183.3
+194,Kanjurmarg West,budget,2,555,semi-furnished,11.0,5.57,19.130098,72.926611,65000,49634,15366,23.6,23.6,0,Listed above model (check overpricing),97000.0,90.3
+195,Andheri East,budget,3,1300,furnished,6.0,0.77,19.095608,72.8761282,115000,120617,-5617,-4.9,4.9,0,In line with model,75000.0,100.0
+196,Malad East,budget,1,450,unfurnished,6.0,5.29,19.187209,72.858713,36000,39567,-3567,-9.9,9.9,0,In line with model,65000.0,92.5
+197,Goregaon West,budget,5,1550,furnished,35.0,4.57,19.151909,72.839993,220000,157033,62967,28.6,28.6,0,Listed above model (check overpricing),76000.0,98.2
+198,Ghatkopar East,budget,5,1200,unfurnished,7.0,2.18,19.06913,72.91142,100000,114148,-14148,-14.1,14.1,0,In line with model,75000.0,83.3
+199,Ghatkopar West,mid,4,2891,furnished,1101.0,4.51,19.096976,72.919728,380000,357103,22897,6.0,6.0,0,In line with model,119000.0,116.75
+200,Vikhroli East,premium,5,1125,semi-furnished,11.0,4.93,19.092531,72.922302,225000,214112,10888,4.8,4.8,0,In line with model,180000.0,166.7
+201,Dadar West,mid,2,950,semi-furnished,2.0,1.89,19.0865579894721,72.8810664643325,95000,111500,-16500,-17.4,17.4,0,Listed below model (possible underpricing),130000.0,122.7
+202,Andheri East,budget,3,1250,semi-furnished,10.0,1.45,19.118165,72.858469,130000,109400,20600,15.8,15.8,0,Listed above model (check overpricing),75000.0,100.0
+203,Jogeshwari East,budget,2,860,furnished,402.0,1.61,19.128792,72.858664,65000,84442,-19442,-29.9,29.9,0,Listed below model (possible underpricing),65000.0,100.0
+204,Borivali West,budget,1,460,semi-furnished,2.0,2.53,19.2151224,72.850671,31000,38654,-7654,-24.7,24.7,0,Listed below model (possible underpricing),40000.0,88.9
+205,Kanjurmarg West,budget,3,1129,semi-furnished,7.0,6.24,19.136516,72.932046,107000,100668,6332,5.9,5.9,0,In line with model,97000.0,90.3
+206,Powai,mid,2,1100,furnished,1.0,1.67,19.116996,72.891654,77000,119618,-42618,-55.3,55.3,0,Listed below model (possible underpricing),85000.0,104.0
+207,Goregaon West,budget,1,460,semi-furnished,3.0,4.75,19.16519,72.85585,45000,40433,4567,10.1,10.1,0,In line with model,76000.0,98.2
+208,Kanjurmarg East,budget,2,785,furnished,31.0,6.47,19.133424,72.9348,80000,73868,6132,7.7,7.7,0,In line with model,73000.0,92.3
+209,Malad West,budget,2,800,furnished,5.0,5.41,19.194852,72.833436,62000,74878,-12878,-20.8,20.8,0,Listed below model (possible underpricing),60000.0,94.1
+210,Sakinaka,mid,1,470,furnished,5.0,1.07,19.10262057,72.88663818,52000,53994,-1994,-3.8,3.8,0,In line with model,65000.0,108.2
+211,Borivali West,budget,1,430,unfurnished,1.0,2.28,19.21757355,72.85110619,31000,38628,-7628,-24.6,24.6,0,Listed below model (possible underpricing),40000.0,88.9
+212,Andheri West,mid,2,800,furnished,11.0,2.97,19.121752,72.831366,125000,95840,29160,23.3,23.3,0,Listed above model (check overpricing),95000.0,116.75
+213,Malad East,budget,2,900,unfurnished,10.0,5.66,19.175479,72.861199,65000,80775,-15775,-24.3,24.3,0,Listed below model (possible underpricing),65000.0,92.5
+214,Andheri West,mid,3,2200,furnished,27.0,4.75,19.141109,72.828539,350000,262925,87075,24.9,24.9,0,Listed above model (check overpricing),95000.0,116.75
+215,Chandivali,budget,2,700,semi-furnished,18.0,2.18,19.105945,72.899131,82000,60249,21751,26.5,26.5,0,Listed above model (check overpricing),82000.0,94.4
+216,Jogeshwari East,budget,2,760,semi-furnished,10.0,2.08,19.138506,72.859044,60000,68634,-8634,-14.4,14.4,0,In line with model,65000.0,100.0
+217,Andheri East,budget,1,550,unfurnished,18.0,0.16,19.116367,72.872539,55000,46290,8710,15.8,15.8,0,Listed above model (check overpricing),75000.0,100.0
+218,Sandesh Nagar,mid,3,1500,unfurnished,15.0,1.89,19.0865579894721,72.8810664643325,100000,180913,-80913,-80.9,80.9,0,Listed below model (possible underpricing),100000.0,142.9
+219,Lokhandwala,premium,2,650,unfurnished,15.0,5.25,19.14499,72.82604,100000,99024,976,1.0,1.0,1,In line with model,100000.0,153.8
+220,Kanjurmarg East,budget,5,537,semi-furnished,2302.0,6.5,19.1333849626996,72.9351273363531,52000,81320,-29320,-56.4,56.4,0,Listed below model (possible underpricing),73000.0,92.3
+221,Powai,mid,2,900,furnished,7.0,4.92,19.126154,72.921526,60000,105826,-45826,-76.4,76.4,0,Listed below model (possible underpricing),85000.0,104.0
+222,Marol,mid,3,1180,furnished,10.0,1.1,19.1173012,72.8840395,120000,136571,-16571,-13.8,13.8,0,In line with model,82000.0,101.7
+223,Jogeshwari East,budget,2,800,unfurnished,10.0,1.8,19.137776,72.861949,75000,72763,2237,3.0,3.0,0,In line with model,65000.0,100.0
+224,Andheri East,budget,2,830,semi-furnished,1603.0,1.38,19.126007,72.860545,80000,82424,-2424,-3.0,3.0,0,In line with model,75000.0,100.0
+225,Andheri East,budget,1,485,furnished,8.0,1.34,19.11837291,72.88631694,60000,43438,16562,27.6,27.6,0,Listed above model (check overpricing),75000.0,100.0
+226,Andheri West,mid,3,1150,semi-furnished,4.0,4.82,19.148253,72.834308,95000,130765,-35765,-37.6,37.6,0,Listed below model (possible underpricing),95000.0,116.75
+227,Bhandup West,budget,2,700,semi-furnished,10.0,4.65,19.149826,72.941431,45000,57468,-12468,-27.7,27.7,0,Listed below model (possible underpricing),46500.0,65.5
+228,Andheri East,budget,1,550,furnished,10.0,1.98,19.127877,72.854956,55000,51405,3595,6.5,6.5,0,In line with model,75000.0,100.0
+229,Bhandup East,budget,1,650,semi-furnished,5.0,4.65,19.1478965967391,72.9460864346954,25000,47250,-22250,-89.0,89.0,0,Listed below model (possible underpricing),25000.0,41.5
+230,Bhandup West,budget,2,1000,semi-furnished,10.0,4.34,19.152539,72.942231,48000,79617,-31617,-65.9,65.9,0,Listed below model (possible underpricing),46500.0,65.5
+231,Malad West,budget,2,680,unfurnished,5.0,5.5,19.191742,72.837065,61000,60189,811,1.3,1.3,0,In line with model,60000.0,94.1
+232,Powai,mid,1,650,semi-furnished,3.0,2.87,19.1165788,72.9045095,37000,68494,-31494,-85.1,85.1,0,Listed below model (possible underpricing),85000.0,104.0
+233,Ghatkopar East,budget,3,1080,semi-furnished,7.0,2.18,19.06913,72.91142,85000,93430,-8430,-9.9,9.9,0,In line with model,75000.0,83.3
+234,Malad West,budget,2,700,semi-furnished,20.0,5.88,19.189026,72.834793,80000,62105,17895,22.4,22.4,0,Listed above model (check overpricing),60000.0,94.1
+235,Powai,mid,2,850,furnished,1.0,1.67,19.116996,72.891654,78000,98262,-20262,-26.0,26.0,0,Listed below model (possible underpricing),85000.0,104.0
+236,Goregaon East,budget,2,850,furnished,18.0,5.35,19.1719575,72.858704,90000,79925,10075,11.2,11.2,0,In line with model,75000.0,98.25
+237,Andheri East,budget,1,600,furnished,10.0,0.94,19.114651,72.884754,77000,55007,21993,28.6,28.6,0,Listed above model (check overpricing),75000.0,100.0
+238,Andheri West,mid,2,665,semi-furnished,18.0,4.52,19.146006,72.836274,75000,74378,622,0.8,0.8,0,In line with model,95000.0,116.75
+239,Bhandup East,budget,2,800,furnished,1.0,4.24,19.150842,72.9489292,37000,64883,-27883,-75.4,75.4,0,Listed below model (possible underpricing),25000.0,41.5
+240,Chembur,mid,2,850,unfurnished,5.0,0.97,19.055013,72.912447,70000,94474,-24474,-35.0,35.0,0,Listed below model (possible underpricing),85000.0,104.2
+241,Goregaon West,budget,2,750,semi-furnished,6.0,4.55,19.154588,72.842697,85000,66204,18796,22.1,22.1,0,Listed above model (check overpricing),76000.0,98.2
+242,Prabhadevi,premium,2,750,semi-furnished,9.0,0.25,19.016624,72.833205,120000,142110,-22110,-18.4,18.4,0,Listed below model (possible underpricing),272500.0,183.3
+243,Marol,mid,2,860,furnished,10.0,0.9,19.10967,72.870082,85000,94394,-9394,-11.1,11.1,0,In line with model,82000.0,101.7
+244,Wadala,mid,5,1600,semi-furnished,15.0,0.92,19.03757,72.879046,190000,204545,-14545,-7.7,7.7,0,In line with model,160000.0,131.15
+245,Amboli,mid,2,665,semi-furnished,10.0,2.75,19.128238,72.843019,75000,72777,2223,3.0,3.0,1,In line with model,75000.0,112.8
+246,Powai,mid,2,845,furnished,7.0,1.82,19.1163302372328,72.8937535899656,68000,96581,-28581,-42.0,42.0,0,Listed below model (possible underpricing),85000.0,104.0
+247,Andheri West,mid,1,500,furnished,3.0,4.37,19.129,72.82039,65000,57373,7627,11.7,11.7,0,In line with model,95000.0,116.75
+248,Malad West,budget,2,650,furnished,5.0,6.47,19.182189,72.8365,61000,61990,-990,-1.6,1.6,0,In line with model,60000.0,94.1
+249,Worli,premium,2,892,unfurnished,14.0,1.21,19.00401,72.82973,225000,194675,30325,13.5,13.5,0,In line with model,290250.0,251.8
+250,Sandesh Nagar,mid,3,886,semi-furnished,1604.0,1.89,19.0865579894721,72.8810664643325,125000,125723,-723,-0.6,0.6,0,In line with model,100000.0,142.9
+251,Chandivali,budget,2,760,furnished,4.0,1.22,19.108241,72.890161,85000,70832,14168,16.7,16.7,0,Listed above model (check overpricing),82000.0,94.4
+252,Andheri East,budget,3,1350,semi-furnished,5.0,0.91,19.1223445788998,72.8659385482862,110000,116875,-6875,-6.2,6.2,0,In line with model,75000.0,100.0
+253,Chembur,mid,2,750,semi-furnished,4.0,0.6,19.057839,72.896969,80000,80265,-265,-0.3,0.3,0,In line with model,85000.0,104.2
+254,Girgaon,mid,1,580,unfurnished,5.0,0.59,18.96024139,72.82272039,75000,56955,18045,24.1,24.1,1,Listed above model (check overpricing),75000.0,129.3
+255,Goregaon West,budget,3,1100,furnished,6.0,5.91,19.162673,72.833025,100000,109924,-9924,-9.9,9.9,0,In line with model,76000.0,98.2
+256,Oshiwara,mid,2,655,semi-furnished,10.0,4.39,19.149183,72.839948,60000,79915,-19915,-33.2,33.2,0,Listed below model (possible underpricing),120000.0,141.8
+257,Khar West,premium,2,700,furnished,9.0,1.63,19.0699819,72.8338084,140000,139502,498,0.4,0.4,0,In line with model,140000.0,200.0
+258,Andheri West,mid,2,750,furnished,10.0,4.38,19.1353,72.8263,99000,90058,8942,9.0,9.0,0,In line with model,95000.0,116.75
+259,Andheri West,mid,3,870,semi-furnished,8.0,4.86,19.147222,72.833323,120000,101185,18815,15.7,15.7,0,Listed above model (check overpricing),95000.0,116.75
+260,Santacruz West,premium,2,700,semi-furnished,9.0,1.09,19.0840704,72.8380186,130000,105076,24924,19.2,19.2,0,Listed above model (check overpricing),177500.0,159.5
+261,Goregaon West,budget,2,655,semi-furnished,3.0,4.19,19.152677,72.845508,60000,58638,1362,2.3,2.3,0,In line with model,76000.0,98.2
+262,Chembur,mid,2,712,semi-furnished,2.0,0.76,19.057444,72.905727,68000,75665,-7665,-11.3,11.3,0,In line with model,85000.0,104.2
+263,Bandra West,premium,2,700,furnished,4.0,2.38,19.0595596,72.8295287,175000,134006,40994,23.4,23.4,0,Listed above model (check overpricing),175000.0,188.2
+264,Malad West,budget,2,650,semi-furnished,5.0,6.58,19.180973,72.836672,56000,57307,-1307,-2.3,2.3,0,In line with model,60000.0,94.1
+265,Mahalaxmi,premium,4,1878,semi-furnished,18.0,0.43,18.983085,72.826831,425000,363076,61924,14.6,14.6,0,In line with model,350000.0,226.3
+266,Parel,premium,2,950,semi-furnished,14.0,2.35,19.004946,72.850021,150000,152447,-2447,-1.6,1.6,0,In line with model,135000.0,157.9
+267,Andheri West,mid,5,600,furnished,4.0,5.17,19.1363,72.81685,65000,83637,-18637,-28.7,28.7,0,Listed below model (possible underpricing),95000.0,116.75
+268,Lower Parel,premium,2,1325,semi-furnished,9.0,0.83,19.003329,72.824829,300000,214432,85568,28.5,28.5,0,Listed above model (check overpricing),280000.0,181.35
+269,Goregaon West,budget,1,418,semi-furnished,3.0,4.6,19.156778,72.844484,42000,36449,5551,13.2,13.2,0,In line with model,76000.0,98.2
+270,Juhu,premium,3,1500,semi-furnished,10.0,2.46,19.11373667,72.83215167,200000,274774,-74774,-37.4,37.4,0,Listed below model (possible underpricing),212500.0,190.5
+271,Juhu,premium,5,2200,semi-furnished,15.0,2.14,19.111011,72.834394,500000,422296,77704,15.5,15.5,0,Listed above model (check overpricing),212500.0,190.5
+272,Andheri West,mid,2,688,furnished,1.0,3.37,19.130477,72.835302,75000,82848,-7848,-10.5,10.5,0,In line with model,95000.0,116.75
+273,Goregaon West,budget,2,678,semi-furnished,8.0,5.26,19.160057,72.838952,70000,60948,9052,12.9,12.9,0,In line with model,76000.0,98.2
+274,Andheri East,budget,1,500,furnished,5.0,1.13,19.122926,72.884015,70000,44496,25504,36.4,36.4,0,Listed above model (check overpricing),75000.0,100.0
+275,Goregaon West,budget,2,600,furnished,20.0,3.92,19.150452,72.846794,77000,57900,19100,24.8,24.8,0,Listed above model (check overpricing),76000.0,98.2
+276,Andheri West,mid,3,1320,furnished,24.0,3.85,19.130583,72.828359,160000,163476,-3476,-2.2,2.2,0,In line with model,95000.0,116.75
+277,Chembur,mid,2,790,semi-furnished,3.0,2.02,19.03281,72.896357,85000,85015,-15,-0.0,0.0,0,In line with model,85000.0,104.2
+278,Andheri East,budget,2,820,furnished,5.0,1.13,19.1156539,72.8629943,93000,77025,15975,17.2,17.2,0,Listed above model (check overpricing),75000.0,100.0
+279,Goregaon West,budget,2,870,semi-furnished,8.0,6.38,19.169371,72.834011,75000,75914,-914,-1.2,1.2,0,In line with model,76000.0,98.2
+280,Malad West,budget,2,810,semi-furnished,48.0,5.56,19.19163,72.836138,80000,71142,8858,11.1,11.1,0,In line with model,60000.0,94.1
+281,Goregaon West,budget,3,890,semi-furnished,6.0,5.3,19.160497,72.838856,90000,82373,7627,8.5,8.5,0,In line with model,76000.0,98.2
+282,Chandivali,budget,2,860,semi-furnished,1502.0,1.22,19.108241,72.890161,77000,82525,-5525,-7.2,7.2,0,In line with model,82000.0,94.4
+283,Bhandup East,budget,1,650,semi-furnished,1.0,4.26,19.150845,72.94821333,27000,47340,-20340,-75.3,75.3,0,Listed below model (possible underpricing),25000.0,41.5
+284,Goregaon West,budget,2,750,semi-furnished,8.0,5.78,19.170029,72.844492,65000,66722,-1722,-2.6,2.6,0,In line with model,76000.0,98.2
+285,Malad West,budget,3,1200,furnished,5.0,6.98,19.176052,72.833683,115000,115090,-90,-0.1,0.1,0,In line with model,60000.0,94.1
+286,Khar West,premium,3,950,semi-furnished,10.0,1.54,19.073643,72.833742,210000,179819,30181,14.4,14.4,0,In line with model,140000.0,200.0
+287,Bandra West,premium,2,700,furnished,2.0,2.38,19.0595596,72.8295287,130000,141449,-11449,-8.8,8.8,0,In line with model,175000.0,188.2
+288,Malad West,budget,1,420,semi-furnished,6.0,6.58,19.174173,72.837401,46000,36475,9525,20.7,20.7,0,Listed above model (check overpricing),60000.0,94.1
+289,Khar West,premium,2,700,furnished,6.0,1.63,19.0699819,72.8338084,140001,137461,2540,1.8,1.8,0,In line with model,140000.0,200.0
+290,Andheri West,mid,1,450,unfurnished,5.0,4.09,19.139922,72.837655,45000,50549,-5549,-12.3,12.3,0,In line with model,95000.0,116.75
+291,Andheri West,mid,2,600,semi-furnished,16.0,4.52,19.146006,72.836274,75000,68713,6287,8.4,8.4,0,In line with model,95000.0,116.75
+292,Malad West,budget,1,460,furnished,11.0,6.63,19.18017,72.83739,45000,44183,817,1.8,1.8,0,In line with model,60000.0,94.1
+293,Malad West,budget,2,700,furnished,1.0,5.93,19.19101,72.83059,57000,68032,-11032,-19.4,19.4,0,Listed below model (possible underpricing),60000.0,94.1
+294,Andheri West,mid,2,655,semi-furnished,8.0,3.03,19.124326,72.832874,90000,72299,17701,19.7,19.7,0,Listed above model (check overpricing),95000.0,116.75
+295,Goregaon West,budget,3,1100,semi-furnished,24.0,4.85,19.157057,72.841289,110000,98240,11760,10.7,10.7,0,In line with model,76000.0,98.2
+296,Kanjurmarg West,budget,3,1129,semi-furnished,3.0,6.24,19.136516,72.932046,103000,99882,3118,3.0,3.0,0,In line with model,97000.0,90.3
+297,Khar West,premium,1,500,furnished,1.0,1.63,19.0699819,72.8338084,70000,99144,-29144,-41.6,41.6,0,Listed below model (possible underpricing),140000.0,200.0
+298,Sakinaka,mid,2,790,semi-furnished,7.0,1.27,19.099471,72.886125,73000,83164,-10164,-13.9,13.9,0,In line with model,65000.0,108.2
+299,Malad West,budget,2,725,semi-furnished,10.0,5.88,19.189026,72.834793,75000,64360,10640,14.2,14.2,0,In line with model,60000.0,94.1
+300,Malad East,budget,1,400,furnished,4.0,5.62,19.175192,72.861546,45000,37886,7114,15.8,15.8,0,Listed above model (check overpricing),65000.0,92.5
+301,Chandivali,budget,2,950,furnished,6.0,2.08,19.0991692,72.8957363,75000,90236,-15236,-20.3,20.3,0,Listed below model (possible underpricing),82000.0,94.4
+302,Marine Lines,mid,5,750,furnished,2.0,0.33,18.9435802647953,72.826117304542,120000,97962,22038,18.4,18.4,0,Listed above model (check overpricing),110000.0,130.0
+303,Versova,premium,2,650,furnished,20.0,4.99,19.132519,72.815835,99000,110393,-11393,-11.5,11.5,0,In line with model,99000.0,145.5
+304,Malad East,budget,1,380,furnished,4.0,5.8,19.17739342,72.86457693,32000,35400,-3400,-10.6,10.6,0,In line with model,65000.0,92.5
+305,Juhu,premium,3,1200,semi-furnished,4.0,3.21,19.1137246339646,72.8246669852848,225000,219239,5761,2.6,2.6,0,In line with model,212500.0,190.5
+306,Kurla East,mid,2,650,furnished,4.0,1.25,19.064803,72.889027,60000,86206,-26206,-43.7,43.7,0,Listed below model (possible underpricing),60000.0,120.95
+307,Juhu,premium,2,700,furnished,4.0,2.87,19.1048146,72.8267098,150000,136742,13258,8.8,8.8,0,In line with model,212500.0,190.5
+308,Bandra West,premium,1,500,furnished,1.0,2.38,19.0595596,72.8295287,120001,94259,25742,21.5,21.5,0,Listed above model (check overpricing),175000.0,188.2
+309,Goregaon West,budget,2,600,furnished,10.0,3.92,19.150452,72.846794,77000,55997,21003,27.3,27.3,0,Listed above model (check overpricing),76000.0,98.2
+310,Chembur,mid,2,1020,semi-furnished,12.0,0.73,19.057756,72.904474,70000,107607,-37607,-53.7,53.7,0,Listed below model (possible underpricing),85000.0,104.2
+311,Bandra West,premium,1,500,semi-furnished,1.0,2.38,19.0595596,72.8295287,85000,90415,-5415,-6.4,6.4,0,In line with model,175000.0,188.2
+312,Navin Nagar,premium,2,700,semi-furnished,6.0,1.09,19.0840704,72.8380186,175000,123736,51264,29.3,29.3,0,Listed above model (check overpricing),150000.0,214.3
+313,Borivali East,budget,2,1050,furnished,7.0,0.66,19.22873,72.8624166,60000,90850,-30850,-51.4,51.4,0,Listed below model (possible underpricing),55000.0,77.15
+314,Malad West,budget,2,655,semi-furnished,20.0,5.5,19.191742,72.837065,65000,58302,6698,10.3,10.3,0,In line with model,60000.0,94.1
+315,Vikhroli East,premium,5,1125,semi-furnished,14.0,4.93,19.092531,72.922302,222000,214167,7833,3.5,3.5,0,In line with model,180000.0,166.7
+316,Bandra West,premium,2,1194,furnished,4.0,2.05,19.0627269778922,72.8314566693355,200000,225988,-25988,-13.0,13.0,0,In line with model,175000.0,188.2
+317,Khar West,premium,2,700,furnished,2.0,1.63,19.0699819,72.8338084,100000,140864,-40864,-40.9,40.9,0,Listed below model (possible underpricing),140000.0,200.0
+318,Goregaon West,budget,5,1550,semi-furnished,29.0,4.57,19.151909,72.839993,150000,154389,-4389,-2.9,2.9,0,In line with model,76000.0,98.2
+319,Lower Parel,premium,3,2600,semi-furnished,27.0,0.93,19.0078,72.832977,390000,445349,-55349,-14.2,14.2,0,In line with model,280000.0,181.35
+320,Bandra East,mid,1,422,semi-furnished,20.0,0.66,19.059421,72.84853,55000,50807,4193,7.6,7.6,0,In line with model,205000.0,136.0
+321,Malad West,budget,1,430,semi-furnished,10.0,6.72,19.178054,72.840716,41000,37307,3693,9.0,9.0,0,In line with model,60000.0,94.1
+322,Andheri West,mid,2,655,semi-furnished,8.0,3.15,19.131432,72.841207,75000,72978,2022,2.7,2.7,0,In line with model,95000.0,116.75
+323,Andheri West,mid,2,650,semi-furnished,10.0,2.89,19.128,72.8397,75000,71743,3257,4.3,4.3,0,In line with model,95000.0,116.75
+324,Lower Parel,premium,3,2979,semi-furnished,27.0,0.93,19.0078,72.832977,400000,504317,-104317,-26.1,26.1,0,Listed below model (possible underpricing),280000.0,181.35
+325,Navin Nagar,premium,2,700,semi-furnished,9.0,1.09,19.0840704,72.8380186,125000,146642,-21642,-17.3,17.3,0,Listed below model (possible underpricing),150000.0,214.3
+326,Andheri West,mid,2,675,semi-furnished,14.0,3.21,19.126351,72.832606,110000,74510,35490,32.3,32.3,0,Listed above model (check overpricing),95000.0,116.75
+327,Bhandup East,budget,1,600,semi-furnished,4.0,4.65,19.1469541,72.94898189999999,25000,44619,-19619,-78.5,78.5,0,Listed below model (possible underpricing),25000.0,41.5
+328,Khar West,premium,3,1100,semi-furnished,11.0,1.63,19.0699819,72.8338084,300000,206570,93430,31.1,31.1,0,Listed above model (check overpricing),140000.0,200.0
+329,Goregaon West,budget,2,700,semi-furnished,6.0,5.78,19.170029,72.844492,65000,62434,2566,3.9,3.9,0,In line with model,76000.0,98.2
+330,Andheri East,budget,2,800,semi-furnished,13.0,0.48,19.1136111,72.8713889,66000,69321,-3321,-5.0,5.0,0,In line with model,75000.0,100.0
+331,Satya Nagar,budget,1,460,unfurnished,1.0,0.61,19.103635,72.859669,31000,39811,-8811,-28.4,28.4,1,Listed below model (possible underpricing),31000.0,67.4
+332,Worli,premium,2,900,semi-furnished,3.0,0.5,18.995137,72.813884,125000,188795,-63795,-51.0,51.0,0,Listed below model (possible underpricing),290250.0,251.8
+333,Bandra West,premium,4,1703,unfurnished,13.0,2.37,19.05950333,72.82967167,600000,322514,277486,46.2,46.2,0,Listed above model (check overpricing),175000.0,188.2
+334,Malad East,budget,2,757,semi-furnished,15.0,5.79,19.178041,72.871778,70000,66005,3995,5.7,5.7,0,In line with model,65000.0,92.5
+335,Goregaon West,budget,2,645,semi-furnished,10.0,5.7,19.167242,72.841577,60000,57936,2064,3.4,3.4,0,In line with model,76000.0,98.2
+336,Bandra West,premium,2,850,semi-furnished,7.0,1.8,19.062862,72.833944,160000,154243,5757,3.6,3.6,0,In line with model,175000.0,188.2
+337,Vikhroli East,premium,5,1125,semi-furnished,17.0,4.93,19.092531,72.922302,219000,211896,7104,3.2,3.2,0,In line with model,180000.0,166.7
+338,Andheri West,mid,2,670,semi-furnished,5.0,2.39,19.125447,72.844829,70000,76232,-6232,-8.9,8.9,0,In line with model,95000.0,116.75
+339,Kanjurmarg West,budget,3,1129,semi-furnished,14.0,6.24,19.136516,72.932046,97000,100988,-3988,-4.1,4.1,0,In line with model,97000.0,90.3
+340,Goregaon West,budget,1,400,semi-furnished,6.0,5.89,19.1661439211859,72.837214454462,41000,35797,5203,12.7,12.7,0,In line with model,76000.0,98.2
+341,Bandra West,premium,2,700,unfurnished,2.0,2.38,19.0595596,72.8295287,40000,132738,-92738,-231.8,231.8,0,Listed below model (possible underpricing),175000.0,188.2
+342,Andheri West,mid,2,725,furnished,10.0,5.48,19.15352,72.830454,80000,87582,-7582,-9.5,9.5,0,In line with model,95000.0,116.75
+343,Powai,mid,2,850,furnished,1.0,1.67,19.116996,72.891654,76000,98262,-22262,-29.3,29.3,0,Listed below model (possible underpricing),85000.0,104.0
+344,Tilak Nagar,mid,2,750,semi-furnished,4.0,1.98,19.071689,72.896186,85000,80904,4096,4.8,4.8,1,In line with model,85000.0,113.3
+345,Andheri West,mid,5,785,semi-furnished,9.0,2.89,19.1277,72.8391,80000,99368,-19368,-24.2,24.2,0,Listed below model (possible underpricing),95000.0,116.75
+346,Goregaon East,budget,1,450,furnished,7.0,5.82,19.177784,72.865787,48000,41491,6509,13.6,13.6,0,In line with model,75000.0,98.25
+347,Khar West,premium,1,500,unfurnished,3.0,1.63,19.0699819,72.8338084,60000,95792,-35792,-59.7,59.7,0,Listed below model (possible underpricing),140000.0,200.0
+348,Kandivali East,budget,3,1012,semi-furnished,22.0,4.13,19.198204,72.855462,100000,82042,17958,18.0,18.0,0,Listed above model (check overpricing),71500.0,52.15
+349,Bandra West,premium,1,200,furnished,1.0,2.38,19.0595596,72.8295287,45000,39886,5114,11.4,11.4,0,In line with model,175000.0,188.2
+350,Oshiwara,mid,2,650,semi-furnished,12.0,4.39,19.149183,72.839948,60000,80218,-20218,-33.7,33.7,0,Listed below model (possible underpricing),120000.0,141.8
+351,Bandra West,premium,3,1600,semi-furnished,12.0,2.09,19.063337,72.830786,345000,281495,63505,18.4,18.4,0,Listed above model (check overpricing),175000.0,188.2
+352,Powai,mid,4,2400,furnished,17.0,2.2,19.123388,72.894532,300000,275122,24878,8.3,8.3,0,In line with model,85000.0,104.0
+353,Goregaon West,budget,1,418,semi-furnished,6.0,4.9,19.161335,72.845833,42000,37252,4748,11.3,11.3,0,In line with model,76000.0,98.2
+354,Ghatkopar West,mid,4,2200,furnished,10.0,4.51,19.097797,72.920018,358000,266415,91585,25.6,25.6,0,Listed above model (check overpricing),119000.0,116.75
+355,Andheri West,mid,2,550,semi-furnished,8.0,3.41,19.127833,72.831458,60000,62129,-2129,-3.5,3.5,0,In line with model,95000.0,116.75
+356,Marol,mid,2,750,furnished,6.0,1.22,19.1165719,72.8865006,85000,86444,-1444,-1.7,1.7,0,In line with model,82000.0,101.7
+357,Goregaon East,budget,3,1120,furnished,18.0,4.41,19.161617,72.855297,132000,108314,23686,17.9,17.9,0,Listed above model (check overpricing),75000.0,98.25
+358,Goregaon East,budget,2,780,semi-furnished,19.0,4.75,19.16852,72.878099,53000,69356,-16356,-30.9,30.9,0,Listed below model (possible underpricing),75000.0,98.25
+359,Goregaon East,budget,2,650,semi-furnished,16.0,3.15,19.15244,72.884405,62000,57281,4719,7.6,7.6,0,In line with model,75000.0,98.25
+360,Goregaon East,budget,2,730,semi-furnished,10.0,4.85,19.164146,72.851361,75000,65040,9960,13.3,13.3,0,In line with model,75000.0,98.25
+361,Malad East,budget,2,700,semi-furnished,14.0,5.79,19.178041,72.871778,75000,61928,13072,17.4,17.4,0,Listed above model (check overpricing),65000.0,92.5
+362,Malad West,budget,1,400,semi-furnished,6.0,6.02,19.185042,72.840177,40000,35451,4549,11.4,11.4,0,In line with model,60000.0,94.1
+363,Bandra West,premium,3,1450,semi-furnished,7.0,2.04,19.0647796814144,72.8307517857595,225000,267447,-42447,-18.9,18.9,0,Listed below model (possible underpricing),175000.0,188.2
+364,Andheri West,mid,3,1200,semi-furnished,9.0,4.86,19.147222,72.833323,115000,137981,-22981,-20.0,20.0,0,Listed below model (possible underpricing),95000.0,116.75
+365,Andheri West,mid,2,728,furnished,4.0,3.31,19.130742,72.836791,80000,85282,-5282,-6.6,6.6,0,In line with model,95000.0,116.75
+366,Andheri West,mid,2,850,furnished,6.0,5.51,19.13877,72.814839,95000,101591,-6591,-6.9,6.9,0,In line with model,95000.0,116.75
+367,Andheri West,mid,1,650,unfurnished,7.0,5.35,19.15085129,72.83012866,48000,71967,-23967,-49.9,49.9,0,Listed below model (possible underpricing),95000.0,116.75
+368,Goregaon West,budget,4,1952,semi-furnished,27.0,4.61,19.152445,72.839961,225000,173170,51830,23.0,23.0,0,Listed above model (check overpricing),76000.0,98.2
+369,Khar West,premium,2,700,furnished,2.0,1.63,19.0699819,72.8338084,140000,140864,-864,-0.6,0.6,0,In line with model,140000.0,200.0
+370,Andheri East,budget,2,1025,furnished,15.0,0.9,19.114715,72.884097,100000,94732,5268,5.3,5.3,0,In line with model,75000.0,100.0
+371,Goregaon East,budget,3,856,semi-furnished,2.0,4.93,19.17031,72.871761,60000,79503,-19503,-32.5,32.5,0,Listed below model (possible underpricing),75000.0,98.25
+372,Malad East,budget,3,1500,furnished,12.0,5.72,19.177289,72.8773,110000,140566,-30566,-27.8,27.8,0,Listed below model (possible underpricing),65000.0,92.5
+373,Andheri East,budget,2,950,furnished,2.0,0.95,19.11038,72.8627,80000,83974,-3974,-5.0,5.0,0,In line with model,75000.0,100.0
+374,Prabhadevi,premium,4,2500,semi-furnished,1.0,0.2,19.01406,72.83082,295000,469457,-174457,-59.1,59.1,0,Listed below model (possible underpricing),272500.0,183.3
+375,Bandra West,premium,2,700,semi-furnished,2.0,2.38,19.0595596,72.8295287,200001,125438,74563,37.3,37.3,0,Listed above model (check overpricing),175000.0,188.2
+376,Chembur,mid,5,800,semi-furnished,12.0,1.05,19.0636013492064,72.8929881744963,90000,98996,-8996,-10.0,10.0,0,In line with model,85000.0,104.2
+377,Juhu,premium,2,700,semi-furnished,1.0,2.87,19.1048146,72.8267098,110001,127936,-17935,-16.3,16.3,0,Listed below model (possible underpricing),212500.0,190.5
+378,Andheri West,mid,2,780,furnished,5.0,3.82,19.12868833,72.82691,75000,93725,-18725,-25.0,25.0,0,Listed below model (possible underpricing),95000.0,116.75
+379,Malad East,budget,2,780,furnished,15.0,4.87,19.19089,72.861307,75000,70452,4548,6.1,6.1,0,In line with model,65000.0,92.5
+380,Andheri West,mid,2,728,semi-furnished,8.0,3.42,19.128627089884,72.8322400501573,85000,82848,2152,2.5,2.5,0,In line with model,95000.0,116.75
+381,Goregaon West,budget,2,670,semi-furnished,10.0,3.75,19.150754,72.849549,62000,59852,2148,3.5,3.5,0,In line with model,76000.0,98.2
+382,Jogeshwari West,budget,2,1100,unfurnished,17.0,4.53,19.142052,72.834135,85000,99454,-14454,-17.0,17.0,0,Listed below model (possible underpricing),85000.0,100.0
+383,Malad East,budget,2,900,unfurnished,12.0,5.66,19.183713,72.864089,55000,80789,-25789,-46.9,46.9,0,Listed below model (possible underpricing),65000.0,92.5
+384,Chandivali,budget,2,1250,unfurnished,2.0,2.22,19.121091,72.894934,82000,108796,-26796,-32.7,32.7,0,Listed below model (possible underpricing),82000.0,94.4
+385,Andheri West,mid,2,760,semi-furnished,1.0,2.51,19.1268140542416,72.8453620973147,65000,82480,-17480,-26.9,26.9,0,Listed below model (possible underpricing),95000.0,116.75
+386,Goregaon East,budget,2,822,semi-furnished,15.0,3.04,19.146015,72.854033,87000,71270,15730,18.1,18.1,0,Listed above model (check overpricing),75000.0,98.25
+387,Marol,mid,2,800,semi-furnished,10.0,1.1,19.1173012,72.8840395,82000,82345,-345,-0.4,0.4,0,In line with model,82000.0,101.7
+388,Andheri East,budget,2,700,furnished,1.0,1.3,19.11654,72.88753,65000,63659,1341,2.1,2.1,0,In line with model,75000.0,100.0
+389,Malad East,budget,1,422,semi-furnished,15.0,4.84,19.191098,72.862479,47000,36754,10246,21.8,21.8,0,Listed above model (check overpricing),65000.0,92.5
+390,Andheri East,budget,1,550,furnished,10.0,0.9,19.114715,72.884097,68000,48492,19508,28.7,28.7,0,Listed above model (check overpricing),75000.0,100.0
+391,Andheri East,budget,1,500,furnished,7.0,1.27,19.121292,72.884916,50000,46873,3127,6.3,6.3,0,In line with model,75000.0,100.0
+392,Chembur,mid,3,1100,semi-furnished,3.0,0.62,19.05718,72.90281,110000,119757,-9757,-8.9,8.9,0,In line with model,85000.0,104.2
+393,Goregaon West,budget,5,1500,unfurnished,15.0,4.58,19.152858,72.840617,170000,144877,25123,14.8,14.8,0,In line with model,76000.0,98.2
+394,Bandra West,premium,1,200,furnished,9.0,2.38,19.0595596,72.8295287,32000,52594,-20594,-64.4,64.4,0,Listed below model (possible underpricing),175000.0,188.2
+395,Andheri West,mid,2,725,furnished,11.0,3.14,19.12451228,72.8316356,75000,89099,-14099,-18.8,18.8,0,Listed below model (possible underpricing),95000.0,116.75
+396,Andheri East,budget,1,500,semi-furnished,10.0,0.92,19.11985,72.881961,45000,42833,2167,4.8,4.8,0,In line with model,75000.0,100.0
+397,Santacruz West,premium,1,500,furnished,6.0,1.09,19.0840704,72.8380186,65000,93791,-28791,-44.3,44.3,0,Listed below model (possible underpricing),177500.0,159.5
+398,Andheri West,mid,3,2100,furnished,63.0,4.07,19.13767,72.834864,300000,241543,58457,19.5,19.5,0,Listed above model (check overpricing),95000.0,116.75
+399,Andheri West,mid,2,750,furnished,2.0,4.15,19.1372301,72.8326694,80000,90437,-10437,-13.0,13.0,0,In line with model,95000.0,116.75
+400,Andheri West,mid,2,700,semi-furnished,6.0,5.17,19.144588,72.826855,75000,78056,-3056,-4.1,4.1,0,In line with model,95000.0,116.75
+401,Andheri West,mid,2,666,unfurnished,6.0,4.36,19.13672746,72.82845687,301000,73134,227866,75.7,75.7,0,Listed above model (check overpricing),95000.0,116.75
+402,Andheri East,budget,1,500,furnished,11.0,1.19,19.116034,72.886572,58000,44542,13458,23.2,23.2,0,Listed above model (check overpricing),75000.0,100.0
+403,Chembur,mid,3,900,semi-furnished,5.0,0.96,19.06035,72.902128,130000,97962,32038,24.6,24.6,0,Listed above model (check overpricing),85000.0,104.2
+404,Sakinaka,mid,2,800,furnished,7.0,1.27,19.099471,72.886125,70000,89854,-19854,-28.4,28.4,0,Listed below model (possible underpricing),65000.0,108.2
+405,Powai,mid,2,1100,furnished,9.0,2.24,19.1230950180622,72.8948255932208,85000,124096,-39096,-46.0,46.0,0,Listed below model (possible underpricing),85000.0,104.0
+406,Andheri East,budget,2,800,semi-furnished,8.0,1.35,19.122404,72.885968,77000,70475,6525,8.5,8.5,0,In line with model,75000.0,100.0
+407,Andheri West,mid,1,498,semi-furnished,8.0,4.52,19.146006,72.836274,55000,56161,-1161,-2.1,2.1,0,In line with model,95000.0,116.75
+408,Goregaon East,budget,2,780,furnished,10.0,4.37,19.161838,72.856647,80000,73827,6173,7.7,7.7,0,In line with model,75000.0,98.25
+409,Andheri West,mid,2,600,semi-furnished,17.0,2.89,19.128,72.8397,65000,68535,-3535,-5.4,5.4,0,In line with model,95000.0,116.75
+410,Bandra West,premium,3,1200,semi-furnished,9.0,1.52,19.06332,72.836671,200000,223181,-23181,-11.6,11.6,0,In line with model,175000.0,188.2
+411,Powai,mid,1,500,semi-furnished,4.0,1.79,19.115138,72.894143,55000,50936,4064,7.4,7.4,0,In line with model,85000.0,104.0
+412,Goregaon East,budget,3,1515,semi-furnished,49.0,4.98,19.169827,72.86377,225000,131878,93122,41.4,41.4,0,Listed above model (check overpricing),75000.0,98.25
+413,Santacruz West,premium,8,6000,furnished,6.0,1.23,19.0820422275199,72.8358087213213,800000,1244017,-444017,-55.5,55.5,0,Listed below model (possible underpricing),177500.0,159.5
+414,Kemps Corner,mid,1,650,furnished,5.0,0.73,18.962913,72.811089,90000,69728,20272,22.5,22.5,1,Listed above model (check overpricing),90000.0,138.5
+415,Malad East,budget,2,788,furnished,15.0,5.79,19.178041,72.871778,75000,73509,1491,2.0,2.0,0,In line with model,65000.0,92.5
+416,Tardeo,premium,2,580,unfurnished,20.0,0.68,18.9644,72.8117,90000,92100,-2100,-2.3,2.3,0,In line with model,90000.0,155.2
+417,Powai,mid,5,900,furnished,3.0,3.35,19.116918,72.909181,75000,117098,-42098,-56.1,56.1,0,Listed below model (possible underpricing),85000.0,104.0
+418,Goregaon East,budget,1,425,furnished,12.0,4.88,19.169326,72.880853,42000,41075,925,2.2,2.2,0,In line with model,75000.0,98.25
+419,Juhu,premium,3,1300,semi-furnished,9.0,2.77,19.1169,72.8304,300000,237127,62873,21.0,21.0,0,Listed above model (check overpricing),212500.0,190.5
+420,Malad West,budget,1,440,unfurnished,38.0,6.08,19.185516,72.837611,48000,37776,10224,21.3,21.3,0,Listed above model (check overpricing),60000.0,94.1
+421,Goregaon East,budget,1,454,semi-furnished,16.0,5.53,19.173157,72.856901,47000,39490,7510,16.0,16.0,0,Listed above model (check overpricing),75000.0,98.25
+422,Malad West,budget,2,700,unfurnished,25.0,5.56,19.191779,72.835777,86000,61064,24936,29.0,29.0,0,Listed above model (check overpricing),60000.0,94.1
+423,Goregaon East,budget,1,480,furnished,2.0,5.82,19.177784,72.865787,48000,45428,2572,5.4,5.4,0,In line with model,75000.0,98.25
+424,Kanjurmarg West,budget,3,1129,semi-furnished,1.0,6.24,19.136516,72.932046,101000,99127,1873,1.9,1.9,0,In line with model,97000.0,90.3
+425,Ghatkopar West,mid,3,1070,semi-furnished,20.0,4.49,19.098048,72.919816,128000,120779,7221,5.6,5.6,0,In line with model,119000.0,116.75
+426,Vikhroli West,budget,2,800,furnished,12.0,3.99,19.106295,72.916475,75000,77003,-2003,-2.7,2.7,0,In line with model,65000.0,93.8
+427,Bandra West,premium,4,1703,unfurnished,13.0,2.37,19.05950333,72.82967167,600000,319867,280133,46.7,46.7,0,Listed above model (check overpricing),175000.0,188.2
+428,Goregaon East,budget,1,350,semi-furnished,4.0,5.11,19.17139043,72.86600181,25000,31603,-6603,-26.4,26.4,0,Listed below model (possible underpricing),75000.0,98.25
+429,Kanjurmarg West,budget,3,1129,semi-furnished,2.0,6.24,19.136516,72.932046,102000,98689,3311,3.2,3.2,0,In line with model,97000.0,90.3
+430,Bangur Nagar,budget,3,1057,semi-furnished,12.0,5.9,19.163807,72.834294,100000,94132,5868,5.9,5.9,0,In line with model,100000.0,94.6
+431,Malad East,budget,1,487,semi-furnished,9.0,5.73,19.177501,72.876135,56000,53188,2812,5.0,5.0,0,In line with model,65000.0,92.5
+432,Malad East,budget,1,400,semi-furnished,19.0,5.65,19.176546,72.868475,28000,35361,-7361,-26.3,26.3,0,Listed below model (possible underpricing),65000.0,92.5
+433,Chembur,mid,2,700,unfurnished,7.0,0.14,19.054718,72.893964,70000,79027,-9027,-12.9,12.9,0,In line with model,85000.0,104.2
+434,Powai,mid,2,814,semi-furnished,13.0,4.34,19.118357,72.91856,85000,87904,-2904,-3.4,3.4,0,In line with model,85000.0,104.0
+435,Chandivali,budget,3,1000,semi-furnished,6.0,2.36,19.106476,72.900911,128000,88512,39488,30.8,30.8,0,Listed above model (check overpricing),82000.0,94.4
+436,Chandivali,budget,2,900,semi-furnished,1.0,2.22,19.121091,72.894934,82000,78164,3836,4.7,4.7,0,In line with model,82000.0,94.4
+437,Sakinaka,mid,2,1200,unfurnished,2.0,1.27,19.098482,72.885828,65000,131356,-66356,-102.1,102.1,0,Listed below model (possible underpricing),65000.0,108.2
+438,Bandra Kurla Complex,premium,4,3200,semi-furnished,5.0,1.77,19.06725,72.869997,710000,467059,242941,34.2,34.2,1,Listed above model (check overpricing),710000.0,221.9
+439,Bhandup East,budget,1,600,semi-furnished,2.0,4.65,19.1469969,72.9486952,24000,44208,-20208,-84.2,84.2,0,Listed below model (possible underpricing),25000.0,41.5
+440,Chembur,mid,2,750,semi-furnished,5.0,0.79,19.053163,72.91212,65000,79767,-14767,-22.7,22.7,0,Listed below model (possible underpricing),85000.0,104.2
+441,Andheri East,budget,2,721,furnished,4.0,1.13,19.122926,72.884015,80000,68368,11632,14.5,14.5,0,In line with model,75000.0,100.0
+442,Goregaon West,budget,2,560,furnished,3.0,3.31,19.1329584,72.8411737,65000,53173,11827,18.2,18.2,0,Listed above model (check overpricing),76000.0,98.2
+443,Jacob Circle,premium,5,750,furnished,12.0,0.77,18.982206,72.832177,115000,130075,-15075,-13.1,13.1,1,In line with model,115000.0,153.3
+444,Bandra West,premium,3,2000,semi-furnished,21.0,1.76,19.053485,72.834834,340000,358924,-18924,-5.6,5.6,0,In line with model,175000.0,188.2
+445,Goregaon East,budget,1,550,furnished,9.0,2.83,,,55000,64790,-9790,-17.8,17.8,0,Listed below model (possible underpricing),75000.0,98.25
+446,Natwar Nagar,mid,1,550,unfurnished,20.0,1.89,19.0865579894721,72.8810664643325,70000,59391,10609,15.2,15.2,1,Listed above model (check overpricing),70000.0,127.3
+447,Chembur,mid,3,1100,semi-furnished,3.0,0.37,19.049874,72.909876,130000,118567,11433,8.8,8.8,0,In line with model,85000.0,104.2
+448,Vikhroli West,budget,2,850,furnished,8.0,3.99,19.106295,72.916475,72000,81381,-9381,-13.0,13.0,0,In line with model,65000.0,93.8
+449,Powai,mid,3,1400,furnished,10.0,2.57,19.114684,72.902158,145000,164649,-19649,-13.6,13.6,0,In line with model,85000.0,104.0
+450,Powai,mid,2,650,semi-furnished,7.0,4.92,19.126154,72.921526,58000,71917,-13917,-24.0,24.0,0,Listed below model (possible underpricing),85000.0,104.0
+451,Borivali East,budget,2,600,unfurnished,5.0,0.59,19.2297814,72.86085589999999,45000,51512,-6512,-14.5,14.5,0,In line with model,55000.0,77.15
+452,Prabhadevi,premium,3,1500,semi-furnished,14.0,0.49,19.011492,72.830383,375000,246802,128198,34.2,34.2,0,Listed above model (check overpricing),272500.0,183.3
+453,Bangur Nagar,budget,3,1072,semi-furnished,10.0,5.9,19.163807,72.834294,100000,97630,2370,2.4,2.4,0,In line with model,100000.0,94.6
+454,Powai,mid,1,650,semi-furnished,2.0,1.84,19.117121,72.893559,58000,68413,-10413,-18.0,18.0,0,Listed below model (possible underpricing),85000.0,104.0
+455,Goregaon East,budget,1,400,unfurnished,6.0,5.59,19.176231,72.871196,27000,35783,-8783,-32.5,32.5,0,Listed below model (possible underpricing),75000.0,98.25
+456,Andheri West,mid,2,690,semi-furnished,10.0,2.89,19.128,72.8397,85000,78604,6396,7.5,7.5,0,In line with model,95000.0,116.75
+457,Goregaon East,budget,2,750,semi-furnished,14.0,5.04,19.167253,72.853964,82000,65785,16215,19.8,19.8,0,Listed above model (check overpricing),75000.0,98.25
+458,Chembur,mid,2,680,semi-furnished,7.0,0.31,19.053083,72.895587,65000,72693,-7693,-11.8,11.8,0,In line with model,85000.0,104.2
+459,Chembur,mid,1,430,furnished,10.0,2.02,19.0328096,72.8963568,67000,48347,18653,27.8,27.8,0,Listed above model (check overpricing),85000.0,104.2
+460,Chembur,mid,1,470,unfurnished,1.0,0.06,19.0544711417848,72.892334443609,55000,49543,5457,9.9,9.9,0,In line with model,85000.0,104.2
+461,Chembur,mid,1,530,semi-furnished,10.0,0.79,19.053163,72.91212,52000,55706,-3706,-7.1,7.1,0,In line with model,85000.0,104.2
+462,Chembur,mid,3,1100,furnished,12.0,0.38,19.051299,72.906677,145000,124632,20368,14.0,14.0,0,In line with model,85000.0,104.2
+463,Vikhroli East,premium,3,1350,semi-furnished,7.0,5.28,19.102628,72.928448,180000,230691,-50691,-28.2,28.2,0,Listed below model (possible underpricing),180000.0,166.7
+464,Andheri East,budget,1,600,semi-furnished,6.0,0.41,19.110691,72.881714,54000,49071,4929,9.1,9.1,0,In line with model,75000.0,100.0
+465,Chembur,mid,3,1000,unfurnished,9.0,1.73,19.0696829,72.8919715,90000,114411,-24411,-27.1,27.1,0,Listed below model (possible underpricing),85000.0,104.2
+466,Bandra West,premium,1,200,semi-furnished,1.0,2.38,19.0595596,72.8295287,50000,38651,11349,22.7,22.7,0,Listed above model (check overpricing),175000.0,188.2
+467,Powai,mid,2,900,semi-furnished,7.0,2.06,19.120197,72.893831,68000,95907,-27907,-41.0,41.0,0,Listed below model (possible underpricing),85000.0,104.0
+468,Deonar,mid,2,750,furnished,10.0,1.05,19.047958,72.916976,95000,105976,-10976,-11.6,11.6,0,In line with model,95000.0,136.4
+469,Santacruz East,budget,2,1100,semi-furnished,5.0,0.74,19.0804527378622,72.8540158556832,85000,90659,-5659,-6.7,6.7,0,In line with model,74000.0,89.65
+470,Malad East,budget,3,1150,semi-furnished,3.0,5.67,19.183693,72.861179,115000,103154,11846,10.3,10.3,0,In line with model,65000.0,92.5
+471,Powai,mid,2,677,semi-furnished,10.0,3.71,19.118103,72.912369,97000,72784,24216,25.0,25.0,0,Listed above model (check overpricing),85000.0,104.0
+472,Chembur,mid,2,700,semi-furnished,3.0,1.3,19.051756,72.918625,85000,75724,9276,10.9,10.9,0,In line with model,85000.0,104.2
+473,Borivali West,budget,2,640,semi-furnished,13.0,2.19,19.2325,72.8424,58000,54391,3609,6.2,6.2,0,In line with model,40000.0,88.9
+474,Chembur,mid,5,1000,unfurnished,13.0,1.1,19.064053,72.892619,100000,122745,-22745,-22.7,22.7,0,Listed below model (possible underpricing),85000.0,104.2
+475,Andheri West,mid,2,750,furnished,6.0,2.3,19.121328,72.839541,75000,87979,-12979,-17.3,17.3,0,Listed below model (possible underpricing),95000.0,116.75
+476,Vikhroli East,premium,3,1100,semi-furnished,9.0,4.69,19.093269,72.920159,180000,194995,-14995,-8.3,8.3,0,In line with model,180000.0,166.7
+477,Malad East,budget,3,1088,furnished,10.0,5.72,19.177289,72.8773,105000,100951,4049,3.9,3.9,0,In line with model,65000.0,92.5
+478,Powai,mid,2,900,semi-furnished,16.0,1.84,19.117121,72.893559,84000,95088,-11088,-13.2,13.2,0,In line with model,85000.0,104.0
+479,Chembur,mid,2,750,unfurnished,4.0,0.18,19.051821,72.900098,75000,82227,-7227,-9.6,9.6,0,In line with model,85000.0,104.2
+480,Chandivali,budget,2,900,semi-furnished,1.0,2.22,19.121091,72.894934,85000,78843,6157,7.2,7.2,0,In line with model,82000.0,94.4
+481,Malad East,budget,1,400,furnished,4.0,5.79,19.177058,72.862804,45000,37055,7945,17.7,17.7,0,Listed above model (check overpricing),65000.0,92.5
+482,Vikhroli West,budget,2,630,furnished,14.0,4.11,19.105689,72.917573,75000,60045,14955,19.9,19.9,0,Listed above model (check overpricing),65000.0,93.8
+483,Goregaon West,budget,2,700,unfurnished,6.0,6.34,19.173312,72.840079,57000,65566,-8566,-15.0,15.0,0,Listed below model (possible underpricing),76000.0,98.2
+484,Goregaon West,budget,2,650,unfurnished,6.0,5.89,19.1661439211859,72.837214454462,52000,61077,-9077,-17.5,17.5,0,Listed below model (possible underpricing),76000.0,98.2
+485,Santacruz East,budget,3,1400,furnished,8.0,1.27,19.075992,72.859663,125000,122380,2620,2.1,2.1,0,In line with model,74000.0,89.65
+486,Malad West,budget,2,1000,furnished,9.0,2.83,,,185000,116778,68222,36.9,36.9,0,Listed above model (check overpricing),60000.0,94.1
+487,Vikhroli West,budget,2,800,furnished,14.0,3.99,19.106295,72.916475,68000,75693,-7693,-11.3,11.3,0,In line with model,65000.0,93.8
+488,Wadala,mid,3,965,semi-furnished,15.0,2.83,19.022674,72.867548,165000,115742,49258,29.9,29.9,0,Listed above model (check overpricing),160000.0,131.15
+489,Bhandup West,budget,3,1000,semi-furnished,9.0,5.99,19.140375,72.933196,72000,85151,-13151,-18.3,18.3,0,Listed below model (possible underpricing),46500.0,65.5
+490,Santacruz East,budget,2,1000,furnished,7.0,1.15,19.077303,72.857848,71000,85504,-14504,-20.4,20.4,0,Listed below model (possible underpricing),74000.0,89.65
+491,Chembur,mid,2,660,semi-furnished,8.0,0.94,19.062211,72.895359,80000,72238,7762,9.7,9.7,0,In line with model,85000.0,104.2
+492,Ghatkopar West,mid,4,2200,semi-furnished,13.0,4.51,19.097797,72.920018,275000,251658,23342,8.5,8.5,0,In line with model,119000.0,116.75
+493,Chembur,mid,2,790,furnished,12.0,1.01,19.063173,72.891839,90000,87994,2006,2.2,2.2,0,In line with model,85000.0,104.2
+494,Khar West,premium,1,500,semi-furnished,3.0,1.63,19.0699819,72.8338084,80000,90025,-10025,-12.5,12.5,0,In line with model,140000.0,200.0
+495,Andheri East,budget,2,550,furnished,5.0,0.51,19.113026,72.877824,95000,53582,41418,43.6,43.6,0,Listed above model (check overpricing),75000.0,100.0
+496,Jogeshwari East,budget,2,750,furnished,6.0,2.37,19.129455,72.851441,65000,72606,-7606,-11.7,11.7,0,In line with model,65000.0,100.0
+497,Malad West,budget,2,650,semi-furnished,5.0,6.01,19.18945,72.83171833,57000,57964,-964,-1.7,1.7,0,In line with model,60000.0,94.1
+498,Worli,premium,2,750,unfurnished,15.0,0.75,19.014238,72.823164,80000,165937,-85937,-107.4,107.4,0,Listed below model (possible underpricing),290250.0,251.8
+499,Goregaon West,budget,3,1200,semi-furnished,7.0,5.3,19.160497,72.838856,90000,107807,-17807,-19.8,19.8,0,Listed below model (possible underpricing),76000.0,98.2
+500,Malad East,budget,1,400,furnished,5.0,5.62,19.175192,72.861546,48000,38362,9638,20.1,20.1,0,Listed above model (check overpricing),65000.0,92.5
+501,Powai,mid,3,1550,furnished,20.0,3.66,19.114579,72.912815,200000,177122,22878,11.4,11.4,0,In line with model,85000.0,104.0
+502,Goregaon East,budget,2,800,semi-furnished,13.0,5.1,19.1717335632515,72.8701690398811,100000,70875,29125,29.1,29.1,0,Listed above model (check overpricing),75000.0,98.25
+503,Goregaon East,budget,3,1367,furnished,5.0,5.44,19.1726023,72.85794589999999,295000,126253,168747,57.2,57.2,0,Listed above model (check overpricing),75000.0,98.25
+504,Malad West,budget,1,340,furnished,2.0,6.77,19.17834023,72.83849043,32000,32333,-333,-1.0,1.0,0,In line with model,60000.0,94.1
+505,Powai,mid,1,400,furnished,17.0,3.74,19.116994,72.913059,80000,45759,34241,42.8,42.8,0,Listed above model (check overpricing),85000.0,104.0
+506,Andheri East,budget,1,600,furnished,22.0,0.89,19.11463,72.884094,75000,52746,22254,29.7,29.7,0,Listed above model (check overpricing),75000.0,100.0
+507,Andheri East,budget,3,1000,furnished,5.0,1.33,19.11747,72.851,100000,97114,2886,2.9,2.9,0,In line with model,75000.0,100.0
+508,Versova,premium,1,550,furnished,17.0,5.73,19.135968,72.809729,65000,95105,-30105,-46.3,46.3,0,Listed below model (possible underpricing),99000.0,145.5
+509,Jogeshwari East,budget,2,750,semi-furnished,10.0,1.8,19.137776,72.861949,75000,66275,8725,11.6,11.6,0,In line with model,65000.0,100.0
+510,Goregaon East,budget,2,975,semi-furnished,19.0,5.91,19.179149,72.872283,69000,85242,-16242,-23.5,23.5,0,Listed below model (possible underpricing),75000.0,98.25
+511,Chembur,mid,2,1222,semi-furnished,14.0,0.73,19.057756,72.904474,71000,125699,-54699,-77.0,77.0,0,Listed below model (possible underpricing),85000.0,104.2
+512,Kanjurmarg East,budget,3,950,semi-furnished,6.0,6.15,19.13,72.93248,70000,87404,-17404,-24.9,24.9,0,Listed below model (possible underpricing),73000.0,92.3
+513,Goregaon East,budget,2,1050,furnished,17.0,5.59,19.176231,72.871196,55000,99988,-44988,-81.8,81.8,0,Listed below model (possible underpricing),75000.0,98.25
+514,Juhu,premium,3,1950,furnished,9.0,2.77,19.1169,72.8304,250000,372609,-122609,-49.0,49.0,0,Listed below model (possible underpricing),212500.0,190.5
+515,Andheri West,mid,2,936,furnished,7.0,5.27,19.1512251309964,72.8312624245793,75000,114174,-39174,-52.2,52.2,0,Listed below model (possible underpricing),95000.0,116.75
+516,Powai,mid,2,700,semi-furnished,5.0,1.82,19.1163302372328,72.8937535899656,70000,73833,-3833,-5.5,5.5,0,In line with model,85000.0,104.0
+517,Borivali East,budget,2,650,semi-furnished,22.0,1.72,19.22016,72.86909,40000,54034,-14034,-35.1,35.1,0,Listed below model (possible underpricing),55000.0,77.15
+518,Borivali West,budget,2,580,semi-furnished,7.0,2.34,19.230828,72.841169,54000,49696,4304,8.0,8.0,0,In line with model,40000.0,88.9
+519,Andheri West,mid,4,2100,furnished,12.0,5.73,19.1493188102435,72.8248460076322,300000,252868,47132,15.7,15.7,0,Listed above model (check overpricing),95000.0,116.75
+520,Chembur,mid,3,1200,semi-furnished,10.0,1.08,19.053359,72.91547,110000,129580,-19580,-17.8,17.8,0,Listed below model (possible underpricing),85000.0,104.2
+521,Cumbala Hill,premium,1,500,furnished,3.0,1.23,18.96764676,72.80732996,90000,71228,18772,20.9,20.9,1,Listed above model (check overpricing),90000.0,180.0
+522,Chembur,mid,2,771,semi-furnished,9.0,1.25,19.0509,72.91849,95000,81625,13375,14.1,14.1,0,In line with model,85000.0,104.2
+523,Ghatkopar West,mid,4,1502,semi-furnished,8.0,4.25,19.0973596616911,72.9173035525092,398000,171613,226387,56.9,56.9,0,Listed above model (check overpricing),119000.0,116.75
+524,Andheri West,mid,3,1550,unfurnished,6.0,5.55,19.145107,72.821382,160000,175434,-15434,-9.6,9.6,0,In line with model,95000.0,116.75
+525,Malad East,budget,5,740,semi-furnished,16.0,5.16,19.1885009,72.8578352,80000,74993,5007,6.3,6.3,0,In line with model,65000.0,92.5
+526,Powai,mid,2,1000,furnished,16.0,3.38,19.118953,72.908827,160000,113672,46328,29.0,29.0,0,Listed above model (check overpricing),85000.0,104.0
+527,Santacruz West,premium,1,500,furnished,2.0,1.09,19.0840704,72.8380186,55000,93759,-38759,-70.5,70.5,0,Listed below model (possible underpricing),177500.0,159.5
+528,Sakinaka,mid,1,500,furnished,6.0,0.91,19.100651,72.88291,58000,57131,869,1.5,1.5,0,In line with model,65000.0,108.2
+529,Malad East,budget,1,430,furnished,3.0,5.11,19.1888856,72.8580304,38000,40923,-2923,-7.7,7.7,0,In line with model,65000.0,92.5
+530,Juhu,premium,2,650,furnished,14.0,2.22,19.10797333,72.83296833,85000,128305,-43305,-50.9,50.9,0,Listed below model (possible underpricing),212500.0,190.5
+531,Bandra West,premium,3,1200,semi-furnished,5.0,2.32,19.06547984,72.82779022,275000,214913,60087,21.8,21.8,0,Listed above model (check overpricing),175000.0,188.2
+532,Malad East,budget,2,680,semi-furnished,11.0,5.68,19.175913,72.862411,62000,59874,2126,3.4,3.4,0,In line with model,65000.0,92.5
+533,Oshiwara,mid,2,670,furnished,28.0,4.83,19.145734,72.832757,125000,86324,38676,30.9,30.9,0,Listed above model (check overpricing),120000.0,141.8
+534,Kurla East,mid,1,401,semi-furnished,2.0,1.61,19.061238,72.879505,60000,40390,19610,32.7,32.7,0,Listed above model (check overpricing),60000.0,120.95
+535,Chembur,mid,2,800,unfurnished,10.0,0.7,19.05797025,72.90093264,110000,89372,20628,18.8,18.8,0,Listed above model (check overpricing),85000.0,104.2
+536,Chembur,mid,3,1000,furnished,5.0,0.99,19.060577,72.902806,155000,119533,35467,22.9,22.9,0,Listed above model (check overpricing),85000.0,104.2
+537,Andheri West,mid,4,2300,semi-furnished,23.0,5.11,19.151569,72.833298,400000,258610,141390,35.3,35.3,0,Listed above model (check overpricing),95000.0,116.75
+538,Goregaon East,budget,1,360,unfurnished,3.0,5.21,19.172878,72.873839,24000,33609,-9609,-40.0,40.0,0,Listed below model (possible underpricing),75000.0,98.25
+539,Goregaon West,budget,5,1400,furnished,701.0,4.57,19.151909,72.839993,350000,148488,201512,57.6,57.6,0,Listed above model (check overpricing),76000.0,98.2
+540,Malad East,budget,3,1110,semi-furnished,7.0,5.03,19.189674,72.8578264,88000,99173,-11173,-12.7,12.7,0,In line with model,65000.0,92.5
+541,Chembur,mid,2,650,semi-furnished,9.0,1.25,19.0509,72.91849,77000,70780,6220,8.1,8.1,0,In line with model,85000.0,104.2
+542,Sandesh Nagar,mid,5,550,semi-furnished,10.0,1.89,19.0865579894721,72.8810664643325,85000,76251,8749,10.3,10.3,0,In line with model,100000.0,142.9
+543,Malad West,budget,2,700,furnished,2.0,5.15,19.196595,72.835152,55000,67693,-12693,-23.1,23.1,0,Listed below model (possible underpricing),60000.0,94.1
+544,Kurla West,mid,2,580,furnished,4.0,2.43,19.069576,72.876461,80000,75547,4453,5.6,5.6,0,In line with model,72500.0,140.2
+545,Malad West,budget,2,700,furnished,4.0,6.89,19.17748,72.83725,52000,66634,-14634,-28.1,28.1,0,Listed below model (possible underpricing),60000.0,94.1
+546,Malad West,budget,1,550,furnished,10.0,6.73,19.1793224828185,72.8371210418868,50000,52104,-2104,-4.2,4.2,0,In line with model,60000.0,94.1
+547,Powai,mid,3,1450,furnished,4.0,3.75,19.120119,72.912069,150000,164330,-14330,-9.6,9.6,0,In line with model,85000.0,104.0
+548,Malad West,budget,1,425,unfurnished,11.0,5.32,19.190241,72.844093,45000,38630,6370,14.2,14.2,0,In line with model,60000.0,94.1
+549,Chembur,mid,2,700,furnished,7.0,0.44,19.053028,72.905782,65000,80760,-15760,-24.2,24.2,0,Listed below model (possible underpricing),85000.0,104.2
+550,Goregaon East,budget,2,850,semi-furnished,19.0,5.91,19.179149,72.872283,65000,75617,-10617,-16.3,16.3,0,Listed below model (possible underpricing),75000.0,98.25
+551,Chembur,mid,2,720,furnished,13.0,0.94,19.045825,72.891058,85000,80378,4622,5.4,5.4,0,In line with model,85000.0,104.2
+552,Goregaon East,budget,1,454,semi-furnished,25.0,5.31,19.1709951,72.8567857,52000,39498,12502,24.0,24.0,0,Listed above model (check overpricing),75000.0,98.25
+553,Andheri West,mid,6,4600,unfurnished,15.0,5.11,19.151569,72.833298,900000,553807,346193,38.5,38.5,0,Listed above model (check overpricing),95000.0,116.75
+554,Andheri West,mid,3,1200,furnished,701.0,4.19,19.138769,72.83466,190000,154552,35448,18.7,18.7,0,Listed above model (check overpricing),95000.0,116.75
+555,Chembur,mid,1,420,semi-furnished,13.0,0.68,19.05727,72.904633,55000,45826,9174,16.7,16.7,0,Listed above model (check overpricing),85000.0,104.2
+556,Worli,premium,4,1990,unfurnished,32.0,1.02,19.00224,72.826286,570000,442942,127058,22.3,22.3,0,Listed above model (check overpricing),290250.0,251.8
+557,Goregaon East,budget,5,1500,semi-furnished,22.0,5.1,19.1717335632515,72.8701690398811,115000,146161,-31161,-27.1,27.1,0,Listed below model (possible underpricing),75000.0,98.25
+558,Ghatkopar West,mid,5,1200,unfurnished,8.0,4.51,19.097797,72.920018,110000,152854,-42854,-39.0,39.0,0,Listed below model (possible underpricing),119000.0,116.75
+559,Chembur,mid,2,730,semi-furnished,10.0,0.83,19.059852,72.897935,90000,76118,13882,15.4,15.4,0,Listed above model (check overpricing),85000.0,104.2
+560,Malad West,budget,2,750,semi-furnished,10.0,6.92,19.178885,72.833735,68000,65845,2155,3.2,3.2,0,In line with model,60000.0,94.1
+561,Wadala,mid,3,965,semi-furnished,6.0,2.9,19.022051,72.867263,155000,116575,38425,24.8,24.8,0,Listed above model (check overpricing),160000.0,131.15
+562,Chembur,mid,1,408,furnished,7.0,0.86,19.059386,72.903145,55000,45691,9309,16.9,16.9,0,Listed above model (check overpricing),85000.0,104.2
+563,Deonar,mid,1,440,semi-furnished,13.0,0.92,19.050512,72.915343,60000,56455,3545,5.9,5.9,0,In line with model,95000.0,136.4
+564,Andheri West,mid,3,1700,furnished,21.0,3.85,19.130583,72.828359,200000,197906,2094,1.0,1.0,0,In line with model,95000.0,116.75
+565,Chembur,mid,2,700,unfurnished,1.0,0.76,19.057444,72.905727,65000,75318,-10318,-15.9,15.9,0,Listed below model (possible underpricing),85000.0,104.2
+566,Malad West,budget,1,450,semi-furnished,1.0,6.74,19.17752833,72.83996,35000,39649,-4649,-13.3,13.3,0,In line with model,60000.0,94.1
+567,Chembur,mid,2,720,unfurnished,5.0,0.11,19.04892,72.90722,85000,76959,8041,9.5,9.5,0,In line with model,85000.0,104.2
+568,Chembur,mid,2,800,semi-furnished,5.0,1.99,19.032991,72.896598,95000,86231,8769,9.2,9.2,0,In line with model,85000.0,104.2
+569,Wadala,mid,3,1040,semi-furnished,1.0,2.83,19.022674,72.867548,168000,123826,44174,26.3,26.3,0,Listed above model (check overpricing),160000.0,131.15
+570,Chembur,mid,4,1400,unfurnished,3.0,0.17,19.053177,72.901483,175000,159292,15708,9.0,9.0,0,In line with model,85000.0,104.2
+571,Chembur,mid,1,430,furnished,1202.0,0.69,19.051808,72.8867,55000,54906,94,0.2,0.2,0,In line with model,85000.0,104.2
+572,Chembur,mid,2,680,furnished,6.0,1.3,19.051756,72.918625,90000,76410,13590,15.1,15.1,0,Listed above model (check overpricing),85000.0,104.2
+573,Wadala East,mid,3,1150,semi-furnished,33.0,2.55,19.0253313474901,72.8677466065711,140000,135879,4121,2.9,2.9,0,In line with model,90000.0,121.7
+574,Powai,mid,1,400,semi-furnished,6.0,2.2,19.123388,72.894532,57000,43409,13591,23.8,23.8,0,Listed above model (check overpricing),85000.0,104.0
+575,Jogeshwari East,budget,2,670,furnished,7.0,2.08,19.138506,72.859044,82000,60952,21048,25.7,25.7,0,Listed above model (check overpricing),65000.0,100.0
+576,Goregaon East,budget,3,989,semi-furnished,2.0,5.29,19.1715144,72.8591173,85000,90986,-5986,-7.0,7.0,0,In line with model,75000.0,98.25
+577,Juhu,premium,3,950,furnished,4.0,2.46,19.113507,72.832023,200000,188103,11897,5.9,5.9,0,In line with model,212500.0,190.5
+578,Goregaon West,budget,2,810,semi-furnished,11.0,3.86,19.150469,72.84766,80000,70721,9279,11.6,11.6,0,In line with model,76000.0,98.2
+579,Chembur,mid,3,1100,semi-furnished,11.0,0.94,19.046411,72.915765,150000,120230,29770,19.8,19.8,0,Listed above model (check overpricing),85000.0,104.2
+580,Marol,mid,1,500,semi-furnished,7.0,0.29,19.109135,72.881233,60000,49981,10019,16.7,16.7,0,Listed above model (check overpricing),82000.0,101.7
+581,Goregaon East,budget,3,1820,furnished,4.0,5.18,19.171611,72.863705,250000,167170,82830,33.1,33.1,0,Listed above model (check overpricing),75000.0,98.25
+582,Malad West,budget,2,800,semi-furnished,5.0,6.43,19.1860398,72.82985772,75000,69796,5204,6.9,6.9,0,In line with model,60000.0,94.1
+583,Goregaon East,budget,5,1500,semi-furnished,28.0,5.1,19.1717335632515,72.8701690398811,135000,150519,-15519,-11.5,11.5,0,In line with model,75000.0,98.25
+584,Wadala,mid,2,900,semi-furnished,18.0,0.91,19.037684,72.879023,120000,102466,17534,14.6,14.6,0,In line with model,160000.0,131.15
+585,Goregaon East,budget,2,960,semi-furnished,21.0,5.53,19.173157,72.856901,75000,83459,-8459,-11.3,11.3,0,In line with model,75000.0,98.25
+586,Malad East,budget,3,1050,semi-furnished,9.0,4.98,19.1900696,72.8578936,105000,94385,10615,10.1,10.1,0,In line with model,65000.0,92.5
+587,Andheri West,mid,3,1200,furnished,7.0,4.19,19.138769,72.83466,185000,144495,40505,21.9,21.9,0,Listed above model (check overpricing),95000.0,116.75
+588,Malad East,budget,3,861,semi-furnished,10.0,5.15,19.1885255,72.8582297,82500,78485,4015,4.9,4.9,0,In line with model,65000.0,92.5
+589,Worli,premium,5,1900,unfurnished,47.0,1.09,19.006066,72.829268,500000,440286,59714,11.9,11.9,0,In line with model,290250.0,251.8
+590,Ghatkopar West,mid,2,649,semi-furnished,8.0,4.51,19.097797,72.920018,65000,73105,-8105,-12.5,12.5,0,In line with model,119000.0,116.75
+591,Chembur,mid,3,1000,semi-furnished,4.0,1.03,19.060951,72.902784,110000,109519,481,0.4,0.4,0,In line with model,85000.0,104.2
+592,Goregaon West,budget,3,2050,furnished,15.0,5.41,19.168089,72.847925,160000,194202,-34202,-21.4,21.4,0,Listed below model (possible underpricing),76000.0,98.2
+593,Goregaon East,budget,2,750,furnished,25.0,5.33,19.169767,72.852983,84000,69448,14552,17.3,17.3,0,Listed above model (check overpricing),75000.0,98.25
+594,Vikhroli East,premium,5,1270,semi-furnished,9.0,4.93,19.092531,72.922302,218000,239279,-21279,-9.8,9.8,0,In line with model,180000.0,166.7
+595,Santacruz East,budget,2,1000,furnished,4.0,0.21,19.080291,72.845377,77000,89886,-12886,-16.7,16.7,0,Listed below model (possible underpricing),74000.0,89.65
+596,Tanji Nagar,mid,2,650,furnished,22.0,4.35,19.1955101,72.8628801,75000,76264,-1264,-1.7,1.7,1,In line with model,75000.0,115.4
+597,Colaba,premium,1,550,furnished,2.0,0.26,18.911584,72.822016,100000,96067,3933,3.9,3.9,0,In line with model,82500.0,174.25
+598,Goregaon East,budget,2,905,furnished,23.0,4.75,19.16852,72.878099,65000,86806,-21806,-33.5,33.5,0,Listed below model (possible underpricing),75000.0,98.25
+599,Goregaon East,budget,2,905,furnished,12.0,4.73,19.167915,72.881131,60000,85075,-25075,-41.8,41.8,0,Listed below model (possible underpricing),75000.0,98.25
+600,Chembur,mid,2,700,unfurnished,4.0,0.47,19.05383,72.905665,72000,76324,-4324,-6.0,6.0,0,In line with model,85000.0,104.2
+601,Andheri West,mid,4,2300,furnished,23.0,5.11,19.151569,72.833298,500000,276816,223184,44.6,44.6,0,Listed above model (check overpricing),95000.0,116.75
+602,Vikhroli West,budget,1,280,furnished,9.0,3.88,19.107457,72.915492,43000,26969,16031,37.3,37.3,0,Listed above model (check overpricing),65000.0,93.8
+603,Dn Nagar,mid,2,650,semi-furnished,5.0,3.09,19.120441,72.8289973,80000,69932,10068,12.6,12.6,1,In line with model,80000.0,123.1
+604,Goregaon West,budget,1,322,semi-furnished,11.0,5.84,19.1695831,72.8427351,30000,29439,561,1.9,1.9,0,In line with model,76000.0,98.2
+605,Marine Lines,mid,2,1000,furnished,2.0,0.55,18.95173,72.82738,100000,131305,-31305,-31.3,31.3,0,Listed below model (possible underpricing),110000.0,130.0
+606,Goregaon East,budget,2,850,semi-furnished,15.0,5.49,19.1724563,72.8560979,80000,74806,5194,6.5,6.5,0,In line with model,75000.0,98.25
+607,Goregaon East,budget,1,650,furnished,2.0,5.82,19.177784,72.865787,49000,61171,-12171,-24.8,24.8,0,Listed below model (possible underpricing),75000.0,98.25
+608,Kanjurmarg West,budget,2,750,semi-furnished,5.0,6.01,19.136279,72.929861,60000,65579,-5579,-9.3,9.3,0,In line with model,97000.0,90.3
+609,Tardeo,premium,5,470,furnished,6.0,1.07,18.97492,72.81248,60000,101622,-41622,-69.4,69.4,0,Listed below model (possible underpricing),90000.0,155.2
+610,Vikhroli West,budget,2,629,unfurnished,17.0,4.11,19.105689,72.917573,65000,54552,10448,16.1,16.1,0,Listed above model (check overpricing),65000.0,93.8
+611,Andheri West,mid,5,980,semi-furnished,20.0,4.98,19.1420569834118,72.8261217723516,110000,127456,-17456,-15.9,15.9,0,Listed below model (possible underpricing),95000.0,116.75
+612,Chembur,mid,2,700,unfurnished,8.0,1.15,19.043898,72.894223,80000,72324,7676,9.6,9.6,0,In line with model,85000.0,104.2
+613,Kanjurmarg East,budget,3,1129,semi-furnished,32.0,5.84,19.128493,72.930003,104000,101334,2666,2.6,2.6,0,In line with model,73000.0,92.3
+614,Goregaon East,budget,3,1100,furnished,10.0,5.76,19.176344,72.86092,125000,105507,19493,15.6,15.6,0,Listed above model (check overpricing),75000.0,98.25
+615,Chembur,mid,4,2145,furnished,5.0,0.58,19.056866,72.902549,220000,241536,-21536,-9.8,9.8,0,In line with model,85000.0,104.2
+616,Malad East,budget,4,3330,semi-furnished,29.0,5.2,19.1881172,72.8578903,275000,284523,-9523,-3.5,3.5,0,In line with model,65000.0,92.5
+617,Powai,mid,3,1400,furnished,8.0,2.57,19.114684,72.902158,150000,161677,-11677,-7.8,7.8,0,In line with model,85000.0,104.0
+618,Kanjurmarg West,budget,2,660,semi-furnished,22.0,6.24,19.136516,72.932046,62000,58493,3507,5.7,5.7,0,In line with model,97000.0,90.3
+619,Malad East,budget,2,680,semi-furnished,10.0,5.73,19.177501,72.876135,75000,60014,14986,20.0,20.0,0,Listed above model (check overpricing),65000.0,92.5
+620,Powai,mid,1,300,semi-furnished,8.0,3.74,19.116994,72.913059,70000,32387,37613,53.7,53.7,0,Listed above model (check overpricing),85000.0,104.0
+621,Oshiwara,mid,2,670,semi-furnished,1234.0,4.83,19.145734,72.832757,95000,88682,6318,6.7,6.7,0,In line with model,120000.0,141.8
+622,Malad West,budget,3,1400,furnished,19.0,6.92,19.178885,72.833735,140000,136349,3651,2.6,2.6,0,In line with model,60000.0,94.1
+623,Dalal Estate,mid,1,550,unfurnished,20.0,0.22,18.968433,72.819967,70000,54185,15815,22.6,22.6,1,Listed above model (check overpricing),70000.0,127.3
+624,Bangur Nagar,budget,3,1050,semi-furnished,10.0,5.9,19.163807,72.834294,100000,95564,4436,4.4,4.4,0,In line with model,100000.0,94.6
+625,Malad West,budget,1,432,unfurnished,8.0,5.85,19.201364,72.819948,35000,36921,-1921,-5.5,5.5,0,In line with model,60000.0,94.1
+626,Wadala,mid,5,450,semi-furnished,6.0,2.83,19.014836,72.864527,42000,64506,-22506,-53.6,53.6,0,Listed below model (possible underpricing),160000.0,131.15
+627,Malad East,budget,2,770,semi-furnished,4.0,5.55,19.175752,72.869888,75000,67425,7575,10.1,10.1,0,In line with model,65000.0,92.5
+628,Malad East,budget,3,1700,furnished,9.0,5.82,19.182601,72.856843,90000,158525,-68525,-76.1,76.1,0,Listed below model (possible underpricing),65000.0,92.5
+629,Malad West,budget,1,306,semi-furnished,18.0,6.06,19.1863,72.8365,26000,27217,-1217,-4.7,4.7,0,In line with model,60000.0,94.1
+630,Malad East,budget,3,950,semi-furnished,6.0,5.01,19.1898455,72.857798,60000,86177,-26177,-43.6,43.6,0,Listed below model (possible underpricing),65000.0,92.5
+631,Andheri West,mid,1,388,furnished,9.0,2.9,19.127991,72.839506,65000,56197,8803,13.5,13.5,0,In line with model,95000.0,116.75
+632,Vikhroli West,budget,2,650,semi-furnished,9.0,5.14,19.116908,72.926683,61000,58166,2834,4.6,4.6,0,In line with model,65000.0,93.8
+633,Malad East,budget,1,650,furnished,12.0,5.73,19.177501,72.876135,56000,58061,-2061,-3.7,3.7,0,In line with model,65000.0,92.5
+634,Andheri West,mid,5,1200,furnished,22.0,4.2,19.1388851,72.83465369999999,250000,160531,89469,35.8,35.8,0,Listed above model (check overpricing),95000.0,116.75
+635,Goregaon East,budget,2,981,furnished,11.0,3.31,19.1531958299402,72.8865832279232,45000,92507,-47507,-105.6,105.6,0,Listed below model (possible underpricing),75000.0,98.25
+636,Powai,mid,3,1700,semi-furnished,20.0,4.42,19.121325,72.918361,240000,179596,60404,25.2,25.2,0,Listed above model (check overpricing),85000.0,104.0
+637,Nepean Sea Road,premium,5,1300,unfurnished,5.0,2.63,18.9515058089075,72.7963064466596,280000,210901,69099,24.7,24.7,1,Listed above model (check overpricing),280000.0,215.4
+638,Goregaon West,budget,3,1200,semi-furnished,15.0,5.86,19.172208,72.846954,90000,109334,-19334,-21.5,21.5,0,Listed below model (possible underpricing),76000.0,98.2
+639,Andheri West,mid,3,1460,furnished,15.0,5.54,19.1350711,72.81132,230000,175336,54664,23.8,23.8,0,Listed above model (check overpricing),95000.0,116.75
+640,Chembur,mid,3,1300,semi-furnished,5.0,0.55,19.058453,72.895371,130000,137001,-7001,-5.4,5.4,0,In line with model,85000.0,104.2
+641,Goregaon West,budget,2,640,semi-furnished,701.0,5.89,19.170532703023,72.8433550394059,80000,59681,20319,25.4,25.4,0,Listed above model (check overpricing),76000.0,98.2
+642,Bandra East,mid,3,1400,semi-furnished,12.0,0.79,19.056192,72.848892,275000,156632,118368,43.0,43.0,0,Listed above model (check overpricing),205000.0,136.0
+643,Lower Parel,premium,3,1700,semi-furnished,2.0,1.0,18.995721,72.829392,250000,303580,-53580,-21.4,21.4,0,Listed below model (possible underpricing),280000.0,181.35
+644,Goregaon West,budget,3,1200,semi-furnished,701.0,4.55,19.154588,72.842697,100000,114651,-14651,-14.7,14.7,0,In line with model,76000.0,98.2
+645,Chembur,mid,3,1400,semi-furnished,10.0,0.32,19.0519159,72.8908059,140000,146508,-6508,-4.6,4.6,0,In line with model,85000.0,104.2
+646,Jogeshwari West,budget,1,450,unfurnished,9.0,2.83,,,80000,51317,28683,35.9,35.9,0,Listed above model (check overpricing),85000.0,100.0
+647,Wadala,mid,2,700,semi-furnished,7.0,2.66,19.020587,72.864366,62000,83662,-21662,-34.9,34.9,0,Listed below model (possible underpricing),160000.0,131.15
+648,Chembur,mid,2,720,semi-furnished,7.0,0.49,19.044243,72.904472,75000,77286,-2286,-3.0,3.0,0,In line with model,85000.0,104.2
+649,Mahalaxmi,premium,4,1850,unfurnished,45.0,0.43,18.983085,72.826831,360000,370519,-10519,-2.9,2.9,0,In line with model,350000.0,226.3
+650,Goregaon West,budget,1,440,unfurnished,701.0,5.7,19.167242,72.841577,45000,41996,3004,6.7,6.7,0,In line with model,76000.0,98.2
+651,Goregaon East,budget,2,1050,furnished,14.0,5.17,19.16818,72.853134,78000,99689,-21689,-27.8,27.8,0,Listed below model (possible underpricing),75000.0,98.25
+652,Worli,premium,1,601,unfurnished,9.0,2.83,,,300500,156992,143508,47.8,47.8,0,Listed above model (check overpricing),290250.0,251.8
+653,Malad West,budget,1,450,furnished,22.0,6.18,19.202248,72.815244,46000,42485,3515,7.6,7.6,0,In line with model,60000.0,94.1
+654,Goregaon East,budget,3,1375,furnished,2.0,5.17,19.171529,72.863911,235000,131077,103923,44.2,44.2,0,Listed above model (check overpricing),75000.0,98.25
+655,Andheri East,budget,1,550,semi-furnished,6.0,1.21,19.1194203849942,72.8848945384194,50000,46642,3358,6.7,6.7,0,In line with model,75000.0,100.0
+656,Colaba,premium,1,360,furnished,5.0,0.76,18.918368,72.827984,60000,68315,-8315,-13.9,13.9,0,In line with model,82500.0,174.25
+657,Chembur,mid,3,1300,furnished,7.0,0.99,19.060577,72.902806,135000,152112,-17112,-12.7,12.7,0,In line with model,85000.0,104.2
+658,Goregaon West,budget,5,1000,unfurnished,25.0,4.55,19.154588,72.842697,90000,101707,-11707,-13.0,13.0,0,In line with model,76000.0,98.2
+659,Powai,mid,4,3200,furnished,12.0,2.2,19.123388,72.894532,300000,361737,-61737,-20.6,20.6,0,Listed below model (possible underpricing),85000.0,104.0
+660,Andheri West,mid,4,3050,furnished,11.0,5.11,19.151569,72.833298,400000,365313,34687,8.7,8.7,0,In line with model,95000.0,116.75
+661,Goregaon West,budget,3,1450,furnished,18.0,4.58,19.152858,72.840617,150000,137311,12689,8.5,8.5,0,In line with model,76000.0,98.2
+662,Andheri West,mid,3,1500,furnished,9.0,2.83,,,175000,236131,-61131,-34.9,34.9,0,Listed below model (possible underpricing),95000.0,116.75
+663,Malad West,budget,5,943,semi-furnished,16.0,4.86,19.198237,72.837412,70000,91822,-21822,-31.2,31.2,0,Listed below model (possible underpricing),60000.0,94.1
+664,Chembur,mid,2,750,furnished,3.0,0.46,19.0512589,72.88964659999999,85000,83507,1493,1.8,1.8,0,In line with model,85000.0,104.2
+665,Chembur,mid,2,750,furnished,5.0,0.96,19.062717,72.892611,75000,87203,-12203,-16.3,16.3,0,Listed below model (possible underpricing),85000.0,104.2
+666,Goregaon East,budget,3,1100,furnished,4.0,5.17,19.171529,72.863911,240000,106734,133266,55.5,55.5,0,Listed above model (check overpricing),75000.0,98.25
+667,Mahalaxmi,premium,3,2100,unfurnished,47.0,0.79,18.986985,72.827622,350000,415825,-65825,-18.8,18.8,0,Listed below model (possible underpricing),350000.0,226.3
+668,Chembur,mid,3,1400,furnished,7.0,0.27,19.054141,72.901802,120000,160827,-40827,-34.0,34.0,0,Listed below model (possible underpricing),85000.0,104.2
+669,Chembur,mid,2,700,semi-furnished,6.0,0.81,19.048269,72.88831,72000,73176,-1176,-1.6,1.6,0,In line with model,85000.0,104.2
+670,Oshiwara,mid,2,670,furnished,29.0,4.83,19.145734,72.832757,125000,86018,38982,31.2,31.2,0,Listed above model (check overpricing),120000.0,141.8
+671,Goregaon West,budget,2,640,semi-furnished,701.0,5.86,19.172208,72.846954,70000,61535,8465,12.1,12.1,0,In line with model,76000.0,98.2
+672,Andheri East,budget,2,700,semi-furnished,9.0,0.78,19.12186,72.86768,75000,60212,14788,19.7,19.7,0,Listed above model (check overpricing),75000.0,100.0
+673,Nagesh Patilwadi,budget,3,1200,furnished,10.0,0.58,19.0524002,72.9099234,115000,112893,2107,1.8,1.8,1,In line with model,115000.0,95.8
+674,Juhu,premium,4,1550,semi-furnished,8.0,2.46,19.113507,72.832023,300000,294524,5476,1.8,1.8,0,In line with model,212500.0,190.5
+675,Chembur,mid,3,1500,furnished,8.0,0.81,19.058636,72.904206,140000,165977,-25977,-18.6,18.6,0,Listed below model (possible underpricing),85000.0,104.2
+676,Andheri West,mid,3,1150,semi-furnished,9.0,5.4,19.151867,72.830203,200000,130025,69975,35.0,35.0,0,Listed above model (check overpricing),95000.0,116.75
+677,Borivali West,budget,2,721,semi-furnished,17.0,1.77,19.230725,72.846817,61000,60833,167,0.3,0.3,0,In line with model,40000.0,88.9
+678,Powai,mid,3,1750,furnished,11.0,2.71,19.115126,72.903392,110000,199372,-89372,-81.2,81.2,0,Listed below model (possible underpricing),85000.0,104.0
+679,Andheri West,mid,3,1350,semi-furnished,12.0,1.92,19.118765,72.841925,135000,150858,-15858,-11.7,11.7,0,In line with model,95000.0,116.75
+680,Malad West,budget,3,1000,unfurnished,7.0,5.85,19.201364,72.819948,68000,91634,-23634,-34.8,34.8,0,Listed below model (possible underpricing),60000.0,94.1
+681,Andheri West,mid,2,800,furnished,9.0,2.83,,,155000,113572,41428,26.7,26.7,0,Listed above model (check overpricing),95000.0,116.75
+682,Andheri West,mid,3,950,semi-furnished,1234.0,4.0,19.1379896,72.8369791,95000,126369,-31369,-33.0,33.0,0,Listed below model (possible underpricing),95000.0,116.75
+683,Goregaon East,budget,2,1050,furnished,12.0,5.91,19.179149,72.872283,70000,100154,-30154,-43.1,43.1,0,Listed below model (possible underpricing),75000.0,98.25
+684,Malad East,budget,1,600,unfurnished,7.0,6.08,19.180089,72.859428,40000,51052,-11052,-27.6,27.6,0,Listed below model (possible underpricing),65000.0,92.5
+685,Vikhroli East,premium,2,780,semi-furnished,1.0,4.93,19.092531,72.922302,130000,131617,-1617,-1.2,1.2,0,In line with model,180000.0,166.7
+686,Andheri West,mid,2,550,unfurnished,2.0,4.52,19.146006,72.836274,65000,66091,-1091,-1.7,1.7,0,In line with model,95000.0,116.75
+687,Andheri East,budget,1,550,furnished,21.0,0.9,19.114715,72.884097,75000,48546,26454,35.3,35.3,0,Listed above model (check overpricing),75000.0,100.0
+688,Worli,premium,4,2267,unfurnished,54.0,1.02,19.00224,72.826286,570000,495853,74147,13.0,13.0,0,In line with model,290250.0,251.8
+689,Malad West,budget,2,897,furnished,9.0,6.21,19.184965,72.83616,90000,83208,6792,7.5,7.5,0,In line with model,60000.0,94.1
+690,Malad West,budget,2,700,furnished,6.0,5.74,19.1907596,72.8343081,60000,66421,-6421,-10.7,10.7,0,In line with model,60000.0,94.1
+691,Malad East,budget,2,788,semi-furnished,9.0,5.79,19.178041,72.871778,78000,92646,-14646,-18.8,18.8,0,Listed below model (possible underpricing),65000.0,92.5
+692,Chembur,mid,3,1100,semi-furnished,4.0,0.62,19.05718,72.90281,115000,117503,-2503,-2.2,2.2,0,In line with model,85000.0,104.2
+693,Mulund West,budget,3,1260,semi-furnished,15.0,1.45,19.181284,72.94923782,75000,102361,-27361,-36.5,36.5,0,Listed below model (possible underpricing),62500.0,65.9
+694,Chembur,mid,2,975,semi-furnished,6.0,0.29,19.055011,72.890199,75000,98863,-23863,-31.8,31.8,0,Listed below model (possible underpricing),85000.0,104.2
+695,Goregaon West,budget,1,440,unfurnished,7.0,4.03,19.149847,72.844781,37000,37354,-354,-1.0,1.0,0,In line with model,76000.0,98.2
+696,Ghatkopar West,mid,1,395,semi-furnished,5.0,2.93,19.08042,72.889902,45000,43874,1126,2.5,2.5,0,In line with model,119000.0,116.75
+697,Malad East,budget,5,1050,unfurnished,24.0,5.63,19.185336,72.850756,65000,108703,-43703,-67.2,67.2,0,Listed below model (possible underpricing),65000.0,92.5
+698,Chembur,mid,2,740,furnished,6.0,0.64,19.05020225,72.88842043,85000,82137,2863,3.4,3.4,0,In line with model,85000.0,104.2
+699,Gulmohar Road,premium,3,1350,furnished,6.0,2.63,19.1144144,72.8306691,300000,197172,102828,34.3,34.3,1,Listed above model (check overpricing),300000.0,222.2
+700,Chembur,mid,3,1100,unfurnished,4.0,0.29,19.055537,72.890513,115000,119329,-4329,-3.8,3.8,0,In line with model,85000.0,104.2
+701,Prabhadevi,premium,3,1210,unfurnished,14.0,0.27,19.01347,72.8307,250000,200269,49731,19.9,19.9,0,Listed above model (check overpricing),272500.0,183.3
+702,Worli,premium,1,400,furnished,15.0,0.47,19.006237,72.822921,65000,91430,-26430,-40.7,40.7,0,Listed below model (possible underpricing),290250.0,251.8
+703,Chembur,mid,2,750,furnished,5.0,0.96,19.062717,72.892611,75000,83820,-8820,-11.8,11.8,0,In line with model,85000.0,104.2
+704,Prabhadevi,premium,4,2150,unfurnished,20.0,0.58,19.010713,72.830626,650000,367843,282157,43.4,43.4,0,Listed above model (check overpricing),272500.0,183.3
+705,Powai,mid,3,1450,furnished,5.0,3.52,19.119467,72.910025,150000,166810,-16810,-11.2,11.2,0,In line with model,85000.0,104.0
+706,Chembur,mid,2,650,unfurnished,3.0,0.47,19.051074,72.889669,75000,72240,2760,3.7,3.7,0,In line with model,85000.0,104.2
+707,Lower Parel,premium,2,1560,unfurnished,10.0,0.83,19.003329,72.824829,300000,261719,38281,12.8,12.8,0,In line with model,280000.0,181.35
+708,Worli,premium,3,1322,unfurnished,20.0,1.04,19.006199,72.828843,420000,293942,126058,30.0,30.0,0,Listed above model (check overpricing),290250.0,251.8
+709,Worli,premium,2,856,furnished,25.0,1.21,19.00401,72.82973,260000,197884,62116,23.9,23.9,0,Listed above model (check overpricing),290250.0,251.8
+710,Dadar West,mid,2,850,semi-furnished,20.0,0.36,19.0136354304109,72.8333579261883,130000,88863,41137,31.6,31.6,0,Listed above model (check overpricing),130000.0,122.7
+711,Kanjurmarg West,budget,2,740,semi-furnished,7.0,6.01,19.136279,72.929861,58000,63924,-5924,-10.2,10.2,0,In line with model,97000.0,90.3
+712,Goregaon West,budget,5,1450,semi-furnished,28.0,4.59,19.152468,72.840204,175000,139686,35314,20.2,20.2,0,Listed above model (check overpricing),76000.0,98.2
+713,Andheri East,budget,5,650,furnished,6.0,1.45,19.117297,72.847509,45000,70912,-25912,-57.6,57.6,0,Listed below model (possible underpricing),75000.0,100.0
+714,Versova,premium,2,1100,furnished,12.0,5.15,19.1320209,72.8136021,160000,180249,-20249,-12.7,12.7,0,In line with model,99000.0,145.5
+715,Worli,premium,3,1546,unfurnished,10.0,1.07,19.004355,72.82844,600000,314364,285636,47.6,47.6,0,Listed above model (check overpricing),290250.0,251.8
+716,Worli,premium,2,1000,unfurnished,3.0,0.61,19.000916,72.812929,200000,210021,-10021,-5.0,5.0,0,In line with model,290250.0,251.8
+717,Goregaon West,budget,2,617,semi-furnished,23.0,5.7,19.167242,72.841577,63000,55077,7923,12.6,12.6,0,In line with model,76000.0,98.2
+718,Sandesh Nagar,mid,1,400,semi-furnished,22.0,1.89,19.0865579894721,72.8810664643325,45000,48319,-3319,-7.4,7.4,0,In line with model,100000.0,142.9
+719,Mahalaxmi,premium,4,2400,unfurnished,40.0,0.79,18.986985,72.827622,700000,469627,230373,32.9,32.9,0,Listed above model (check overpricing),350000.0,226.3
+720,Powai,mid,3,1450,semi-furnished,10.0,2.08,19.121229,72.893097,150000,156015,-6015,-4.0,4.0,0,In line with model,85000.0,104.0
+721,Prabhadevi,premium,5,2475,unfurnished,44.0,0.58,19.010713,72.830626,750000,438949,311051,41.5,41.5,0,Listed above model (check overpricing),272500.0,183.3
+722,Wadala,mid,1,400,semi-furnished,6.0,2.83,19.014836,72.864527,40000,47127,-7127,-17.8,17.8,0,Listed below model (possible underpricing),160000.0,131.15
+723,Chembur,mid,2,720,furnished,2.0,0.99,19.060533,72.899292,75000,82989,-7989,-10.7,10.7,0,In line with model,85000.0,104.2
+724,Chembur,mid,2,1000,furnished,6.0,0.77,19.057817,72.905302,80000,112465,-32465,-40.6,40.6,0,Listed below model (possible underpricing),85000.0,104.2
+725,Prabhadevi,premium,3,1850,semi-furnished,9.0,0.64,19.011085,72.827505,250000,461531,-211531,-84.6,84.6,0,Listed below model (possible underpricing),272500.0,183.3
+726,Chembur,mid,2,750,unfurnished,5.0,0.31,19.05433,72.88986,75000,80000,-5000,-6.7,6.7,0,In line with model,85000.0,104.2
+727,Bandra West,premium,3,1100,semi-furnished,1.0,2.38,19.0595596,72.8295287,130000,211984,-81984,-63.1,63.1,0,Listed below model (possible underpricing),175000.0,188.2
+728,Malad West,budget,1,450,semi-furnished,2.0,6.74,19.178195,72.83976667,45000,39635,5365,11.9,11.9,0,In line with model,60000.0,94.1
+729,Goregaon West,budget,2,1090,semi-furnished,3.0,5.89,19.170528,72.843357,80000,93645,-13645,-17.1,17.1,0,Listed below model (possible underpricing),76000.0,98.2
+730,Ghatkopar West,mid,2,730,semi-furnished,8.0,4.25,19.0973596616911,72.9173035525092,82000,84297,-2297,-2.8,2.8,0,In line with model,119000.0,116.75
+731,Wadala,mid,3,1200,semi-furnished,18.0,0.9,19.037785,72.878098,170000,139013,30987,18.2,18.2,0,Listed above model (check overpricing),160000.0,131.15
+732,Chembur,mid,1,408,semi-furnished,5.0,0.86,19.059386,72.903145,53000,44616,8384,15.8,15.8,0,Listed above model (check overpricing),85000.0,104.2
+733,Colaba,premium,1,480,furnished,2.0,0.26,18.911584,72.822016,90000,85483,4517,5.0,5.0,0,In line with model,82500.0,174.25
+734,Bandra East,mid,3,1600,semi-furnished,12.0,1.05,19.062266,72.86457,160000,182458,-22458,-14.0,14.0,0,In line with model,205000.0,136.0
+735,Kanjurmarg East,budget,2,797,semi-furnished,22.0,6.47,19.133424,72.9348,73000,70640,2360,3.2,3.2,0,In line with model,73000.0,92.3
+736,Chembur,mid,5,620,unfurnished,10.0,0.22,19.05254334,72.89162912,55000,78618,-23618,-42.9,42.9,0,Listed below model (possible underpricing),85000.0,104.2
+737,Andheri West,mid,2,750,unfurnished,3.0,4.7,19.13026675,72.81750143,95000,85152,9848,10.4,10.4,0,In line with model,95000.0,116.75
+738,Goregaon East,budget,2,905,furnished,13.0,4.02,19.155237,72.851275,90000,83346,6654,7.4,7.4,0,In line with model,75000.0,98.25
+739,Chembur,mid,5,900,semi-furnished,9.0,1.01,19.063173,72.891839,95000,110462,-15462,-16.3,16.3,0,Listed below model (possible underpricing),85000.0,104.2
+740,Andheri West,mid,3,1500,furnished,72.0,5.42,19.1453749,72.8238743,130000,181132,-51132,-39.3,39.3,0,Listed below model (possible underpricing),95000.0,116.75
+741,Goregaon West,budget,3,1650,semi-furnished,14.0,5.95,19.17054,72.842409,140000,146252,-6252,-4.5,4.5,0,In line with model,76000.0,98.2
+742,Bhandup West,budget,3,1460,semi-furnished,6.0,5.94,19.140886,72.933037,87000,121282,-34282,-39.4,39.4,0,Listed below model (possible underpricing),46500.0,65.5
+743,Andheri West,mid,3,1200,semi-furnished,12.0,3.33,19.123779,72.828676,150000,136605,13395,8.9,8.9,0,In line with model,95000.0,116.75
+744,Chembur,mid,3,1300,semi-furnished,7.0,0.51,19.055746,72.904205,110000,138520,-28520,-25.9,25.9,0,Listed below model (possible underpricing),85000.0,104.2
+745,Vile Parle West,mid,3,2000,unfurnished,19.0,3.06,19.1113842,72.82546099999999,275000,205251,69749,25.4,25.4,1,Listed above model (check overpricing),275000.0,137.5
+746,Vikhroli East,premium,2,850,semi-furnished,8.0,5.09,19.103757,72.926802,73000,144851,-71851,-98.4,98.4,0,Listed below model (possible underpricing),180000.0,166.7
+747,Malad East,budget,2,600,unfurnished,5.0,6.08,19.180089,72.859428,55000,53644,1356,2.5,2.5,0,In line with model,65000.0,92.5
+748,Chembur,mid,2,750,semi-furnished,5.0,0.5,19.056044,72.903236,85000,80216,4784,5.6,5.6,0,In line with model,85000.0,104.2
+749,Shapur Baug,budget,1,835,unfurnished,1.0,0.25,18.961649,72.819807,75000,68494,6506,8.7,8.7,1,In line with model,75000.0,89.8
+750,Malad East,budget,1,420,semi-furnished,7.0,5.79,19.177528,72.865805,45500,36201,9299,20.4,20.4,0,Listed above model (check overpricing),65000.0,92.5
+751,Goregaon East,budget,3,1360,furnished,15.0,3.04,19.146015,72.854033,150000,127660,22340,14.9,14.9,0,In line with model,75000.0,98.25
+752,Chembur,mid,2,800,semi-furnished,5.0,1.58,19.0502009,72.9217999,75000,83287,-8287,-11.0,11.0,0,In line with model,85000.0,104.2
+753,Goregaon East,budget,1,420,furnished,20.0,5.06,19.1893106,72.8582058,52000,39128,12872,24.8,24.8,0,Listed above model (check overpricing),75000.0,98.25
+754,Chembur,mid,3,1300,semi-furnished,10.0,0.15,19.05305,72.901847,120000,136635,-16635,-13.9,13.9,0,In line with model,85000.0,104.2
+755,Goregaon West,budget,2,677,semi-furnished,15.0,4.56,19.159442,72.848643,63000,60771,2229,3.5,3.5,0,In line with model,76000.0,98.2
+756,Wadala,mid,2,650,semi-furnished,13.0,2.74,19.0240495938634,72.8665027514191,68000,78272,-10272,-15.1,15.1,0,Listed below model (possible underpricing),160000.0,131.15
+757,Colaba,premium,1,600,semi-furnished,5.0,0.85,18.917765,72.828714,75000,101048,-26048,-34.7,34.7,0,Listed below model (possible underpricing),82500.0,174.25
+758,Goregaon West,budget,2,617,semi-furnished,12.0,5.7,19.167242,72.841577,60000,56214,3786,6.3,6.3,0,In line with model,76000.0,98.2
+759,Jogeshwari East,budget,1,470,furnished,6.0,1.47,19.13881,72.8702,55000,43573,11427,20.8,20.8,0,Listed above model (check overpricing),65000.0,100.0
+760,Chembur,mid,3,1200,furnished,8.0,0.6,19.0528124128104,72.9094195814022,125000,140988,-15988,-12.8,12.8,0,In line with model,85000.0,104.2
+761,Chembur,mid,1,550,semi-furnished,5.0,1.01,19.063173,72.891839,55000,55327,-327,-0.6,0.6,0,In line with model,85000.0,104.2
+762,Goregaon West,budget,1,450,furnished,5.0,5.69,19.162009,72.835253,41000,41916,-916,-2.2,2.2,0,In line with model,76000.0,98.2
+763,Malad West,budget,3,900,semi-furnished,9.0,5.32,19.190241,72.844093,85000,80933,4067,4.8,4.8,0,In line with model,60000.0,94.1
+764,Malad East,budget,1,420,semi-furnished,12.0,5.12,19.1887872,72.8586194,40000,36599,3401,8.5,8.5,0,In line with model,65000.0,92.5
+765,Chembur,mid,3,1400,semi-furnished,8.0,1.15,19.064278,72.890799,130000,149956,-19956,-15.4,15.4,0,Listed below model (possible underpricing),85000.0,104.2
+766,Chembur,mid,3,1100,semi-furnished,5.0,0.99,19.057051,72.909363,100000,118806,-18806,-18.8,18.8,0,Listed below model (possible underpricing),85000.0,104.2
+767,Andheri West,mid,3,1150,furnished,12.0,2.39,19.122741,72.839941,140000,136923,3077,2.2,2.2,0,In line with model,95000.0,116.75
+768,Ghatkopar West,mid,1,410,furnished,7.0,3.9,19.095964,72.913279,43000,50836,-7836,-18.2,18.2,0,Listed below model (possible underpricing),119000.0,116.75
+769,Malad West,budget,3,1065,semi-furnished,15.0,5.56,19.19163,72.836138,110000,94686,15314,13.9,13.9,0,In line with model,60000.0,94.1
+770,Andheri West,mid,2,700,semi-furnished,12.0,3.5,19.133574,72.838273,70000,80032,-10032,-14.3,14.3,0,In line with model,95000.0,116.75
+771,Chembur,mid,3,1200,semi-furnished,5.0,0.4,19.046515,72.903454,105000,130082,-25082,-23.9,23.9,0,Listed below model (possible underpricing),85000.0,104.2
+772,Goregaon West,budget,2,618,semi-furnished,21.0,3.93,19.151208,72.847498,60000,55439,4561,7.6,7.6,0,In line with model,76000.0,98.2
+773,Goregaon East,budget,2,690,semi-furnished,5.0,5.91,19.179149,72.872283,65000,62122,2878,4.4,4.4,0,In line with model,75000.0,98.25
+774,Wadala,mid,2,680,semi-furnished,6.0,1.91,19.009445,72.849446,62000,80234,-18234,-29.4,29.4,0,Listed below model (possible underpricing),160000.0,131.15
+775,Goregaon West,budget,3,1088,semi-furnished,25.0,3.86,19.150469,72.84766,110000,97498,12502,11.4,11.4,0,In line with model,76000.0,98.2
+776,Malad East,budget,2,700,unfurnished,5.0,6.08,19.180089,72.859428,55000,61765,-6765,-12.3,12.3,0,In line with model,65000.0,92.5
+777,Chembur,mid,4,1400,semi-furnished,5.0,0.17,19.053177,72.901483,160000,156473,3527,2.2,2.2,0,In line with model,85000.0,104.2
+778,Goregaon West,budget,2,629,semi-furnished,15.0,3.75,19.150754,72.849549,62000,56396,5604,9.0,9.0,0,In line with model,76000.0,98.2
+779,Worli,premium,5,2900,semi-furnished,67.0,1.07,19.004355,72.82844,1000000,626016,373984,37.4,37.4,0,Listed above model (check overpricing),290250.0,251.8
+780,Goregaon West,budget,2,617,semi-furnished,6.0,5.7,19.167242,72.841577,65000,56049,8951,13.8,13.8,0,In line with model,76000.0,98.2
+781,Malad East,budget,1,350,unfurnished,9.0,2.83,,,75000,35992,39008,52.0,52.0,0,Listed above model (check overpricing),65000.0,92.5
+782,Andheri East,budget,1,490,furnished,5.0,0.65,19.1143,72.868353,59000,43574,15426,26.1,26.1,0,Listed above model (check overpricing),75000.0,100.0
+783,Ghatkopar West,mid,3,1055,unfurnished,4.0,4.49,19.098048,72.919816,139500,121916,17584,12.6,12.6,0,In line with model,119000.0,116.75
+784,Jogeshwari West,budget,5,550,unfurnished,13.0,4.82,19.144726,72.832347,60000,57343,2657,4.4,4.4,0,In line with model,85000.0,100.0
+785,Malad East,budget,2,950,furnished,4.0,5.64,19.1765340868467,72.8695313967914,55000,87201,-32201,-58.5,58.5,0,Listed below model (possible underpricing),65000.0,92.5
+786,Chembur,mid,3,1500,semi-furnished,5.0,0.15,19.046815,72.907696,200000,159536,40464,20.2,20.2,0,Listed above model (check overpricing),85000.0,104.2
+787,Chembur,mid,3,1430,semi-furnished,5.0,0.23,19.048623,72.904923,125000,152717,-27717,-22.2,22.2,0,Listed below model (possible underpricing),85000.0,104.2
+788,Andheri West,mid,3,1116,furnished,37.0,5.4,19.151867,72.830203,240000,141705,98295,41.0,41.0,0,Listed above model (check overpricing),95000.0,116.75
+789,Andheri West,mid,2,1000,furnished,92.0,4.8,19.138106,72.823736,75000,118367,-43367,-57.8,57.8,0,Listed below model (possible underpricing),95000.0,116.75
+790,Chembur,mid,3,1300,furnished,5.0,0.51,19.055746,72.904205,140000,145249,-5249,-3.7,3.7,0,In line with model,85000.0,104.2
+791,Goregaon West,budget,2,775,semi-furnished,15.0,4.55,19.154588,72.842697,81000,67991,13009,16.1,16.1,0,Listed above model (check overpricing),76000.0,98.2
+792,Chembur,mid,2,650,semi-furnished,3.0,0.29,19.05210853,72.89103689,70000,69456,544,0.8,0.8,0,In line with model,85000.0,104.2
+793,Goregaon East,budget,1,450,furnished,6.0,5.85,19.178495,72.869884,30000,42959,-12959,-43.2,43.2,0,Listed below model (possible underpricing),75000.0,98.25
+794,Chembur,mid,5,500,semi-furnished,5.0,0.06,19.0544711417848,72.892334443609,50000,63871,-13871,-27.7,27.7,0,Listed below model (possible underpricing),85000.0,104.2
+795,Goregaon West,budget,5,908,semi-furnished,6.0,4.55,19.154588,72.842697,85000,89635,-4635,-5.5,5.5,0,In line with model,76000.0,98.2
+796,Andheri West,mid,3,1900,semi-furnished,52.0,3.37,19.12316,72.827686,250000,206588,43412,17.4,17.4,0,Listed above model (check overpricing),95000.0,116.75
+797,Goregaon West,budget,2,672,semi-furnished,15.0,5.86,19.172208,72.846954,63000,60179,2821,4.5,4.5,0,In line with model,76000.0,98.2
+798,Goregaon West,budget,5,710,semi-furnished,10.0,6.37,19.167663,72.832131,70000,71571,-1571,-2.2,2.2,0,In line with model,76000.0,98.2
+799,Chembur,mid,2,800,semi-furnished,9.0,0.1,19.0520183815238,72.902723851151,90000,84178,5822,6.5,6.5,0,In line with model,85000.0,104.2
+800,Chembur,mid,2,750,semi-furnished,5.0,0.6,19.057839,72.896969,95000,77827,17173,18.1,18.1,0,Listed above model (check overpricing),85000.0,104.2
+801,Goregaon West,budget,2,950,furnished,12.0,5.71,19.160766,72.833757,80000,89196,-9196,-11.5,11.5,0,In line with model,76000.0,98.2
+802,Malad West,budget,2,805,semi-furnished,15.0,5.56,19.19163,72.836138,80000,69684,10316,12.9,12.9,0,In line with model,60000.0,94.1
+803,Ghatkopar East,budget,2,900,semi-furnished,22.0,2.68,19.073572,72.912492,75000,74935,65,0.1,0.1,0,In line with model,75000.0,83.3
+804,Goregaon East,budget,4,1850,furnished,9.0,2.83,,,145000,209809,-64809,-44.7,44.7,0,Listed below model (possible underpricing),75000.0,98.25
+805,Santacruz East,budget,1,550,furnished,10.0,0.7,19.0831916121885,72.8522934931045,55000,47292,7708,14.0,14.0,0,In line with model,74000.0,89.65
+806,Chembur,mid,2,750,unfurnished,11.0,0.15,19.0522115,72.900522,80000,79958,42,0.1,0.1,0,In line with model,85000.0,104.2
+807,Lower Parel,premium,2,950,semi-furnished,40.0,0.93,19.0078,72.832977,325000,157859,167141,51.4,51.4,0,Listed above model (check overpricing),280000.0,181.35
+808,Chembur,mid,2,750,semi-furnished,5.0,1.3,19.051756,72.918625,83000,78292,4708,5.7,5.7,0,In line with model,85000.0,104.2
+809,Lower Parel,premium,2,1600,unfurnished,19.0,0.83,19.003329,72.824829,260000,277618,-17618,-6.8,6.8,0,In line with model,280000.0,181.35
+810,Andheri West,mid,2,570,semi-furnished,22.0,4.52,19.146006,72.836274,70000,64495,5505,7.9,7.9,0,In line with model,95000.0,116.75
+811,Mahim West,premium,3,1400,semi-furnished,16.0,0.23,19.0372216153893,72.8437586631216,210000,267995,-57995,-27.6,27.6,0,Listed below model (possible underpricing),220000.0,197.55
+812,Malad East,budget,1,410,furnished,13.0,4.84,19.191098,72.862479,47000,38737,8263,17.6,17.6,0,Listed above model (check overpricing),65000.0,92.5
+813,Goregaon West,budget,3,1200,unfurnished,6.0,5.48,19.1629924,72.8393019,65000,112577,-47577,-73.2,73.2,0,Listed below model (possible underpricing),76000.0,98.2
+814,Oshiwara,mid,2,900,furnished,9.0,4.83,19.145734,72.832757,120000,155020,-35020,-29.2,29.2,0,Listed below model (possible underpricing),120000.0,141.8
+815,Goregaon West,budget,1,440,unfurnished,7.0,5.7,19.167242,72.841577,45000,40415,4585,10.2,10.2,0,In line with model,76000.0,98.2
+816,Deonar,mid,4,1500,semi-furnished,8.0,0.92,19.050512,72.915343,300000,178565,121435,40.5,40.5,0,Listed above model (check overpricing),95000.0,136.4
+817,Malad West,budget,2,629,furnished,20.0,6.18,19.202248,72.815244,68000,60259,7741,11.4,11.4,0,In line with model,60000.0,94.1
+818,Dadar West,mid,3,1100,semi-furnished,4.0,1.89,19.0865579894721,72.8810664643325,135000,128606,6394,4.7,4.7,0,In line with model,130000.0,122.7
+819,Chembur,mid,3,1500,furnished,11.0,0.38,19.051299,72.906677,130000,165522,-35522,-27.3,27.3,0,Listed below model (possible underpricing),85000.0,104.2
+820,Goregaon West,budget,2,800,semi-furnished,19.0,5.3,19.160497,72.838856,65000,71198,-6198,-9.5,9.5,0,In line with model,76000.0,98.2
+821,Goregaon West,budget,2,1090,semi-furnished,12.0,5.89,19.170528,72.843357,80000,93441,-13441,-16.8,16.8,0,Listed below model (possible underpricing),76000.0,98.2
+822,Malad West,budget,2,660,unfurnished,6.0,6.11,19.201347,72.816842,47000,61213,-14213,-30.2,30.2,0,Listed below model (possible underpricing),60000.0,94.1
+823,Goregaon West,budget,2,700,semi-furnished,12.0,5.03,19.1593,72.8413,61000,62403,-1403,-2.3,2.3,0,In line with model,76000.0,98.2
+824,Malad West,budget,2,700,unfurnished,17.0,5.61,19.202425,72.822057,65000,62826,2174,3.3,3.3,0,In line with model,60000.0,94.1
+825,Mahalaxmi,premium,3,1100,unfurnished,45.0,0.43,18.983085,72.826831,260000,215324,44676,17.2,17.2,0,Listed above model (check overpricing),350000.0,226.3
+826,Chembur,mid,3,1000,unfurnished,10.0,0.15,19.0522115,72.900522,100000,114219,-14219,-14.2,14.2,0,In line with model,85000.0,104.2
+827,Wadala,mid,3,1550,unfurnished,30.0,0.91,19.037684,72.879023,200000,185428,14572,7.3,7.3,0,In line with model,160000.0,131.15
+828,Chembur,mid,2,800,semi-furnished,7.0,1.14,19.064213,72.890925,90000,86161,3839,4.3,4.3,0,In line with model,85000.0,104.2
+829,Goregaon West,budget,5,908,semi-furnished,16.0,4.55,19.154588,72.842697,90000,89497,503,0.6,0.6,0,In line with model,76000.0,98.2
+830,Malad West,budget,2,613,semi-furnished,9.0,5.5,19.191742,72.837065,65000,54692,10308,15.9,15.9,0,Listed above model (check overpricing),60000.0,94.1
+831,Goregaon East,budget,5,1370,semi-furnished,12.0,3.65,19.154105,72.85579,175000,132562,42438,24.3,24.3,0,Listed above model (check overpricing),75000.0,98.25
+832,Goregaon West,budget,3,1022,semi-furnished,3.0,5.41,19.165024,72.84298,92000,93111,-1111,-1.2,1.2,0,In line with model,76000.0,98.2
+833,Worli,premium,3,2200,unfurnished,20.0,1.02,19.00224,72.826286,540000,458467,81533,15.1,15.1,0,Listed above model (check overpricing),290250.0,251.8
+834,Malad West,budget,3,1150,semi-furnished,25.0,5.56,19.19163,72.836138,125000,103888,21112,16.9,16.9,0,Listed above model (check overpricing),60000.0,94.1
+835,Goregaon West,budget,3,1650,semi-furnished,15.0,5.95,19.17054,72.842409,125000,142821,-17821,-14.3,14.3,0,In line with model,76000.0,98.2
+836,Malad West,budget,1,427,semi-furnished,9.0,5.32,19.190241,72.844093,43000,37641,5359,12.5,12.5,0,In line with model,60000.0,94.1
+837,Goregaon West,budget,2,618,semi-furnished,6.0,3.93,19.151208,72.847498,65000,54831,10169,15.6,15.6,0,Listed above model (check overpricing),76000.0,98.2
+838,Chembur,mid,3,1327,unfurnished,3.0,0.81,19.058636,72.904206,145000,146753,-1753,-1.2,1.2,0,In line with model,85000.0,104.2
+839,Malad West,budget,2,700,furnished,1.0,4.65,19.196328,72.845351,55000,65476,-10476,-19.0,19.0,0,Listed below model (possible underpricing),60000.0,94.1
+840,Wadala,mid,3,1322,unfurnished,23.0,0.91,19.037684,72.879023,200000,153367,46633,23.3,23.3,0,Listed above model (check overpricing),160000.0,131.15
+841,Malad West,budget,2,730,semi-furnished,25.0,4.97,19.197149,72.837362,60000,63626,-3626,-6.0,6.0,0,In line with model,60000.0,94.1
+842,Mahalaxmi,premium,4,1850,unfurnished,30.0,0.43,18.983085,72.826831,420000,370914,49086,11.7,11.7,0,In line with model,350000.0,226.3
+843,Mulund West,budget,3,1080,semi-furnished,10.0,4.46,19.150939,72.943155,65000,88507,-23507,-36.2,36.2,0,Listed below model (possible underpricing),62500.0,65.9
+844,Lower Parel,premium,1,400,furnished,12.0,1.27,19.003288,72.82999,58000,75803,-17803,-30.7,30.7,0,Listed below model (possible underpricing),280000.0,181.35
+845,Malad West,budget,2,620,furnished,18.0,6.18,19.202248,72.815244,60000,59367,633,1.1,1.1,0,In line with model,60000.0,94.1
+846,Andheri West,mid,3,950,furnished,9.0,2.47,19.125058,72.842295,125000,138516,-13516,-10.8,10.8,0,In line with model,95000.0,116.75
+847,Chembur,mid,2,750,semi-furnished,5.0,1.01,19.063173,72.891839,77000,79881,-2881,-3.7,3.7,0,In line with model,85000.0,104.2
+848,Goregaon East,budget,3,1400,furnished,18.0,4.41,19.161617,72.855297,135000,128705,6295,4.7,4.7,0,In line with model,75000.0,98.25
+849,Malad East,budget,1,419,unfurnished,14.0,6.08,19.180089,72.859428,37000,35866,1134,3.1,3.1,0,In line with model,65000.0,92.5
+850,Goregaon East,budget,1,440,semi-furnished,6.0,3.43,19.1544212924512,72.88634604823,47000,37635,9365,19.9,19.9,0,Listed above model (check overpricing),75000.0,98.25
+851,Kanjurmarg East,budget,2,650,semi-furnished,3.0,6.11,19.129465,72.932323,60000,57247,2753,4.6,4.6,0,In line with model,73000.0,92.3
+852,Goregaon West,budget,2,915,semi-furnished,20.0,6.16,19.170677,72.839021,75000,80540,-5540,-7.4,7.4,0,In line with model,76000.0,98.2
+853,Malad East,budget,2,905,semi-furnished,24.0,5.79,19.178041,72.871778,75000,78409,-3409,-4.5,4.5,0,In line with model,65000.0,92.5
+854,Andheri West,mid,1,500,semi-furnished,9.0,2.83,,,100000,64747,35253,35.3,35.3,0,Listed above model (check overpricing),95000.0,116.75
+855,Malad West,budget,2,700,furnished,2.0,6.57,19.180692,72.837633,60000,66566,-6566,-10.9,10.9,0,In line with model,60000.0,94.1
+856,Malad West,budget,2,700,furnished,8.0,6.2,19.185972,72.834183,65000,66415,-1415,-2.2,2.2,0,In line with model,60000.0,94.1
+857,Chembur,mid,3,1700,unfurnished,6.0,0.88,19.061971,72.893548,86000,185804,-99804,-116.1,116.1,0,Listed below model (possible underpricing),85000.0,104.2
+858,Goregaon West,budget,3,1500,semi-furnished,5.0,5.95,19.173289,72.847284,82000,133894,-51894,-63.3,63.3,0,Listed below model (possible underpricing),76000.0,98.2
+859,Malad West,budget,1,450,unfurnished,6.0,6.14,19.200804,72.816929,36000,40928,-4928,-13.7,13.7,0,In line with model,60000.0,94.1
+860,Goregaon West,budget,2,775,semi-furnished,29.0,4.55,19.154588,72.842697,82000,68379,13621,16.6,16.6,0,Listed above model (check overpricing),76000.0,98.2
+861,Lower Parel,premium,2,842,semi-furnished,22.0,0.96,18.995787,72.828903,115000,152131,-37131,-32.3,32.3,0,Listed below model (possible underpricing),280000.0,181.35
+862,Goregaon West,budget,2,672,furnished,6.0,5.86,19.172208,72.846954,73000,64466,8534,11.7,11.7,0,In line with model,76000.0,98.2
+863,Mahim West,premium,2,560,semi-furnished,17.0,0.34,19.03598,72.840055,130000,97334,32666,25.1,25.1,0,Listed above model (check overpricing),220000.0,197.55
+864,Wadala,mid,3,1319,unfurnished,16.0,0.91,19.037684,72.879023,210000,152940,57060,27.2,27.2,0,Listed above model (check overpricing),160000.0,131.15
+865,Lower Parel,premium,3,1277,unfurnished,25.0,0.83,19.003329,72.824829,411000,217124,193876,47.2,47.2,0,Listed above model (check overpricing),280000.0,181.35
+866,Goregaon East,budget,3,1400,furnished,18.0,5.17,19.16818,72.853134,95000,133876,-38876,-40.9,40.9,0,Listed below model (possible underpricing),75000.0,98.25
+867,Malad West,budget,1,420,furnished,1.0,6.09,19.1866274309697,72.835110044883,50000,39025,10975,22.0,22.0,0,Listed above model (check overpricing),60000.0,94.1
+868,Shivaji Nagar,mid,5,1020,semi-furnished,12.0,5.68,19.1759432,72.8622558,110000,122384,-12384,-11.3,11.3,1,In line with model,110000.0,107.8
+869,Goregaon East,budget,1,425,furnished,16.0,3.3,19.153049,72.886561,27000,40804,-13804,-51.1,51.1,0,Listed below model (possible underpricing),75000.0,98.25
+870,Malad West,budget,1,485,unfurnished,22.0,5.52,19.191133,72.837761,45000,41040,3960,8.8,8.8,0,In line with model,60000.0,94.1
+871,Mulund West,budget,3,1100,semi-furnished,12.0,3.21,19.170312,72.936647,80000,89442,-9442,-11.8,11.8,0,In line with model,62500.0,65.9
+872,Worli,premium,3,1880,unfurnished,25.0,1.0,19.002554,72.826363,530000,400825,129175,24.4,24.4,0,Listed above model (check overpricing),290250.0,251.8
+873,Worli,premium,3,1100,unfurnished,9.0,1.09,19.006066,72.829268,280000,240500,39500,14.1,14.1,0,In line with model,290250.0,251.8
+874,Chembur,mid,2,800,semi-furnished,4.0,0.53,19.058527,72.890867,70000,86089,-16089,-23.0,23.0,0,Listed below model (possible underpricing),85000.0,104.2
+875,Govandi,budget,3,1400,furnished,8.0,1.91,19.06845,72.90581,125000,117765,7235,5.8,5.8,0,In line with model,56000.0,80.0
+876,Andheri West,mid,1,650,furnished,9.0,2.83,,,135000,88047,46953,34.8,34.8,0,Listed above model (check overpricing),95000.0,116.75
+877,Andheri West,mid,2,1000,furnished,2.0,4.82,19.148253,72.834308,80000,117775,-37775,-47.2,47.2,0,Listed below model (possible underpricing),95000.0,116.75
+878,Chembur,mid,5,550,unfurnished,5.0,0.64,19.0506169,72.88792959999999,55000,71835,-16835,-30.6,30.6,0,Listed below model (possible underpricing),85000.0,104.2
+879,Goregaon West,budget,2,805,semi-furnished,22.0,3.92,19.150452,72.846794,65000,70604,-5604,-8.6,8.6,0,In line with model,76000.0,98.2
+880,Malad East,budget,1,200,furnished,9.0,2.83,,,25000,23778,1222,4.9,4.9,0,In line with model,65000.0,92.5
+881,Mahalaxmi,premium,3,2100,unfurnished,36.0,0.79,18.986985,72.827622,340000,415569,-75569,-22.2,22.2,0,Listed below model (possible underpricing),350000.0,226.3
+882,Andheri East,budget,2,950,furnished,2.0,0.86,19.131617,72.868086,80000,88176,-8176,-10.2,10.2,0,In line with model,75000.0,100.0
