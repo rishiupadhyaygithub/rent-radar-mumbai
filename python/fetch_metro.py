@@ -184,7 +184,7 @@ def fetch_city(city_slug: str, dry_run: bool = False) -> None:
         print(f"   {len(stations)} stations | {len(geojson['features'])} route lines")
     except Exception as ex:
         print(f"   ❌ Overpass failed: {ex}")
-        # Write empty fallback files so frontend doesn't 404
+        # Write empty fallback files so the clean step doesn't crash on a missing file
         stations = []
         geojson  = {"type": "FeatureCollection", "features": []}
 
@@ -192,13 +192,13 @@ def fetch_city(city_slug: str, dry_run: bool = False) -> None:
         print("   Dry run — not saving")
         return
 
-    out_dir = Path(__file__).parent.parent / "public" / "data"
+    out_dir = Path(__file__).parent.parent / "data" / "geo"
     out_dir.mkdir(parents=True, exist_ok=True)
     with open(out_dir / f"metro_lines_{city_slug}.geojson", "w") as f:
         json.dump(geojson, f)
     with open(out_dir / f"metro_stations_{city_slug}.json", "w") as f:
         json.dump(stations, f)
-    print(f"   Saved → public/data/metro_lines_{city_slug}.geojson + metro_stations_{city_slug}.json")
+    print(f"   Saved → data/geo/metro_lines_{city_slug}.geojson + metro_stations_{city_slug}.json")
     for s in stations[:3]:
         print(f"     {s['name']} ({s['lat']:.4f}, {s['lng']:.4f})")
 

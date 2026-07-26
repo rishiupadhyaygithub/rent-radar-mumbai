@@ -57,6 +57,20 @@ def main() -> None:
 
     # JOIN the locality attributes onto each listing (same relation as the SQL).
     df = df.merge(loc, on="locality", how="left")
+
+    # Leave-one-out locality rent/sqft — the honest neighbourhood feature.
+    # Each flat gets the median rent/sqft of the OTHER flats in its locality, so
+    # its own price is never echoed back through the feature. Single-listing
+    # localities have no neighbour -> NaN -> filled with the city median below
+    # (an honest "unknown neighbourhood" signal, not a peek at the answer).
+    def _loo_median(s):
+        v = s.to_numpy(dtype=float)
+        return pd.Series(
+            [np.median(np.delete(v, i)) if len(v) > 1 else np.nan
+             for i in range(len(v))], index=s.index)
+
+    df["median_rps_loo"] = (
+        df.groupby("locality")["rent_per_sqft"].transform(_loo_median))
     note("# Rent Radar - Model Report\n")
     note(f"Listings after JOIN: **{len(df)}** rows.\n")
 
@@ -91,7 +105,7 @@ def main() -> None:
     # ---- Feature engineering ----
     # Predict log(rent): rent is right-skewed and multiplicative (a premium
     # locality scales rent, not adds a flat amount). Log makes errors relative.
-    feats_num = ["area_sqft", "bhk", "floor", "metro_km", "median_rent_per_sqft"]
+    feats_num = ["area_sqft", "bhk", "floor", "metro_km", "median_rps_loo"]
     feats_cat = ["furnishing", "tier"]
     model_df = df.dropna(subset=["price", "area_sqft"]).copy()
     model_df[feats_num] = model_df[feats_num].fillna(model_df[feats_num].median())
@@ -167,12 +181,14 @@ def main() -> None:
          "is log(rent), so **effect_on_rent** is how much predicted rent changes.\n")
     note(coef_tbl.head(8)[["feature", "coef_log", "effect_on_rent"]]
          .to_markdown(index=False, floatfmt=".3f"))
-    note("\n**In plain words:** floor **area** is the single biggest genuine lever "
-         "(+1 SD ≈ +47% rent), followed by **locality strength** "
-         "(median_rent_per_sqft, +27%). BHK and tier add on top; metro distance "
-         "moves rent only at the margin. The large negative on `furnishing_unknown` "
-         "is a *missingness* signal, not a real driver — listings that hide their "
-         "furnishing status tend to be cheaper, so the flag itself predicts lower rent.\n")
+    note("\n**In plain words:** floor **area** is the single biggest genuine lever, "
+         "then **locality tier** (premium vs budget). With the continuous locality "
+         "median now computed leave-one-out, most of the neighbourhood signal loads "
+         "onto the collinear tier dummies rather than median_rps_loo. BHK adds on "
+         "top; metro distance moves rent only at the margin. The negative on "
+         "`furnishing_unknown` is a *missingness* signal, not a real driver — "
+         "listings that hide furnishing tend to be cheaper. (Exact per-feature "
+         "effects are the table above, regenerated each run.)\n")
 
     # ---- Honest failure analysis (on out-of-fold predictions) ----
     # Flag rows whose locality has only ONE listing: their tier and
@@ -219,11 +235,12 @@ def main() -> None:
          "tier and median-rent features rest on one flat each (flagged as "
          "solo_locality in predictions.csv).\n"
          "- Single source (Square Yards); one city (Mumbai) by design.\n"
-         f"- median_rent_per_sqft is locality-derived, so it leaks some locality "
-         f"strength; for the {n_solo} single-listing localities it equals that "
-         "row's own rent/sqft — a hard leak that flatters out-of-fold R2 on "
-         "those rows. Kept because it mirrors how a human prices a flat, and "
-         "disclosed not hidden; leave-one-out locality medians are the clean fix.\n"
+         f"- Locality strength enters the model as **median_rps_loo**, a "
+         "leave-one-out median: each flat sees the other flats in its locality, "
+         f"never its own price. The {n_solo} single-listing localities have no "
+         "neighbour, so they fall back to the city median (an honest 'unknown "
+         "area' signal). This closes the solo-locality leak the raw locality "
+         "median would have carried; `tier` remains a coarse 3-level area class.\n"
          "- Evaluated by 5-fold CV (not a single split) so every row gets an "
          "out-of-fold prediction and the headline R2 carries a fold-spread band.\n")
 

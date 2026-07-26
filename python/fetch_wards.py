@@ -113,13 +113,13 @@ if __name__ == "__main__":
 
     annotated = annotate(geojson)
 
-    out_dir = Path(__file__).parent.parent / "public" / "data"
+    out_dir = Path(__file__).parent.parent / "data" / "geo"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     with open(out_dir / "ward_flood_risk.geojson", "w") as f:
         json.dump(annotated, f)
 
-    print(f"   Saved → public/data/ward_flood_risk.geojson")
+    print(f"   Saved → data/geo/ward_flood_risk.geojson")
 
     # Summary
     from collections import Counter

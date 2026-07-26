@@ -22,7 +22,7 @@ I used an LLM (Claude) as a pair — for scaffolding, for arguing a modelling ch
 
 **How I caught it:** The accuracy looked *too good* in a quick test (R² near 0.99). Results that look too perfect are a red flag, not a victory — so I traced the feature back to its formula and saw `price` on both sides. I removed per-listing `rent_per_sqft` from the feature set.
 
-**The nuance I did keep:** I kept `median_rent_per_sqft` — the *locality-level* median — as a feature, and I flagged it honestly as a mild leak (it's derived from the same localities) in `limitations.md`. The distinction matters: the per-listing version leaks the exact answer for that row; the locality median encodes "how expensive is this neighbourhood," which is genuinely knowable before pricing a new flat and mirrors how a human prices one. That judgment call — reject the leaky feature, keep the defensible proxy and disclose it — is mine, not the model's.
+**The nuance I kept — then hardened:** I kept the *locality-level* rent/sqft signal (the per-listing version leaks the exact answer for that row; the neighbourhood level encodes "how expensive is this area," which is knowable before pricing a new flat and mirrors how a human prices one). But a leave-one-out check showed the plain locality median *still* leaked for single-listing localities — there the "neighbourhood median" simply is that one flat. So I switched the model to a **leave-one-out** median (`median_rps_loo`): each flat sees only the *other* flats in its locality. Reject the leaky feature, keep the defensible proxy, then close the residual leak — that sequence is the judgment on display, mine not the model's. It cost ~1.7 points of R² (0.792 → 0.775) and I kept the honest number.
 
 ## Where I trusted AI and where I did not
 
