@@ -17,7 +17,7 @@ python python/pipeline/03_build_dashboard.py   # rebuild the .xlsx
 
 The Power BI guide below is the higher-polish option (interactive slicers + a map). Use whichever you present.
 
-> **Rebuild note.** The first cut (`DASHBOARD PROJECT.pbix`) was a descriptive view of the *raw* listings — count, average area, furnishing mix, price-vs-area — imported from `data/raw/mumbai_listings_raw.csv`. That answers *"what do the listings look like?"*, not the brief's *"what should this flat cost?"*. Rebuild it on the four files below so it shows **locality rankings, price drivers, and predicted-vs-actual** — the three things Part 4 asks for. Save the rebuilt file into `dashboard/` so the deliverable lives in the repo.
+> **Status.** `DASHBOARD PROJECT.pbix` (in this folder) is the built Power BI page. It now includes the **predicted-vs-actual** trust chart (actual_rent vs predicted_rent, sized by `abs_pct_error`) plus a rent KPI, furnishing mix, a price-by-furnishing bar, a geo map, and a listing table. Two Part-4 extras can still be added in ~2 minutes from files already exported: a **locality-ranking bar** (`locality_ranking.csv`) and a **price-driver bar** (`coefficients.csv`) — see visuals 2 and 3 below. The `rent_radar_dashboard.xlsx` in this folder already has all four, if you want a second, fuller view.
 
 ## Data sources (Home → Get data → Text/CSV, add all four)
 
