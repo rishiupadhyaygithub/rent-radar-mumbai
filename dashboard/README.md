@@ -39,6 +39,7 @@ Every prediction in `dashboard_data.csv` is **out-of-fold** — each flat was pr
    - `mae_rupees` → **Typical error ≈ ₹28,700/mo**
    - `n_listings` → **Listings 882**  ·  `n_localities` → **Localities 95**
    These are the "how much do we trust it" numbers, up front.
+   **Formatting:** the integer tiles load as `882.0` — on each card: Format pane → Callout value → **0 decimal places**. For `cv_r2` use **2** decimals so it reads `0.81`.
 
 2. **Locality ranking (bar) — "which areas are expensive."** From `locality_ranking`: Y = `locality`, X = `median_rent_per_sqft`, sort descending, colour by `tier`. **Add a visual-level filter `n_listings >= 2`** — otherwise single-listing localities (Gundavali, Pali Hill) top the chart on one flat each. With the filter, **Worli leads (~₹252/sqft)**.
 
@@ -52,6 +53,7 @@ Every prediction in `dashboard_data.csv` is **out-of-fold** — each flat was pr
    Points near the diagonal = model agrees; far off = mispriced or model breaks. The luxury tail (5+ BHK) fans out top-right — that's where we say "advisory, not automatic." *(Optional literal 45° line: the Analytics pane isn't reliable for y=x, so the `pricing_flag` colour already encodes above/below the line — that carries the same read.)*
 
 5. **Map — where the mispricing is.** From `dashboard_data`: Latitude = `lat`, Longitude = `lng`, Legend = `pricing_flag`, Bubble size = `abs_pct_error`. Shows the over/under-priced clusters geographically.
+   **First tag the geo columns or the map stays blank:** select `lat` → **Column tools → Data category → Latitude**; select `lng` → **Data category → Longitude**. Also the default map needs internet, and if your org disabled map visuals (File → Options → Security), skip this one — the other four still meet the brief.
 
 **Slicers (apply to page):** `tier` and `bhk`, so the pricing team can slice to their question.
 
