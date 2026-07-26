@@ -17,3 +17,6 @@ rent_radar.db
 .serena/
 node_modules/
 ${HOME}/
+
+# LibreOffice / Excel open-file locks
+.~lock.*#
